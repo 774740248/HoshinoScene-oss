@@ -1,0 +1,181 @@
+[{
+  "title": "background",
+  "items": [
+    {
+      "id": "background/uclamp.min",
+      "title": "uclamp.min",
+      "field": {
+        "path": "/dev/cpuctl/background/cpu.uclamp.min",
+        "type": "decimal",
+        "min": 0.00,
+        "max": 100.00
+      },
+      "convert": {
+        "max": "100.00"
+      }
+    },
+    {
+      "id": "background/uclamp.max",
+      "title": "uclamp.max",
+      "field": {
+        "path": "/dev/cpuctl/background/cpu.uclamp.max",
+        "type": "decimal",
+        "min": 0.00,
+        "max": 100.00
+      },
+      "convert": {
+        "max": "100.00"
+      }
+    },
+    {
+      "id": "background/latency_sensitive",
+      "title": "latency_sensitive",
+      "field": {
+        "path": "/dev/cpuctl/background/cpu.uclamp.latency_sensitive",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "background/sched_boost_no_override",
+      "title": "sched_boost_no_override",
+      "field": {
+        "path": "/dev/cpuctl/background/cpu.uclamp.sched_boost_no_override",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "background/cpu.shares",
+      "title": "cpu.shares",
+      "field": {
+        "path": "/dev/cpuctl/background/cpu.shares",
+        "type": "number",
+        "min": 0,
+        "max": 1024
+      }
+    }
+  ]
+}, {
+  "title": "foreground",
+  "items": [
+    {
+      "id": "foreground/cpu.uclamp.min",
+      "title": "uclamp.min",
+      "field": {
+        "path": "/dev/cpuctl/foreground/cpu.uclamp.min",
+        "type": "decimal",
+        "min": 0.00,
+        "max": 100.00
+      },
+      "convert": {
+        "max": "100.00"
+      }
+    },
+    {
+      "id": "foreground/cpu.uclamp.max",
+      "title": "uclamp.max",
+      "field": {
+        "path": "/dev/cpuctl/foreground/cpu.uclamp.max",
+        "type": "decimal",
+        "min": 0.00,
+        "max": 100.00
+      },
+      "convert": {
+        "max": "100.00"
+      }
+    },
+    {
+      "id": "foreground/latency_sensitive",
+      "title": "latency_sensitive",
+      "field": {
+        "path": "/dev/cpuctl/foreground/cpu.uclamp.latency_sensitive",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "foreground/sched_boost_no_override",
+      "title": "sched_boost_no_override",
+      "field": {
+        "path": "/dev/cpuctl/foreground/cpu.uclamp.sched_boost_no_override",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "foreground/cpu.shares",
+      "title": "cpu.shares",
+      "field": {
+        "path": "/dev/cpuctl/foreground/cpu.shares",
+        "type": "number",
+        "min": 0,
+        "max": 1024
+      }
+    }
+  ]
+}, {
+  "title": "top-app",
+  "items": [
+    {
+      "id": "top-app/cpu.uclamp.min",
+      "title": "uclamp.min",
+      "field": {
+        "path": "/dev/cpuctl/top-app/cpu.uclamp.min",
+        "type": "decimal",
+        "min": 0.00,
+        "max": 100.00
+      },
+      "convert": {
+        "max": "100.00"
+      }
+    },
+    {
+      "id": "top-app/cpu.uclamp.max",
+      "title": "uclamp.max",
+      "field": {
+        "path": "/dev/cpuctl/top-app/cpu.uclamp.max",
+        "type": "decimal",
+        "min": 0.00,
+        "max": 100.00
+      },
+      "convert": {
+        "max": "100.00"
+      }
+    },
+    {
+      "id": "top-app/latency_sensitive",
+      "title": "latency_sensitive",
+      "field": {
+        "path": "/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "top-app/sched_boost_no_override",
+      "title": "sched_boost_no_override",
+      "field": {
+        "path": "/dev/cpuctl/top-app/cpu.uclamp.sched_boost_no_override",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "top-app/cpu.shares",
+      "title": "cpu.shares",
+      "field": {
+        "path": "/dev/cpuctl/top-app/cpu.shares",
+        "type": "number",
+        "min": 0,
+        "max": 1024
+      }
+    }
+  ]
+}]

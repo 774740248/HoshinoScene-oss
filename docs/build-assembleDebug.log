@@ -1,0 +1,844 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:dataBindingMergeDependencyArtifactsDebug UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:dataBindingGenBaseClassesDebug UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:processDebugNavigationResources UP-TO-DATE
+> Task :app:compileDebugNavigationResources UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+
+> Task :app:compileDebugJavaWithJavac
+/workspace/hoshino-scene-recovered/app/src/main/java/a/kk0.java:4: error: cannot access LifecycleOwner
+public class kk0 extends androidx.activity.ComponentActivity implements a.k6, a.l6 {
+                                          ^
+  class file for androidx.lifecycle.LifecycleOwner not found
+/workspace/hoshino-scene-recovered/app/src/main/java/androidx/activity/a.java:3: error: cannot find symbol
+import a.b31;
+        ^
+  symbol:   class b31
+  location: package a
+/workspace/hoshino-scene-recovered/app/src/main/java/androidx/activity/a.java:18: error: cannot find symbol
+    public final b31 c;
+                 ^
+  symbol:   class b31
+  location: class a
+/workspace/hoshino-scene-recovered/app/src/main/java/a/uk.java:6: error: cannot find symbol
+    public final a.lm f;
+                  ^
+  symbol:   class lm
+  location: package a
+/workspace/hoshino-scene-recovered/app/src/main/java/a/sk.java:11: error: cannot find symbol
+    public androidx.appcompat.app.AlertController$RecycleListView e;
+                                 ^
+  symbol:   class AlertController$RecycleListView
+  location: package androidx.appcompat.app
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:974: error: cannot find symbol
+    public final void U(android.content.Context context, java.lang.String str, java.util.HashMap hashMap, com.omarea.krscript.model.RunnableNode runnableNode, final java.lang.Runnable runnable, final a.r1 r1Var) {
+                                                                                                                                                                                                         ^
+  symbol:   class r1
+  location: package a
+/workspace/hoshino-scene-recovered/app/src/main/java/a/x01.java:57: error: cannot find symbol
+    public final void a(java.lang.String str, a.a80 a80Var) {
+                                               ^
+  symbol:   class a80
+  location: package a
+/workspace/hoshino-scene-recovered/app/src/main/java/a/w81.java:5: error: cannot find symbol
+    public final a.v81 r;
+                  ^
+  symbol:   class v81
+  location: package a
+/workspace/hoshino-scene-recovered/app/src/main/java/a/t5.java:12: error: cannot find symbol
+    public t5(a.r5 r5Var, android.content.SharedPreferences sharedPreferences, android.widget.TextView textView, int i) {
+               ^
+  symbol:   class r5
+  location: package a
+/workspace/hoshino-scene-recovered/app/src/main/java/a/j10.java:14: error: cannot find symbol
+    public /* synthetic */ j10(a.x81 x81Var, androidx.recyclerview.widget.RecyclerView recyclerView, a.ha1 ha1Var, a.n60 n60Var, java.lang.String[] strArr, a.n40 n40Var, int i) {
+                                                                                                                                                             ^
+  symbol:   class n40
+  location: package a
+/workspace/hoshino-scene-recovered/app/src/main/java/com/omarea/common/ui/ProgressCircle.java:108: error: cannot find symbol
+            this.d = (int) ((i2 * 0.9d) - r0);
+                                          ^
+  symbol:   variable r0
+  location: class ProgressCircle
+/workspace/hoshino-scene-recovered/app/src/main/java/com/omarea/common/ui/ProgressCircle.java:110: error: cannot find symbol
+            this.d = (int) ((i * 0.9d) - r0);
+                                         ^
+  symbol:   variable r0
+  location: class ProgressCircle
+/workspace/hoshino-scene-recovered/app/src/main/java/a/sw0.java:33: error: cannot find symbol
+                ((androidx.viewpager.widget.ViewPager) obj).e();
+                                                           ^
+  symbol:   method e()
+  location: class ViewPager
+/workspace/hoshino-scene-recovered/app/src/main/java/a/sw0.java:36: error: cannot find symbol
+                ((com.google.android.material.tabs.TabLayout) obj).g();
+                                                                  ^
+  symbol:   method g()
+  location: class TabLayout
+/workspace/hoshino-scene-recovered/app/src/main/java/a/sw0.java:59: error: cannot find symbol
+                ((androidx.viewpager.widget.ViewPager) obj).e();
+                                                           ^
+  symbol:   method e()
+  location: class ViewPager
+/workspace/hoshino-scene-recovered/app/src/main/java/a/sw0.java:62: error: cannot find symbol
+                ((com.google.android.material.tabs.TabLayout) obj).g();
+                                                                  ^
+  symbol:   method g()
+  location: class TabLayout
+/workspace/hoshino-scene-recovered/app/src/main/java/a/x81.java:15: error: incompatible types: Object cannot be converted to Callback
+        for (android.view.KeyEvent.Callback callback : this.f682a) {
+                                                           ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/lt0.java:193: error: cannot find symbol
+            ((java.util.List) nkVar.e).set(r5.size() - 1, mt0Var3);
+                                           ^
+  symbol:   variable r5
+  location: class lt0
+/workspace/hoshino-scene-recovered/app/src/main/java/a/lt0.java:211: error: incompatible types: Object cannot be converted to Entry
+        for (java.util.Map.Entry entry : map.entrySet()) {
+                                                     ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:275: error: incompatible types: Object cannot be converted to ng1
+            a.ng1 obj = new java.lang.Object();
+                        ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:418: error: cannot find symbol
+        if (tabLayout.G || !(view instanceof a.ik1)) {
+                     ^
+  symbol:   variable G
+  location: variable tabLayout of type TabLayout
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:723: error: incompatible types: Object cannot be converted to y21
+        a.y21 obj = new java.lang.Object();
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:747: error: incompatible types: Object cannot be converted to mc1
+        a.mc1 obj = new java.lang.Object();
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1109: error: call to this must be first statement in constructor
+                this(3);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1121: error: call to this must be first statement in constructor
+                this(5);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1124: error: call to this must be first statement in constructor
+                this(6);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1127: error: call to this must be first statement in constructor
+                this(7);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1130: error: call to this must be first statement in constructor
+                this(8);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1133: error: call to this must be first statement in constructor
+                this(9);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1136: error: call to this must be first statement in constructor
+                this(10);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1139: error: call to this must be first statement in constructor
+                this(11);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1142: error: call to this must be first statement in constructor
+                this(15);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1145: error: call to this must be first statement in constructor
+                this(16);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1148: error: call to this must be first statement in constructor
+                this(17);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1151: error: call to this must be first statement in constructor
+                this(18);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1154: error: call to this must be first statement in constructor
+                this(19);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1157: error: call to this must be first statement in constructor
+                this(20);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1160: error: call to this must be first statement in constructor
+                this(21);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1163: error: call to this must be first statement in constructor
+                this(22);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1166: error: call to this must be first statement in constructor
+                this(25);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1169: error: call to this must be first statement in constructor
+                this(27);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1172: error: call to this must be first statement in constructor
+                this(28);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1175: error: call to this must be first statement in constructor
+                this(29);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:406: error: cannot find symbol
+        return (a.mt0) ((java.util.List) this.e).get(((java.util.List) r0).size() - 1);
+                                                                       ^
+  symbol:   variable r0
+  location: class nk
+/workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:415: error: incompatible types: Object cannot be converted to Entry
+        for (java.util.Map.Entry entry : ((java.util.HashMap) this.e).entrySet()) {
+                                                                              ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:663: error: cannot find symbol
+            ((java.util.List) this.e).set(r0.size() - 1, mt0Var2);
+                                            ^
+  symbol:   method size()
+  location: class r0
+/workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:675: error: cannot find symbol
+            ((java.util.List) this.e).set(r1.size() - 1, mt0Var3);
+                                          ^
+  symbol:   variable r1
+  location: class nk
+/workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:720: error: cannot find symbol
+        ((java.util.List) this.e).remove(r3.size() - 1);
+                                           ^
+  symbol:   method size()
+  location: class r3
+/workspace/hoshino-scene-recovered/app/src/main/java/a/er1.java:10: error: incompatible types: Object cannot be converted to zq1
+        for (a.zq1 zq1Var : this.f132a.values()) {
+                                             ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:352: error: constructor cc1 in class cc1 cannot be applied to given types;
+                XposedBridge.hookAllConstructors(androidx.recyclerview.widget.RecyclerView.class, new a.cc1(0));
+                                                                                                  ^
+  required: no arguments
+  found:    int
+  reason: actual and formal argument lists differ in length
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:354: error: constructor cc1 in class cc1 cannot be applied to given types;
+                XposedHelpers.findAndHookMethod(androidx.recyclerview.widget.RecyclerView.class, "setItemViewCacheSize", new java.lang.Object[]{cls, new a.cc1(1)});
+                                                                                                                                                     ^
+  required: no arguments
+  found:    int
+  reason: actual and formal argument lists differ in length
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:355: error: constructor cc1 in class cc1 cannot be applied to given types;
+                XposedBridge.hookAllConstructors(android.view.Window.class, new a.cc1(2));
+                                                                            ^
+  required: no arguments
+  found:    int
+  reason: actual and formal argument lists differ in length
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:356: error: constructor cc1 in class cc1 cannot be applied to given types;
+                XposedHelpers.findAndHookMethod(android.view.Window.class, "setWindowManager", new java.lang.Object[]{android.view.WindowManager.class, android.os.IBinder.class, java.lang.String.class, java.lang.Boolean.TYPE, new a.cc1(3)});
+                                                                                                                                                                                                                                  ^
+  required: no arguments
+  found:    int
+  reason: actual and formal argument lists differ in length
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:357: error: constructor cc1 in class cc1 cannot be applied to given types;
+                XposedHelpers.findAndHookMethod(android.view.Window.class, "setFlags", new java.lang.Object[]{cls, cls, new a.cc1(4)});
+                                                                                                                        ^
+  required: no arguments
+  found:    int
+  reason: actual and formal argument lists differ in length
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:375: error: call to this must be first statement in constructor
+                this(1);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:378: error: call to this must be first statement in constructor
+                this(2);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:381: error: call to this must be first statement in constructor
+                this(3);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:387: error: call to this must be first statement in constructor
+                this(5);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:390: error: call to this must be first statement in constructor
+                this(6);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:393: error: call to this must be first statement in constructor
+                this(7);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:396: error: call to this must be first statement in constructor
+                this(8);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:399: error: call to this must be first statement in constructor
+                this(9);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:402: error: call to this must be first statement in constructor
+                this(10);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:405: error: call to this must be first statement in constructor
+                this(11);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:408: error: call to this must be first statement in constructor
+                this(12);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:411: error: call to this must be first statement in constructor
+                this(13);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:414: error: call to this must be first statement in constructor
+                this(14);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:417: error: call to this must be first statement in constructor
+                this(15);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:420: error: call to this must be first statement in constructor
+                this(16);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:423: error: call to this must be first statement in constructor
+                this(17);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:426: error: call to this must be first statement in constructor
+                this(18);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:429: error: call to this must be first statement in constructor
+                this(19);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:432: error: call to this must be first statement in constructor
+                this(20);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:435: error: call to this must be first statement in constructor
+                this(21);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:438: error: call to this must be first statement in constructor
+                this(22);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:441: error: call to this must be first statement in constructor
+                this(23);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:444: error: call to this must be first statement in constructor
+                this(24);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:447: error: call to this must be first statement in constructor
+                this(25);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:450: error: call to this must be first statement in constructor
+                this(26);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:453: error: call to this must be first statement in constructor
+                this(27);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:456: error: call to this must be first statement in constructor
+                this(28);
+                    ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/ix.java:66: error: ws1 is abstract; cannot be instantiated
+        a.ip1 ws1Var = new a.ws1(this);
+                       ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/ix.java:70: error: incompatible types: ip1 cannot be converted to nr0
+        this.d = ws1Var;
+                 ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/ix.java:71: error: ws1 is abstract; cannot be instantiated
+        a.ip1 ws1Var2 = new a.ws1(this);
+                        ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:22: error: Enum is abstract; cannot be instantiated
+        a.mt0 r0 = new java.lang.Enum("EMPTY_ARRAY", 0);
+                   ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:24: error: Enum is abstract; cannot be instantiated
+        a.mt0 r1 = new java.lang.Enum("NONEMPTY_ARRAY", 1);
+                   ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:26: error: Enum is abstract; cannot be instantiated
+        a.mt0 r2 = new java.lang.Enum("EMPTY_OBJECT", 2);
+                   ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:28: error: Enum is abstract; cannot be instantiated
+        a.mt0 r3 = new java.lang.Enum("DANGLING_KEY", 3);
+                   ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:30: error: Enum is abstract; cannot be instantiated
+        a.mt0 r4 = new java.lang.Enum("NONEMPTY_OBJECT", 4);
+                   ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:32: error: Enum is abstract; cannot be instantiated
+        a.mt0 r5 = new java.lang.Enum("NULL", 5);
+                   ^
+/workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:38: error: method valueOf in class Enum<E> cannot be applied to given types;
+        return (a.mt0) java.lang.Enum.valueOf(a.mt0.class, str);
+                                     ^
+  required: Class<T>,String
+  found:    Class<mt0>,String
+  reason: inference variable T has incompatible bounds
+    equality constraints: mt0
+    upper bounds: Enum<T>
+  where T,E are type-variables:
+    T extends Enum<T> declared in method <T>valueOf(Class<T>,String)
+    E extends Enum<E> declared in class Enum
+/workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:25: error: cannot find symbol
+        obj.b = true;
+           ^
+  symbol:   variable b
+  location: variable obj of type Object
+/workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:26: error: cannot find symbol
+        obj.c = true;
+           ^
+  symbol:   variable c
+  location: variable obj of type Object
+/workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:27: error: cannot find symbol
+        obj.e = new java.util.ArrayList();
+           ^
+  symbol:   variable e
+  location: variable obj of type Object
+/workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:29: error: cannot find symbol
+        obj.f = null;
+           ^
+  symbol:   variable f
+  location: variable obj of type Object
+/workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:30: error: cannot find symbol
+        obj.g = new java.lang.Object();
+           ^
+  symbol:   variable g
+  location: variable obj of type Object
+/workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:31: error: cannot find symbol
+        obj.h = new java.util.ArrayList();
+           ^
+  symbol:   variable h
+  location: variable obj of type Object
+/workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:32: error: cannot find symbol
+        obj.f245a = this;
+           ^
+  symbol:   variable f245a
+  location: variable obj of type Object
+/workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:33: error: cannot find symbol
+        obj.d = this;
+           ^
+  symbol:   variable d
+  location: variable obj of type Object
+/workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:34: error: incompatible types: Object cannot be converted to j30
+        this.f0 = obj;
+                  ^
+/workspace/hoshino-scene-recovered/app/src/main/java/com/omarea/ui/fps/ThreadCPUView.java:123: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+            a.gu.b(canvas, width, f5, rectF, a.b20.z0(strArr), f2, paint, null, 0, 896);
+                                                      ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+/workspace/hoshino-scene-recovered/app/src/main/java/a/l1.java:96: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+        return new a.yt0(java.util.Arrays.copyOf(strArr2, strArr2.length));
+                                                ^
+  cast to Object for a varargs call
+  cast to Object[] for a non-varargs call and to suppress this warning
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+100 errors
+2 warnings
+
+> Task :app:compileDebugJavaWithJavac FAILED
+
+[Incubating] Problems report is available at: file:///workspace/hoshino-scene-recovered/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler output below.
+  /workspace/hoshino-scene-recovered/app/src/main/java/com/omarea/ui/fps/ThreadCPUView.java:123: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+              a.gu.b(canvas, width, f5, rectF, a.b20.z0(strArr), f2, paint, null, 0, 896);
+                                                        ^
+    cast to Object for a varargs call
+    cast to Object[] for a non-varargs call and to suppress this warning
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/l1.java:96: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+          return new a.yt0(java.util.Arrays.copyOf(strArr2, strArr2.length));
+                                                  ^
+    cast to Object for a varargs call
+    cast to Object[] for a non-varargs call and to suppress this warning
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:352: error: constructor cc1 in class cc1 cannot be applied to given types;
+                  XposedBridge.hookAllConstructors(androidx.recyclerview.widget.RecyclerView.class, new a.cc1(0));
+                                                                                                    ^
+    required: no arguments
+    found:    int
+    reason: actual and formal argument lists differ in length
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:354: error: constructor cc1 in class cc1 cannot be applied to given types;
+                  XposedHelpers.findAndHookMethod(androidx.recyclerview.widget.RecyclerView.class, "setItemViewCacheSize", new java.lang.Object[]{cls, new a.cc1(1)});
+                                                                                                                                                       ^
+    required: no arguments
+    found:    int
+    reason: actual and formal argument lists differ in length
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:355: error: constructor cc1 in class cc1 cannot be applied to given types;
+                  XposedBridge.hookAllConstructors(android.view.Window.class, new a.cc1(2));
+                                                                              ^
+    required: no arguments
+    found:    int
+    reason: actual and formal argument lists differ in length
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:356: error: constructor cc1 in class cc1 cannot be applied to given types;
+                  XposedHelpers.findAndHookMethod(android.view.Window.class, "setWindowManager", new java.lang.Object[]{android.view.WindowManager.class, android.os.IBinder.class, java.lang.String.class, java.lang.Boolean.TYPE, new a.cc1(3)});
+                                                                                                                                                                                                                                    ^
+    required: no arguments
+    found:    int
+    reason: actual and formal argument lists differ in length
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:357: error: constructor cc1 in class cc1 cannot be applied to given types;
+                  XposedHelpers.findAndHookMethod(android.view.Window.class, "setFlags", new java.lang.Object[]{cls, cls, new a.cc1(4)});
+                                                                                                                          ^
+    required: no arguments
+    found:    int
+    reason: actual and formal argument lists differ in length
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:38: error: method valueOf in class Enum<E> cannot be applied to given types;
+          return (a.mt0) java.lang.Enum.valueOf(a.mt0.class, str);
+                                       ^
+    required: Class<T>,String
+    found:    Class<mt0>,String
+    reason: inference variable T has incompatible bounds
+      equality constraints: mt0
+      upper bounds: Enum<T>
+    where T,E are type-variables:
+      T extends Enum<T> declared in method <T>valueOf(Class<T>,String)
+      E extends Enum<E> declared in class Enum
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/ix.java:66: error: ws1 is abstract; cannot be instantiated
+          a.ip1 ws1Var = new a.ws1(this);
+                         ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/ix.java:71: error: ws1 is abstract; cannot be instantiated
+          a.ip1 ws1Var2 = new a.ws1(this);
+                          ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:22: error: Enum is abstract; cannot be instantiated
+          a.mt0 r0 = new java.lang.Enum("EMPTY_ARRAY", 0);
+                     ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:24: error: Enum is abstract; cannot be instantiated
+          a.mt0 r1 = new java.lang.Enum("NONEMPTY_ARRAY", 1);
+                     ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:26: error: Enum is abstract; cannot be instantiated
+          a.mt0 r2 = new java.lang.Enum("EMPTY_OBJECT", 2);
+                     ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:28: error: Enum is abstract; cannot be instantiated
+          a.mt0 r3 = new java.lang.Enum("DANGLING_KEY", 3);
+                     ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:30: error: Enum is abstract; cannot be instantiated
+          a.mt0 r4 = new java.lang.Enum("NONEMPTY_OBJECT", 4);
+                     ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/mt0.java:32: error: Enum is abstract; cannot be instantiated
+          a.mt0 r5 = new java.lang.Enum("NULL", 5);
+                     ^
+  Note: Recompile with -Xlint:deprecation for details.
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1109: error: call to this must be first statement in constructor
+                  this(3);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1121: error: call to this must be first statement in constructor
+                  this(5);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1124: error: call to this must be first statement in constructor
+                  this(6);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1127: error: call to this must be first statement in constructor
+                  this(7);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1130: error: call to this must be first statement in constructor
+                  this(8);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1133: error: call to this must be first statement in constructor
+                  this(9);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1136: error: call to this must be first statement in constructor
+                  this(10);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1139: error: call to this must be first statement in constructor
+                  this(11);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1142: error: call to this must be first statement in constructor
+                  this(15);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1145: error: call to this must be first statement in constructor
+                  this(16);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1148: error: call to this must be first statement in constructor
+                  this(17);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1151: error: call to this must be first statement in constructor
+                  this(18);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1154: error: call to this must be first statement in constructor
+                  this(19);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1157: error: call to this must be first statement in constructor
+                  this(20);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1160: error: call to this must be first statement in constructor
+                  this(21);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1163: error: call to this must be first statement in constructor
+                  this(22);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1166: error: call to this must be first statement in constructor
+                  this(25);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1169: error: call to this must be first statement in constructor
+                  this(27);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1172: error: call to this must be first statement in constructor
+                  this(28);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:1175: error: call to this must be first statement in constructor
+                  this(29);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:375: error: call to this must be first statement in constructor
+                  this(1);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:378: error: call to this must be first statement in constructor
+                  this(2);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:381: error: call to this must be first statement in constructor
+                  this(3);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:387: error: call to this must be first statement in constructor
+                  this(5);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:390: error: call to this must be first statement in constructor
+                  this(6);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:393: error: call to this must be first statement in constructor
+                  this(7);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:396: error: call to this must be first statement in constructor
+                  this(8);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:399: error: call to this must be first statement in constructor
+                  this(9);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:402: error: call to this must be first statement in constructor
+                  this(10);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:405: error: call to this must be first statement in constructor
+                  this(11);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:408: error: call to this must be first statement in constructor
+                  this(12);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:411: error: call to this must be first statement in constructor
+                  this(13);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:414: error: call to this must be first statement in constructor
+                  this(14);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:417: error: call to this must be first statement in constructor
+                  this(15);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:420: error: call to this must be first statement in constructor
+                  this(16);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:423: error: call to this must be first statement in constructor
+                  this(17);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:426: error: call to this must be first statement in constructor
+                  this(18);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:429: error: call to this must be first statement in constructor
+                  this(19);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:432: error: call to this must be first statement in constructor
+                  this(20);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:435: error: call to this must be first statement in constructor
+                  this(21);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:438: error: call to this must be first statement in constructor
+                  this(22);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:441: error: call to this must be first statement in constructor
+                  this(23);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:444: error: call to this must be first statement in constructor
+                  this(24);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:447: error: call to this must be first statement in constructor
+                  this(25);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:450: error: call to this must be first statement in constructor
+                  this(26);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:453: error: call to this must be first statement in constructor
+                  this(27);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fa0.java:456: error: call to this must be first statement in constructor
+                  this(28);
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/x81.java:15: error: incompatible types: Object cannot be converted to Callback
+          for (android.view.KeyEvent.Callback callback : this.f682a) {
+                                                             ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/lt0.java:211: error: incompatible types: Object cannot be converted to Entry
+          for (java.util.Map.Entry entry : map.entrySet()) {
+                                                       ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:275: error: incompatible types: Object cannot be converted to ng1
+              a.ng1 obj = new java.lang.Object();
+                          ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:723: error: incompatible types: Object cannot be converted to y21
+          a.y21 obj = new java.lang.Object();
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:747: error: incompatible types: Object cannot be converted to mc1
+          a.mc1 obj = new java.lang.Object();
+                      ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:415: error: incompatible types: Object cannot be converted to Entry
+          for (java.util.Map.Entry entry : ((java.util.HashMap) this.e).entrySet()) {
+                                                                                ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/er1.java:10: error: incompatible types: Object cannot be converted to zq1
+          for (a.zq1 zq1Var : this.f132a.values()) {
+                                               ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/ix.java:70: error: incompatible types: ip1 cannot be converted to nr0
+          this.d = ws1Var;
+                   ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:34: error: incompatible types: Object cannot be converted to j30
+          this.f0 = obj;
+                    ^
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/kk0.java:4: error: cannot access LifecycleOwner
+  public class kk0 extends androidx.activity.ComponentActivity implements a.k6, a.l6 {
+                                            ^
+    class file for androidx.lifecycle.LifecycleOwner not found
+  /workspace/hoshino-scene-recovered/app/src/main/java/androidx/activity/a.java:3: error: cannot find symbol
+  import a.b31;
+          ^
+    symbol:   class b31
+    location: package a
+  /workspace/hoshino-scene-recovered/app/src/main/java/androidx/activity/a.java:18: error: cannot find symbol
+      public final b31 c;
+                   ^
+    symbol:   class b31
+    location: class a
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/uk.java:6: error: cannot find symbol
+      public final a.lm f;
+                    ^
+    symbol:   class lm
+    location: package a
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/sk.java:11: error: cannot find symbol
+      public androidx.appcompat.app.AlertController$RecycleListView e;
+                                   ^
+    symbol:   class AlertController$RecycleListView
+    location: package androidx.appcompat.app
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:974: error: cannot find symbol
+      public final void U(android.content.Context context, java.lang.String str, java.util.HashMap hashMap, com.omarea.krscript.model.RunnableNode runnableNode, final java.lang.Runnable runnable, final a.r1 r1Var) {
+                                                                                                                                                                                                           ^
+    symbol:   class r1
+    location: package a
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/x01.java:57: error: cannot find symbol
+      public final void a(java.lang.String str, a.a80 a80Var) {
+                                                 ^
+    symbol:   class a80
+    location: package a
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/w81.java:5: error: cannot find symbol
+      public final a.v81 r;
+                    ^
+    symbol:   class v81
+    location: package a
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/t5.java:12: error: cannot find symbol
+      public t5(a.r5 r5Var, android.content.SharedPreferences sharedPreferences, android.widget.TextView textView, int i) {
+                 ^
+    symbol:   class r5
+    location: package a
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/j10.java:14: error: cannot find symbol
+      public /* synthetic */ j10(a.x81 x81Var, androidx.recyclerview.widget.RecyclerView recyclerView, a.ha1 ha1Var, a.n60 n60Var, java.lang.String[] strArr, a.n40 n40Var, int i) {
+                                                                                                                                                               ^
+    symbol:   class n40
+    location: package a
+  /workspace/hoshino-scene-recovered/app/src/main/java/com/omarea/common/ui/ProgressCircle.java:108: error: cannot find symbol
+              this.d = (int) ((i2 * 0.9d) - r0);
+                                            ^
+    symbol:   variable r0
+    location: class ProgressCircle
+  /workspace/hoshino-scene-recovered/app/src/main/java/com/omarea/common/ui/ProgressCircle.java:110: error: cannot find symbol
+              this.d = (int) ((i * 0.9d) - r0);
+                                           ^
+    symbol:   variable r0
+    location: class ProgressCircle
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/lt0.java:193: error: cannot find symbol
+              ((java.util.List) nkVar.e).set(r5.size() - 1, mt0Var3);
+                                             ^
+    symbol:   variable r5
+    location: class lt0
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/fs1.java:418: error: cannot find symbol
+          if (tabLayout.G || !(view instanceof a.ik1)) {
+                       ^
+    symbol:   variable G
+    location: variable tabLayout of type TabLayout
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:406: error: cannot find symbol
+          return (a.mt0) ((java.util.List) this.e).get(((java.util.List) r0).size() - 1);
+                                                                         ^
+    symbol:   variable r0
+    location: class nk
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:675: error: cannot find symbol
+              ((java.util.List) this.e).set(r1.size() - 1, mt0Var3);
+                                            ^
+    symbol:   variable r1
+    location: class nk
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:25: error: cannot find symbol
+          obj.b = true;
+             ^
+    symbol:   variable b
+    location: variable obj of type Object
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:26: error: cannot find symbol
+          obj.c = true;
+             ^
+    symbol:   variable c
+    location: variable obj of type Object
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:27: error: cannot find symbol
+          obj.e = new java.util.ArrayList();
+             ^
+    symbol:   variable e
+    location: variable obj of type Object
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:29: error: cannot find symbol
+          obj.f = null;
+             ^
+    symbol:   variable f
+    location: variable obj of type Object
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:30: error: cannot find symbol
+          obj.g = new java.lang.Object();
+             ^
+    symbol:   variable g
+    location: variable obj of type Object
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:31: error: cannot find symbol
+          obj.h = new java.util.ArrayList();
+             ^
+    symbol:   variable h
+    location: variable obj of type Object
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:32: error: cannot find symbol
+          obj.f245a = this;
+             ^
+    symbol:   variable f245a
+    location: variable obj of type Object
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/jx.java:33: error: cannot find symbol
+          obj.d = this;
+             ^
+    symbol:   variable d
+    location: variable obj of type Object
+  Note: Recompile with -Xlint:unchecked for details.
+  Note: Some input files use or override a deprecated API.
+  Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+  Note: Some input files use unchecked or unsafe operations.
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/sw0.java:33: error: cannot find symbol
+                  ((androidx.viewpager.widget.ViewPager) obj).e();
+                                                             ^
+    symbol:   method e()
+    location: class ViewPager
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/sw0.java:36: error: cannot find symbol
+                  ((com.google.android.material.tabs.TabLayout) obj).g();
+                                                                    ^
+    symbol:   method g()
+    location: class TabLayout
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/sw0.java:59: error: cannot find symbol
+                  ((androidx.viewpager.widget.ViewPager) obj).e();
+                                                             ^
+    symbol:   method e()
+    location: class ViewPager
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/sw0.java:62: error: cannot find symbol
+                  ((com.google.android.material.tabs.TabLayout) obj).g();
+                                                                    ^
+    symbol:   method g()
+    location: class TabLayout
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:663: error: cannot find symbol
+              ((java.util.List) this.e).set(r0.size() - 1, mt0Var2);
+                                              ^
+    symbol:   method size()
+    location: class r0
+  /workspace/hoshino-scene-recovered/app/src/main/java/a/nk.java:720: error: cannot find symbol
+          ((java.util.List) this.e).remove(r3.size() - 1);
+                                             ^
+    symbol:   method size()
+    location: class r3
+  100 errors
+  2 warnings
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.0/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 14s
+17 actionable tasks: 1 executed, 16 up-to-date

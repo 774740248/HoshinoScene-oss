@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@id/fw_action"
+        android:background="@drawable/fw_fps_watch_bg"
+        android:layout_width="42.0dip"
+        android:layout_height="27.0dip">
+        <TextView
+            android:textSize="14.0dip"
+            android:textColor="#ffe3e3e3"
+            android:layout_gravity="center"
+            android:id="@id/fw_fps"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="FPS"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="center" />
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/fw_fps_duration"
+        android:background="@drawable/shape_corner"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:layout_below="@id/fw_action"
+        android:paddingVertical="4.0dip">
+        <TextView
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fps_duration"
+            android:paddingHorizontal="6.0dip"
+            style="@style/textXSmall" />
+        <View
+            android:background="#88cccccc"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_marginHorizontal="6.0dip"
+            android:layout_marginVertical="4.0dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="4.0dip">
+            <TextView
+                android:textColor="@android:color/white"
+                android:id="@id/duration_5m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:alpha="0.3"
+                android:layout_marginStart="2.0dip"
+                android:paddingHorizontal="4.0dip"
+                style="@style/textTitle" />
+            <TextView
+                android:textColor="@android:color/white"
+                android:id="@id/duration_10m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:alpha="0.3"
+                android:layout_marginStart="2.0dip"
+                android:paddingHorizontal="2.0dip"
+                style="@style/textTitle" />
+            <TextView
+                android:textColor="@android:color/white"
+                android:id="@id/duration_15m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:alpha="0.3"
+                android:layout_marginStart="2.0dip"
+                android:paddingHorizontal="2.0dip"
+                style="@style/textTitle" />
+            <TextView
+                android:textColor="@android:color/white"
+                android:id="@id/duration_30m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30"
+                android:alpha="0.3"
+                android:layout_marginStart="2.0dip"
+                android:paddingHorizontal="2.0dip"
+                style="@style/textTitle" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

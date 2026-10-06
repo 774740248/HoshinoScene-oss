@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.omarea.vtools"
+    platformBuildVersionCode="36"
+    platformBuildVersionName="16"
+    android:installLocation="internalOnly"
+    android:compileSdkVersion="36"
+    android:compileSdkVersionCodename="16"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <!-- 此应用可显示在其他应用上方或屏幕的其他部分。这可能会妨碍您正常地使用应用，且其他应用的显示方式可能会受到影响。 -->
+    <uses-permission
+        android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 允许应用在系统完成引导后立即自动启动。这样可能会延长手机的启动时间，并允许应用始终运行，从而导致手机总体运行速度减慢。 -->
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 允许应用查看所有已安装的软件包。 -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <!-- 允许该应用创建网络套接字和使用自定义网络协议。浏览器和其他某些应用提供了向互联网发送数据的途径，因此应用无需该权限即可向互联网发送数据。 -->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <!-- 允许该应用查看网络连接的相关信息，例如存在和连接的网络。 -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许该应用读取您共享存储空间中的内容。 -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许该应用写入您共享存储空间中的内容。 -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 反编译产物残留乱码权限 android.permiactivty_module_detailssion.WRITE_EXTERNAL_STORAGE 已删除（非法权限名） -->
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <!-- 允许该应用使用前台服务。 -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- 允许该应用使用“specialUse”类型的前台服务 -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- 允许该应用显示通知 -->
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- 允许应用请求相应的权限，以便忽略针对该应用的电池优化。 -->
+    <uses-permission
+        android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- 此应用可在后台运行，这样可能会加快耗电速度。 -->
+    <uses-permission
+        android:name="android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND" />
+    <!-- 允许应用阻止手机进入休眠状态。 -->
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许应用控制振动器。 -->
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <!-- 允许应用修改系统的设置数据。恶意应用可能会破坏您的系统配置。 -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission
+        android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+    <uses-permission
+        android:name="android.permission.GET_APP_OPS_STATS" />
+    <uses-permission
+        android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <!-- 允许应用自行添加主屏幕快捷方式。 -->
+    <uses-permission
+        android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!-- 允许应用自行删除主屏幕快捷方式。 -->
+    <uses-permission
+        android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <!-- 允许应用请求安装文件包。 -->
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <permission
+        android:name="com.omarea.vtools.permission.EDITOR_FILE_SERVICE"
+        android:protectionLevel="signature" />
+    <permission
+        android:name="com.omarea.vtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+    <uses-permission
+        android:name="com.omarea.vtools.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <application
+        android:theme="@style/AppTheme"
+        android:label="星野Scene"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.omarea.Scene"
+        android:persistent="false"
+        android:grantUriPermissions="true"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:usesCleartextTraffic="true"
+        android:defaultToDeviceProtectedStorage="false"
+        android:directBootAware="false"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true"
+        android:enableOnBackInvokedCallback="true">
+        <receiver
+            android:name="com.omarea.vtools.SceneAppWidgetProvider"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_info" />
+        </receiver>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.omarea.vtools.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="com.omarea.vtools.SceneUnfreezeProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:authorities="com.omarea.vtools.SceneUnfreezeProvider" />
+        <provider
+            android:name="com.omarea.vtools.SceneFreezeProvider"
+            android:enabled="true"
+            android:exported="true"
+            android:authorities="com.omarea.vtools.SceneFreezeProvider" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityPowerModeTile"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityAppXposedDetails"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.omarea.vtools.services.KeepAliveService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Keep Scene process alive for background features" />
+        </service>
+        <receiver
+            android:name="com.omarea.scene_mode.ReceiverSceneMode"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.omarea.scene_mode.ReceiverSceneMode" />
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Scene auto unfreeze for launcher" />
+        <meta-data
+            android:name="xposedscope"
+            android:resource="@array/config_xposed_scope" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.8" />
+        <meta-data
+            android:name="free_version"
+            android:value="false" />
+        <activity
+            android:label="@string/app_name"
+            android:name="com.omarea.vtools.activities.ActivityStartSplash"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="星野Scene"
+            android:name="com.omarea.vtools.activities.ActivityMain"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:launchMode="singleTop"
+            android:configChanges="density|fontScale|screenSize"
+            android:autoRemoveFromRecents="false">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+                <category
+                    android:name="de.robv.android.xposed.category.MODULE_SETTINGS" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/menu_other"
+            android:name="com.omarea.vtools.activities.ActivityOtherSettings"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:label="@string/menu_uninstalled"
+            android:name="com.omarea.vtools.activities.ActivityAppRetrieve"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity
+            android:label="@string/title_activity_online"
+            android:name="com.omarea.vtools.activities.ActivityAddinOnline"
+            android:finishOnTaskLaunch="false"
+            android:excludeFromRecents="true"
+            android:launchMode="standard"
+            android:configChanges="keyboardHidden|orientation|uiMode" />
+        <activity
+            android:label="@string/menu_app_scene"
+            android:name="com.omarea.vtools.activities.ActivityAppDetails"
+            android:exported="true"
+            android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_file_selector"
+            android:name="com.omarea.vtools.activities.ActivityFileSelector"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="standard"
+            android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppThemeTransparent"
+            android:label="@string/title_activity_shortcut"
+            android:name="com.omarea.vtools.activities.ActivityQuickStart"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/title_activity_freeze"
+            android:icon="@drawable/freeze_logo"
+            android:name="com.omarea.vtools.activities.ActivityFreezeApps"
+            android:enabled="false"
+            android:exported="true"
+            android:multiprocess="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:noHistory="true"
+            android:roundIcon="@drawable/freeze_logo">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:name="com.omarea.vtools.activities.ActivityFreezeApps2"
+            android:enabled="true"
+            android:excludeFromRecents="false"
+            android:launchMode="singleTop"
+            android:targetActivity="com.omarea.vtools.activities.ActivityFreezeApps"
+            android:noHistory="false" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityActionPage"
+            android:exported="true"
+            android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.omarea.vtools.activities.ActionPageOnline"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityAddin"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityApplications"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityAppContents"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityAppActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityAppActivities"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityAppComponents"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivitySwap"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityImg"
+            android:configChanges="colorMode|density|fontScale|keyboard|keyboardHidden|layoutDirection|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityChargeControl"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityChargeStat"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityPowerStat"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityProcess"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityModules"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityModuleUpload"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityModuleDetail"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityMagisk"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityCpuControl"
+            android:exported="true"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityPerfOptions"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityAppConfig2"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityAppXposedConfig"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityCommandList"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityCustomCommand"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityAutoClick"
+            android:exported="true"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityMiuiThermal"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityOplusORMS"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityMiuiCloudProfile"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityEditor"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityPerfBench"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityPowerBench"
+            android:screenOrientation="userLandscape"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityFpsSessions"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityThreadsStat"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityFpsSession"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityScreenTest"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityFiles"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityFilesTreemap"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityFastShare"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.omarea.vtools.activities.ActivityMonitorDesigner"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustResize" />
+        <receiver
+            android:name="com.omarea.vtools.ReceiverBoot"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+                <action
+                    android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <category
+                    android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.omarea.scene_mode.ReceiverShortcut"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <!-- 反编译产物残留非法 action（"\\@string/"）已删除；原义应为快捷方式创建广播 -->
+                <action
+                    android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
+                <category
+                    android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:label="@string/accessibility_service_name"
+            android:name="com.omarea.vtools.AccessibilitySceneMode"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true"
+            android:configChanges="density|fontScale|orientation|screenLayout|screenSize|smallestScreenSize">
+            <intent-filter>
+                <action
+                    android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/phone_accessibility" />
+        </service>
+        <service
+            android:label="@string/notification_filter"
+            android:name="com.omarea.scene_mode.NotificationListenerService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.omarea.vtools.services.BootService"
+            android:permission=""
+            android:enabled="true" />
+        <service
+            android:name="com.omarea.vtools.services.CompileService"
+            android:permission=""
+            android:enabled="true" />
+        <service
+            android:name="com.omarea.vtools.services.EditorFileService"
+            android:permission="com.omarea.vtools.permission.EDITOR_FILE_SERVICE"
+            android:exported="true" />
+        <service
+            android:label="@string/app_name"
+            android:icon="@drawable/p4"
+            android:name="com.omarea.scene_mode.SceneTileService"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.omarea.vtools.androidx-startup">
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

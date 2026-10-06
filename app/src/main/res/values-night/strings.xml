@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="editor_auto_clear">自动优化</string>
+    <string name="editor_export">导出</string>
+    <string name="editor_import_content">导入配置</string>
+    <string name="editor_mt">使用MT编辑</string>
+    <string name="editor_reset">重置配置</string>
+    <string name="editor_save">保存修改</string>
+    <string name="editor_unchanged">未发生修改</string>
+</resources>

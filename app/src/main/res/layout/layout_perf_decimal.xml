@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/activity_vertical_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/ItemTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6.0dip"
+        style="@style/textTitle" />
+    <EditText
+        android:id="@id/ItemEditText"
+        android:background="@drawable/in_card_item_inactive"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="16"
+        android:layout_below="@id/ItemTitle"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionDone"
+        style="@style/SceneInput" />
+    <TextView
+        android:id="@id/ItemDesc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:layout_below="@id/ItemEditText"
+        android:textIsSelectable="true"
+        style="@style/textSmall" />
+</RelativeLayout>

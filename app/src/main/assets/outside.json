@@ -1,0 +1,10 @@
+{
+  "version": "9.0 Outside",
+  "versionCode": 9000,
+  "author": "Unofficial",
+  "projectUrl": "http://vtools.omarea.com/",
+  "features": {
+    "strict": true,
+    "pedestal": false
+  }
+}

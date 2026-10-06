@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="6.0dip"
+    android:paddingVertical="12.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/ItemIcon"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:maxWidth="40.0dip"
+        android:maxHeight="40.0dip"
+        android:minWidth="40.0dip"
+        android:minHeight="40.0dip"
+        android:layout_marginStart="12.0dip" />
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@id/center"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginStart="8.0dip">
+        <TextView
+            android:id="@id/ItemTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            style="@style/textTitle" />
+        <TextView
+            android:id="@id/ItemText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            style="@style/textSmall" />
+        <TextView
+            android:textColor="?android:colorAccent"
+            android:id="@id/ItemEnabledStateText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxWidth="100.0dip"
+            style="@style/textSmall" />
+        <TextView
+            android:textSize="10.0dip"
+            android:id="@id/ItemPath"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/textSmall" />
+    </LinearLayout>
+    <CheckBox
+        android:layout_gravity="center_vertical"
+        android:id="@id/select_state"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="12.0dip" />
+</LinearLayout>

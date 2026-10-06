@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="8.0dip"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.85">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/schedule_source_scene"
+                style="@style/textSmall" />
+            <ImageButton
+                android:id="@id/help"
+                style="@style/help_icon" />
+        </LinearLayout>
+        <com.omarea.ui.OptionItemView
+            android:id="@id/source_official_hp"
+            app:desc="@string/schedule_hp_desc"
+            app:iconColor="@color/color_balance"
+            app:iconSrc="@drawable/source_balance"
+            app:title="@string/schedule_hp"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/source_official_ep"
+            app:desc="@string/schedule_ep_desc"
+            app:iconColor="@color/color_fast"
+            app:iconSrc="@drawable/source_perf"
+            app:title="@string/schedule_ep"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/source_official_lp"
+            app:desc="@string/schedule_fas_desc"
+            app:iconColor="@color/color_powersave"
+            app:iconSrc="@drawable/source_lab"
+            app:title="@string/schedule_fas"
+            style="@style/ListCardItemSmall" />
+        <TextView
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="@string/schedule_source_hot"
+            style="@style/textSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/source_fas_rs"
+            app:desc="@string/schedule_fas_rs_desc"
+            app:iconColor="@color/pinkDark"
+            app:iconSrc="@drawable/source_fas_rs"
+            app:title="@string/schedule_fas_rs"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/source_download3"
+            app:desc="@string/schedule_uperf_gt_desc"
+            app:iconColor="@color/color_pedestal"
+            app:iconSrc="@drawable/source_ugt"
+            app:title="@string/schedule_uperf_gt"
+            style="@style/ListCardItemSmall" />
+        <TextView
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="@string/schedule_source_others"
+            style="@style/textSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/source_download"
+            app:desc="@string/schedule_uperf_desc"
+            app:iconSrc="@drawable/source_uperf"
+            app:title="@string/schedule_uperf"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/source_custom"
+            app:desc="@string/schedule_custom_desc"
+            app:iconSrc="@drawable/source_custom"
+            app:title="@string/schedule_custom"
+            style="@style/ListCardItemSmall" />
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

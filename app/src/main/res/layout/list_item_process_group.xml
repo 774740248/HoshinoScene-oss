@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="?android:selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="8.0dip"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingVertical="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/ProcessExpand"
+        android:padding="2.0dip"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="22.0dip"
+        android:layout_height="22.0dip"
+        android:src="@drawable/ic_select_arrow"
+        android:tint="?android:textColorSecondary"
+        android:layout_centerVertical="true"
+        android:importantForAccessibility="no"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:id="@id/ProcessIcon"
+        android:layout_width="32.0dip"
+        android:layout_height="32.0dip"
+        android:src="@drawable/app_user"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="2.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_toEndOf="@id/ProcessExpand" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/ProcessIcon">
+        <TextView
+            android:id="@id/ProcessFriendlyName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/textSmallTitle" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip">
+            <TextView
+                android:id="@id/ProcessName"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:alpha="0.7"
+                style="@style/textSmall" />
+            <TextView
+                android:id="@id/ProcessRES"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                style="@style/textSmall" />
+            <TextView
+                android:id="@id/ProcessCPU"
+                android:layout_width="50.0dip"
+                android:layout_height="wrap_content"
+                style="@style/textSmall" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

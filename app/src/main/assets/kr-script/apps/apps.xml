@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<items>
+    <resource dir="file:///android_asset/kr-script/apps" />
+
+    <group>
+        <switch id="google_service"
+            shell="hidden"
+            visible=". ./kr-script/common/gapps_support.sh">
+            <title>@string:kr_apps_google_service</title>
+            <desc>@string:kr_apps_google_service_desc</desc>
+            <get>run gapps_get.sh</get>
+            <set>run gapps_set.sh</set>
+        </switch>
+        <page auto-off="true" id="google_settings"
+            activity="com.google.android.gms/.app.settings.GoogleSettingsLink"
+            visible=". ./kr-script/common/gapps_support.sh">
+            <title>@string:kr_apps_google_settings</title>
+            <desc>@string:kr_apps_google_settings_desc</desc>
+        </page>
+        <switch auto-off="true" id="google_hal_eis" shell="hidden">
+            <title>Camera2 HAL、EIS</title>
+            <desc>@string:kr_apps_camera2_desc</desc>
+            <summary>@string:kr_apps_camera2_summary</summary>
+            <get>run gcm_get.sh</get>
+            <set>run gcm_set.sh</set>
+        </switch>
+        <page link="https://play.google.com/store/account/subscriptions">
+            <title>@string:kr_apps_google_subscribe</title>
+            <desc>@string:kr_apps_google_subscribe_desc</desc>
+        </page>
+        <page activity="com.google.android.gms/com.google.android.gms.auth.account.otp.OtpActivity">
+            <title>@string:kr_apps_google_otp</title>
+            <desc>@string:kr_apps_google_otp_desc</desc>
+        </page>
+    </group>
+
+    <group>
+        <picker title="@string:kr_apps_install_location" auto-off="true" summary-sh="run install-location-summary.sh">
+            <option value="0">@string:kr_apps_install_location_auto</option>
+            <option value="1">@string:kr_apps_install_internal_storage</option>
+            <option value="2">@string:kr_apps_install_external_storage</option>
+            <get>pm get-install-location | cut -f1 -d '['</get>
+            <set>
+                pm set-install-location $state
+                echo '@string:kr_apps_install_location_wran'
+            </set>
+        </picker>
+        <picker auto-off="true"
+            visible=". ./kr-script/common/android_p.sh"
+            summary-sh="run launcher/get.sh"
+            options-sh="run launcher/options.sh">
+            <title>@string:kr_apps_launcher</title>
+            <get>run launcher/get.sh</get>
+            <set>run launcher/set.sh</set>
+        </picker>
+        <page title="@string:kr_apps_live_wallpaper" id="livepicker"
+            activity="com.android.wallpaper.livepicker/com.android.wallpaper.livepicker.LiveWallpaperActivity" />
+        <page
+            title="@string:kr_apps_default_app"
+            activity="com.android.permissioncontroller/com.android.packageinstaller.role.ui.DefaultAppListActivity"
+            visible="pm query-activities --brief -n com.android.permissioncontroller/com.android.packageinstaller.role.ui.DefaultAppListActivity | grep '/' > /dev/null &amp;&amp; echo 1" />
+    </group>
+</items>

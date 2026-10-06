@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <com.omarea.common.ui.OverScrollView
+        android:id="@id/root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.omarea.ui.BlurViewLinearLayout
+                android:id="@id/cpu_apply_boot"
+                android:layout_marginTop="0.0dip"
+                style="@style/ListCardItem">
+                <Switch
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@id/cpu_apply_onboot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perf_auto_start"
+                    android:switchPadding="4.0dip" />
+                <TextView
+                    android:textSize="13.0dip"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@id/cpu_apply_onboot_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="@string/perf_auto_start_desc" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurView
+                style="@style/ListCardItem">
+                <GridLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_gravity="fill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10.0dip"
+                        android:text="Cpuset"
+                        android:layout_row="0"
+                        android:layout_columnSpan="2"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="fill"
+                        android:layout_column="0"
+                        android:text="@string/perf_cpuset_background"
+                        android:layout_row="1" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:id="@id/cpuset_bg"
+                        android:padding="5.0dip"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text=""
+                        android:layout_row="1"
+                        android:textAlignment="textEnd" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="fill"
+                        android:layout_column="0"
+                        android:text="@string/perf_cpuset_sys_background"
+                        android:layout_row="2" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:id="@id/cpuset_system_bg"
+                        android:padding="5.0dip"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text=""
+                        android:layout_row="2"
+                        android:textAlignment="textEnd" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="fill"
+                        android:layout_column="0"
+                        android:text="@string/perf_cpuset_foreground"
+                        android:layout_row="3" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:id="@id/cpuset_foreground"
+                        android:padding="5.0dip"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text=""
+                        android:layout_row="3"
+                        android:textAlignment="textEnd" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="fill"
+                        android:layout_column="0"
+                        android:text="@string/perf_cpuset_top"
+                        android:layout_row="4" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:id="@id/cpuset_top_app"
+                        android:padding="5.0dip"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text=""
+                        android:layout_row="4"
+                        android:textAlignment="textEnd" />
+                </GridLayout>
+            </com.omarea.ui.BlurView>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/cpu_cluster_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <com.omarea.ui.BlurViewLinearLayout
+                style="@style/ListCardItem">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip"
+                    android:text="Core Online"
+                    style="@style/textTitle" />
+                <GridLayout
+                    android:id="@id/cpu_cores"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurView
+                android:id="@id/gpu_params"
+                style="@style/ListCardItem">
+                <GridLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_gravity="fill"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_row="0"
+                        android:layout_columnSpan="2">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GPU"
+                            style="@style/textTitle" />
+                    </LinearLayout>
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="fill"
+                        android:layout_column="0"
+                        android:text="@string/perf_min_freq"
+                        android:layout_row="1" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:id="@id/gpu_min_freq"
+                        android:padding="5.0dip"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Min  Freq"
+                        android:layout_row="1"
+                        android:textAlignment="textEnd" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="fill"
+                        android:layout_column="0"
+                        android:text="@string/perf_max_freq"
+                        android:layout_row="2" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:id="@id/gpu_max_freq"
+                        android:padding="5.0dip"
+                        android:layout_width="150.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Max Freq"
+                        android:layout_row="2"
+                        android:textAlignment="textEnd" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="fill"
+                        android:visibility="gone"
+                        android:layout_column="0"
+                        android:text="@string/perf_governor"
+                        android:layout_row="3" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:id="@id/gpu_governor"
+                        android:padding="5.0dip"
+                        android:visibility="gone"
+                        android:layout_width="150.0dip"
+                        android:layout_column="1"
+                        android:text="Governor"
+                        android:layout_row="3"
+                        android:textAlignment="textEnd" />
+                </GridLayout>
+            </com.omarea.ui.BlurView>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="vertical"
+                android:id="@id/nav_more"
+                android:background="@drawable/in_card_item"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin">
+                <TextView
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/look_other"
+                    style="@style/textDefault" />
+                <GridLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip">
+                    <TextView
+                        android:textColor="@color/colorAccent"
+                        android:id="@id/cpu_cpuctl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CPUCTL"
+                        android:layout_marginEnd="20.0dip"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:textColor="@color/colorAccent"
+                        android:id="@id/cpu_stune"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STUNE"
+                        android:layout_marginEnd="20.0dip"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:textColor="@color/colorAccent"
+                        android:id="@id/cpu_sched"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SCHED"
+                        android:layout_marginEnd="20.0dip"
+                        style="@style/textTitle" />
+                </GridLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+        </LinearLayout>
+    </com.omarea.common.ui.OverScrollView>
+</RelativeLayout>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="appops_filter">
+        <item>All</item>
+        <item>Allow</item>
+        <item>Foreground</item>
+        <item>Ignore</item>
+        <item>Deny</item>
+    </string-array>
+    <string-array name="apps_filter">
+        <item>All</item>
+        <item>Disabled</item>
+        <item>Updated</item>
+        <item>Enabled</item>
+    </string-array>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <string-array name="com_google_android_gms_fonts_certs_dev">
+        <item>MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=</item>
+    </string-array>
+    <string-array name="com_google_android_gms_fonts_certs_prod">
+        <item>MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK</item>
+    </string-array>
+    <string-array name="config_contents_filter">
+        <item>Activity</item>
+        <item>Service</item>
+        <item>Receiver</item>
+        <item>ContentProvider</item>
+    </string-array>
+    <string-array name="config_device_templates">
+        <item>vivo x100 Pro</item>
+        <item>Xiaomi 14</item>
+        <item>OnePlus 12</item>
+    </string-array>
+    <string-array name="config_device_templates_data">
+        <item>V2324A@vivo@vivo@PD2324@PD2324</item>
+        <item>23127PN0CC@Xiaomi@Xiaomi@houji@houji</item>
+        <item>PJD110@OnePlus@OnePlus@PJD110@OP5929L1</item>
+    </string-array>
+    <string-array name="config_fas_whitelist">
+        <item>com.tencent.tmgp.speedmobile</item>
+        <item>com.tencent.tmgp.sgame</item>
+        <item>com.tencent.tmgp.sgamece</item>
+        <item>com.tencent.tmgp.pubgmhd</item>
+        <item>com.tencent.tmgp.pubgmhdce</item>
+        <item>com.tencent.ig</item>
+        <item>com.tencent.lolm</item>
+        <item>com.netease.moba.aligames</item>
+        <item>com.pubg.newstate</item>
+    </string-array>
+    <string-array name="config_frozen_apps">
+        <item>bin.mt.plus</item>
+        <item>com.dna.tools</item>
+        <item>com.dundastech.sqlitemasterlight</item>
+        <item>com.projectkr.shell</item>
+        <item>com.rarlab.rar</item>
+        <item>com.speedsoftware.rootexplorer</item>
+        <item>com.termux</item>
+        <item>com.wn.app.np</item>
+        <item>com.x7890.shortcutcreator</item>
+        <item>ioncannon.com.andspecmod</item>
+        <item>ioncannon.com.anspec17</item>
+        <item>jp.pxv.android</item>
+        <item>kr.clpeak</item>
+        <item>org.telegram.messenger</item>
+        <item>org.thunderdog.challegram</item>
+        <item>xzr.hkf</item>
+        <item>xzr.konabess</item>
+        <item>org.swiftapps.swiftbackup</item>
+        <item>com.futuremark.dmandroid.application</item>
+        <item>com.ijsoft.socl</item>
+        <item>com.ioncannon.cpuburn.gpugflops</item>
+        <item>com.ioncannon.memlatency</item>
+        <item>com.primatelabs.banff</item>
+        <item>com.reveny.nativecheck</item>
+        <item>com.superpaninbros.glng</item>
+        <item>com.absinthe.libchecker</item>
+        <item>com.wandoujia.phoenix2</item>
+        <item>ceui.lisa.pixiv</item>
+        <item>com.v2ray.ang</item>
+        <item>com.android.vending</item>
+    </string-array>
+    <string-array name="config_games_blacklist">
+        <item>com.tencent.mobileqq</item>
+        <item>com.miui.securitycenter</item>
+        <item>com.miui.securityadd</item>
+        <item>tv.danmaku.bilibilihd</item>
+        <item>com.qiyi.video.pad</item>
+        <item>com.mihoyo.hyperion</item>
+        <item>com.handsgo.jiakao.android</item>
+        <item>com.heytap.speechassist</item>
+        <item>com.miHoYo.cloudgames.ys</item>
+        <item>com.android.launcher</item>
+        <item>com.youdao.note</item>
+        <item>com.sf.activity</item>
+        <item>com.qiyi.video</item>
+        <item>com.slanissue.apps.mobile.erge</item>
+        <item>com.miui.hybrid</item>
+        <item>com.nearme.gamecenter</item>
+    </string-array>
+    <string-array name="config_powercfg_balance">
+        <item>standby</item>
+    </string-array>
+    <string-array name="config_powercfg_fast">
+        <item>com.android.packageinstaller</item>
+        <item>com.miui.packageinstaller</item>
+        <item>com.google.android.packageinstaller</item>
+        <item>com.miui.backup</item>
+        <item>com.meizu.datamigration</item>
+        <item>com.miui.huanji</item>
+        <item>com.tencent.mm:toolsmp</item>
+        <item>com.tencent.mm:appbrand</item>
+        <item>com.tencent.mm.plugin.appbrand.ui.AppBrandLauncherUI</item>
+        <item>com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI</item>
+        <item>com.samsung.agc.gcam84</item>
+        <item>com.mediatek.expert.mtkcamhelper</item>
+        <item>org.codeaurora.snapcam</item>
+        <item>com.termux</item>
+        <item>org.swiftapps.swiftbackup</item>
+        <item>com.tencent.mm.plugin.scanner.ui.BaseScanUI</item>
+        <item>com.tencent.mobileqq.olympic.activity.ScanTorchActivity</item>
+        <item>com.tencent.mobileqq.olympic.activity.ScanTorchActivity</item>
+        <item>com.alipay.mobile.scan.as.main.MainCaptureActivity</item>
+        <item>com.jd.lib.scan.lib.zxing.client.android.CaptureActivity</item>
+        <item>com.jd.lib.scan.lib.zxing.client.android.NewCaptureActivity</item>
+        <item>com.etao.feimagesearch.capture.CaptureActivity</item>
+        <item>com.tencent.wework.login.controller.LoginScannerActivity</item>
+        <item>kt.com.fcbox.hiveconsumer.app.business.scan.ScanActivity</item>
+        <item>com.coloros.backuprestore</item>
+        <item>com.oplus.ota</item>
+        <item>com.motorola.ccc.ota</item>
+    </string-array>
+    <string-array name="config_powercfg_force_igoned">
+        <item>android</item>
+        <item>com.android.systemui</item>
+        <item>com.miui.freeform</item>
+        <item>com.omarea.vtools</item>
+        <item>com.omarea.scene</item>
+        <item>com.miui.touchassistant</item>
+        <item>com.miui.contentextension</item>
+        <item>com.miui.systemAdSolution</item>
+        <item>com.miui.securitycenter</item>
+        <item>com.android.permissioncontroller</item>
+        <item>com.lbe.security.miui</item>
+        <item>com.miui.aod</item>
+        <item>com.omarea.gesture</item>
+        <item>com.coloros.smartsidebar</item>
+        <item>com.oplus.pscanvas</item>
+        <item>com.oplus.screenshot</item>
+        <item>com.android.settings.screenshot</item>
+    </string-array>
+    <string-array name="config_powercfg_igoned">
+        <item>com.zbar.lib</item>
+        <item>eu.chainfire.supersu</item>
+        <item>dev.nick.app.screencast</item>
+        <item>eu.chainfire.perfmon</item>
+        <item>com.c4x.roundcorner</item>
+        <item>com.tencent.gamehelper.smoba</item>
+        <item>com.waterdaaan.cpufloat</item>
+        <item>com.miui.contentextension</item>
+        <item>com.sec.app.screenrecorder</item>
+        <item>com.cyngn.screencast</item>
+        <item>com.bst.airmessage</item>
+        <item>com.gamebench.metricscollector</item>
+        <item>com.samsung.android.game.gametools</item>
+        <item>com.samsung.android.app.cocktailbarservice</item>
+        <item>com.samsung.android.app.assistantmenu</item>
+        <item>com.samsung.android.app.aodservice</item>
+        <item>com.samsung.android.MtpApplication</item>
+        <item>com.android.vpndialogs</item>
+        <item>com.android.documentsui</item>
+        <item>com.android.wallpapercropper</item>
+        <item>com.mfashiongallery.emag</item>
+        <item>com.topjohnwu.magisk</item>
+        <item>com.miui.notification</item>
+        <item>com.xiaomi.gamecenter.sdk.service</item>
+        <item>com.coloros.smartsidebar</item>
+    </string-array>
+    <string-array name="config_powercfg_performance">
+        <item>com.tencent.tmgp.speedmobile</item>
+        <item>com.tencent.tmgp.pubgm</item>
+        <item>com.tencent.tmgp.pubgmhd</item>
+        <item>com.rarlab.rar</item>
+        <item>com.stupeflix.replay</item>
+        <item>com.niksoftware.snapseed</item>
+        <item>com.goseet.vidtrim</item>
+        <item>com.netease.hyxd</item>
+        <item>com.pinguo.edit.sdk</item>
+        <item>com.ak.mi</item>
+        <item>com.tencent.cldts</item>
+        <item>com.mihoyo.bh3</item>
+        <item>com.mihoyo.bh3.mi</item>
+        <item>com.mihoyo.bh3.uc</item>
+        <item>com.miHoYo.bh3.wdj</item>
+        <item>com.netease.dwrg</item>
+        <item>com.netease.mrzh</item>
+        <item>com.netease.mrzh.aligames</item>
+        <item>com.android.camera</item>
+        <item>com.miHoYo.Yuanshen</item>
+        <item>com.miHoYo.ys.mi</item>
+        <item>com.miHoYo.ys.bilibili</item>
+        <item>com.tencent.mm.plugin.scanner.ui.BaseScanUI</item>
+        <item>com.tencent.mm.plugin.recordvideo.activity.MMRecordUI</item>
+        <item>com.tencent.mobileqq.olympic.activity.ScanTorchActivity</item>
+        <item>dov.com.qq.im.QIMCameraCaptureActivity</item>
+        <item>com.tencent.aelight.camera.aebase.QIMCameraCaptureActivity</item>
+        <item>com.alipay.mobile.scan.as.main.MainCaptureActivity</item>
+        <item>com.jd.lib.scan.lib.zxing.client.android.CaptureActivity</item>
+        <item>com.etao.feimagesearch.capture.CaptureActivity</item>
+    </string-array>
+    <string-array name="config_powercfg_powersave">
+        <item>org.videolan.vlc</item>
+        <item>com.mxtech.videoplayer.pro</item>
+        <item>com.mxtech.videoplayer.ad</item>
+        <item>com.kmxs.reader</item>
+        <item>com.qidian.QDReader</item>
+        <item>com.tencent.weread</item>
+        <item>com.dragon.read</item>
+        <item>com.chaozh.iReaderFree</item>
+        <item>com.qidian.QDReader</item>
+        <item>com.duokan.free</item>
+    </string-array>
+    <string-array name="config_scene_gps_on">
+        <item>me.ele</item>
+        <item>com.sankuai.meituan</item>
+        <item>com.tencent.map</item>
+        <item>com.baidu.BaiduMap</item>
+        <item>com.autonavi.minimap</item>
+        <item>com.gvsoft.gofun</item>
+        <item>com.sdu.didi.psnger</item>
+        <item>com.ruqi.travel</item>
+        <item>com.miui.weather2</item>
+        <item>com.android.camera</item>
+        <item>com.hskj.palmmetro</item>
+        <item>make.more.r2d2.cellular_z</item>
+        <item>com.pupumall.customer</item>
+        <item>cn.missfresh.application</item>
+        <item>com.miui.huanji</item>
+    </string-array>
+    <string-array name="config_scene_standby_whitelist">
+        <item>com.omarea.vtools</item>
+        <item>com.omarea.gesture</item>
+        <item>com.omarea.filter</item>
+        <item>com.topjohnwu.magisk</item>
+        <item>org.meowcat.edxposed.manager</item>
+        <item>com.mi.android.globallauncher</item>
+        <item>com.pittvandewitt.viperfx</item>
+        <item>com.omarea.vaddin</item>
+    </string-array>
+    <string-array name="config_start_dir_options">
+        <item>/sdcard</item>
+        <item>/odm/etc</item>
+        <item>/system/etc</item>
+        <item>/vendor/etc</item>
+        <item>/data/vendor/thermal/config</item>
+    </string-array>
+    <string-array name="config_start_dir_orms_options">
+        <item>/sdcard</item>
+        <item>/odm/etc/orms</item>
+        <item>/system/etc/orms</item>
+        <item>/vendor/etc/orms</item>
+    </string-array>
+    <string-array name="config_su_alias">
+        <item>magisk su -mm</item>
+        <item>su -M</item>
+        <item>su</item>
+        <item>timesu</item>
+        <item>suu</item>
+        <item>xsu</item>
+        <item>mqsas</item>
+    </string-array>
+    <string-array name="config_xposed_scope">
+        <item>android</item>
+        <item>com.bbk.launcher2</item>
+        <item>com.android.quicksearchbox</item>
+        <item>com.android.settings</item>
+        <item>com.meizu.flyme.launcher</item>
+        <item>com.teslacoilsw.launcher</item>
+        <item>com.mi.android.globallauncher</item>
+        <item>com.miui.home</item>
+        <item>net.oneplus.launcher</item>
+        <item>net.oneplus.h2launcher</item>
+        <item>com.oneplus.hydrogen.launcher</item>
+        <item>com.microsoft.launcher</item>
+        <item>org.lineageos.trebuchet</item>
+        <item>org.mokee.lawnchair</item>
+        <item>com.google.android.apps.nexuslauncher</item>
+        <item>com.oppo.launcher</item>
+        <item>ch.deletescape.lawnchair.plah</item>
+        <item>com.android.launcher</item>
+        <item>com.zte.mifavor.launcher</item>
+        <item>com.motorola.launcher3</item>
+    </string-array>
+    <string-array name="default_powercfg_mode_options">
+        <item>@string/powersave</item>
+        <item>@string/balance</item>
+        <item>@string/performance</item>
+        <item>@string/fast</item>
+    </string-array>
+    <string-array name="detail_categories">
+        <item>APP</item>
+        <item>GAME</item>
+    </string-array>
+    <string-array name="modules_source_filter">
+        <item>All</item>
+        <item>Official</item>
+        <item>Shared by users</item>
+        <item>"Magisk'Modules Repo"</item>
+    </string-array>
+    <string-array name="powercfg_apptype_filter">
+        <item>User</item>
+        <item>System</item>
+        <item>All</item>
+    </string-array>
+    <string-array name="powercfg_modes_filter">
+        <item>Any mode</item>
+        <item>@string/powersave</item>
+        <item>@string/balance</item>
+        <item>@string/performance</item>
+        <item>@string/fast</item>
+        <item>@string/global_default</item>
+        <item>@string/kepp_state</item>
+    </string-array>
+    <array name="preloaded_fonts">
+        <item>@font/aldrich</item>
+    </array>
+    <string-array name="process_filter">
+        <item>Apps</item>
+        <item>Others</item>
+        <item>All</item>
+    </string-array>
+    <string-array name="process_sort_modes">
+        <item>By CPU</item>
+        <item>By RES</item>
+        <item>By PID</item>
+        <item>By UID</item>
+        <item>No Sort</item>
+    </string-array>
+    <string-array name="sleep_powercfg_mode_options">
+        <item>@string/powersave</item>
+        <item>@string/balance</item>
+        <item>@string/performance</item>
+        <item>@string/kepp_state</item>
+    </string-array>
+    <string-array name="su_alias_name">
+        <item>Magisk</item>
+        <item>KernelSU/APatch</item>
+        <item>SuperSU</item>
+        <item>TimeSU</item>
+        <item>SUU</item>
+        <item>AYANEO</item>
+        <item>MQSAS</item>
+    </string-array>
+</resources>

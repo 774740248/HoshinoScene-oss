@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+applets.txt -- BusyBox 1.36.1 applet 清单（自 assets/toolkit/busybox 提取）
+
+提取方法：
+  在二进制的 applet 名称表（NUL 分隔的连续字符串块，位于 .rodata，
+  紧邻 "start-stop-daemon" 等长名）中，按 `^[a-z][a-z0-9_.-]{1,20}$`
+  规则切分并去重，得到本文件中的 69 个 applet。
+  复刻：`python3 tools/extract_applets.py` 或直接 `./busybox --list`。
+
+来源版本：BusyBox v1.36.1 (2026-09-10 18:17:45 CST)
+工具链    ：Android NDK r25c, aarch64, statically linked, stripped
+共 69 个：
+"""
+
+# ===== applet 列表（按字母序，逐行一个，可直接 `sort` / `while read`）=====
+APPLETS = """
+ash
+awk
+basename
+blkid
+cat
+chgrp
+chmod
+chown
+chroot
+cmp
+cp
+cut
+date
+dd
+df
+echo
+egrep
+false
+fgrep
+free
+getopt
+grep
+head
+id
+kill
+killall
+link
+ln
+ls
+mkdir
+mktemp
+mount
+mv
+nohup
+printenv
+printf
+pwd
+readlink
+realpath
+rfkill
+rm
+sed
+seq
+setpriv
+setsid
+sh
+sleep
+sort
+start-stop-daemon
+stat
+strings
+sync
+tail
+tee
+timeout
+touch
+tr
+true
+truncate
+umount
+uname
+uniq
+unlink
+uptime
+usleep
+wc
+which
+whoami
+xargs
+""".strip().splitlines()
+
+assert len(APPLETS) == 69, "expected 69 applets, got %d" % len(APPLETS)
+
+
+def main() -> None:
+    """CLI：打印 applet 清单（每行一个），便于脚本消费。"""
+    for applet in APPLETS:
+        print(applet)
+
+
+if __name__ == "__main__":
+    main()

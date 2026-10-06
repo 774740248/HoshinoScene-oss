@@ -1,0 +1,94 @@
+[
+  {
+    "title": "@string:limiter_apps",
+    "items": [
+      {
+        "title": "@string:btn_enable",
+        "visible": "always",
+        "field": {
+          "default": "1",
+          "path": "in_apps",
+          "type": "boolean"
+        }
+      },
+      {
+        "title": "主线程锁定大核",
+        "desc": "强制在性能最高的核心上运行主线程(重启设备生效)",
+        "visible": "always",
+        "field": {
+          "default": "0",
+          "path": "gold_first",
+          "type": "boolean"
+        }
+      }
+    ]
+  },
+  {
+    "title": "@string:limiter_games",
+    "items": [
+      {
+        "title": "@string:btn_enable",
+        "visible": "always",
+        "field": {
+          "default": "1",
+          "path": "in_games",
+          "type": "boolean"
+        }
+      },
+      {
+        "title": "提高优先级",
+        "desc": "提高重负载线程的优先级，以抢占更多CPU资源(可能导致部分游戏画面突然卡死)。变更需重启应用/游戏",
+        "visible": "never",
+        "field": {
+          "default": "0",
+          "path": "high_priority",
+          "type": "boolean"
+        }
+      }
+    ]
+  },
+  {
+    "items": [
+      {
+        "title": "Ebpf增强",
+        "desc": "使用Ebpf监听线程启动，更快的监听到应用或游戏的线程变化(可能略微增加性能开销)，可能需要Linux Kernel版本高于4.19",
+        "visible": "always",
+        "field": {
+          "default": "0",
+          "path": "ebpf_enhanced",
+          "type": "boolean"
+        }
+      },
+      {
+        "title": "性能需求提示",
+        "desc": "*试验性新功能，向Scene FAS、FAS Lite、辅助调速器，报告重要线程运行状态（注意：Scene FAS会在使用温度、功耗感知、目标帧率偏移幅度较大时，忽略提示信息）",
+        "visible": "always",
+        "field": {
+          "default": "1",
+          "path": "perf_notify",
+          "type": "boolean"
+        }
+      },
+      {
+        "title": "使用预设配置",
+        "desc": "SCENE为少数热门游戏提供了线程亲和预设，未提供预设的游戏和应用，由框架根据负载自动调节分配",
+        "visible": "always",
+        "field": {
+          "default": "1",
+          "path": "use_presets",
+          "type": "boolean"
+        }
+      },
+      {
+        "title": "应用黑名单",
+        "desc": "在特定应用或游戏中不使用核心分配",
+        "visible": "always",
+        "field": {
+          "default": "",
+          "path": "blacklist",
+          "type": "apps"
+        }
+      }
+    ]
+  }
+]

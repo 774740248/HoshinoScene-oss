@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:icon="@drawable/shortcut_android_logo"
+        android:enabled="true"
+        android:shortcutId="ActivityApplistions"
+        android:shortcutShortLabel="@string/menu_applictions"
+        android:shortcutLongLabel="@string/menu_applictions"
+        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        <intent
+            android:targetPackage="com.omarea.vtools"
+            android:action="b"
+            android:targetClass="com.omarea.vtools.activities.ActivityApplications" />
+    </shortcut>
+    <shortcut
+        android:icon="@drawable/shortcut_process_logo"
+        android:enabled="true"
+        android:shortcutId="ActivityProcess"
+        android:shortcutShortLabel="@string/menu_processes"
+        android:shortcutLongLabel="@string/menu_processes"
+        android:shortcutDisabledMessage="@string/shortcut_disabled">
+        <intent
+            android:targetPackage="com.omarea.vtools"
+            android:action="c"
+            android:targetClass="com.omarea.vtools.activities.ActivityProcess" />
+    </shortcut>
+</shortcuts>

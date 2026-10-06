@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/krscript_item_ripple_inactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip">
+            <LinearLayout
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8.0dip"
+                android:paddingStart="@dimen/activity_horizontal_margin">
+                <TextView
+                    android:id="@id/confirm_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule_features" />
+                <ImageButton
+                    android:id="@id/custom_features_faq"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_toEndOf="@id/custom_features"
+                    style="@style/help_icon" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/in_card_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/refresh_rate"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/schedule_feature_fps_desc"
+                    app:iconColor="#ffffc107"
+                    app:iconSrc="@drawable/icon_display"
+                    app:title="@string/schedule_feature_fps" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/cpus_control"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/schedule_feature_cpus_desc"
+                    app:endArrow="true"
+                    app:iconColor="#ffffc107"
+                    app:iconSrc="@drawable/ic_processes"
+                    app:title="@string/schedule_feature_cpus" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/cpus_limiter"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/schedule_limiter_desc"
+                    app:endArrow="true"
+                    app:iconColor="#ffffc107"
+                    app:iconSrc="@drawable/icon_chart_cpu"
+                    app:title="@string/schedule_limiter" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/fas"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/schedule_fas_enable_desc"
+                    app:endArrow="true"
+                    app:iconColor="#ffffc107"
+                    app:iconSrc="@drawable/source_game"
+                    app:title="@string/schedule_fas_enable" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/bypass_power_supply"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/schedule_bypass_power_desc"
+                    app:iconColor="#ffffc107"
+                    app:iconSrc="@drawable/ic_power_supply"
+                    app:title="@string/schedule_bypass_power" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/env"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/schedule_env_desc"
+                    app:endArrow="true"
+                    app:iconColor="#ffffc107"
+                    app:iconSrc="@drawable/ic_menu_shell"
+                    app:title="@string/schedule_env" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <Button
+                android:id="@id/btn_cancel"
+                android:text="@string/btn_cancel"
+                android:layout_marginEnd="8.0dip"
+                style="@style/dialogCancelBtn" />
+            <Button
+                android:id="@id/btn_confirm"
+                android:text="@string/btn_confirm"
+                style="@style/dialogConfirmBtn" />
+        </LinearLayout>
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

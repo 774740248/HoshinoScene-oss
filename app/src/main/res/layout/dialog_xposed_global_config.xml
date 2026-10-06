@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="12.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/krscript_item_ripple_inactive"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.0dip">
+        <TextView
+            android:id="@id/confirm_title"
+            android:text="@string/xp_global"
+            style="@style/dialogTitle" />
+        <TextView
+            android:id="@id/confirm_message"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/xp_global_desc"
+            style="@style/dialogDesc" />
+        <FrameLayout
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin">
+            <SeekBar
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/swap_size"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:max="64"
+                android:progress="8"
+                style="@style/SceneSeekBar" />
+            <TextView
+                android:layout_gravity="center"
+                android:id="@id/swap_size_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0MB"
+                style="@style/textSmall" />
+        </FrameLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/in_card_item_inactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin">
+            <com.omarea.ui.SwitchOptionItemView
+                android:id="@id/xposed_android_scroll"
+                android:padding="6.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="70.0dip"
+                app:desc="@string/xp_slow_scroll_desc"
+                app:iconColor="#ff2196f3"
+                app:iconSrc="@drawable/ic_menu_addon"
+                app:title="@string/xp_slow_scroll" />
+            <com.omarea.ui.SwitchOptionItemView
+                android:id="@id/xposed_root_icon_hide"
+                android:padding="6.0dip"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="70.0dip"
+                app:desc="@string/xp_hide_su_icon_desc"
+                app:iconColor="#ff2196f3"
+                app:iconSrc="@drawable/ic_menu_addon"
+                app:title="@string/xp_hide_su_icon" />
+            <com.omarea.ui.SwitchOptionItemView
+                android:id="@id/xposed_foreground_disable"
+                android:padding="6.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="70.0dip"
+                app:desc="@string/xp_disable_foreground_desc"
+                app:iconColor="#ff2196f3"
+                app:iconSrc="@drawable/ic_menu_addon"
+                app:title="@string/xp_disable_foreground" />
+            <com.omarea.ui.SwitchOptionItemView
+                android:id="@id/xposed_reverse_optimizer"
+                android:padding="6.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="70.0dip"
+                app:desc="@string/xp_disable_hw_acceleration_desc"
+                app:iconColor="#ff2196f3"
+                app:iconSrc="@drawable/ic_menu_addon"
+                app:title="@string/xp_disable_hw_acceleration" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+        <Button
+            android:id="@id/btn_cancel"
+            android:text="@string/btn_cancel"
+            style="@style/dialogCancelBtn" />
+        <Button
+            android:id="@id/btn_confirm"
+            android:text="@string/btn_confirm"
+            android:layout_marginStart="8.0dip"
+            style="@style/dialogConfirmBtn" />
+    </LinearLayout>
+</LinearLayout>

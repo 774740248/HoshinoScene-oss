@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <com.omarea.sysmbol.PerfOptionsRender
+        android:id="@id/perf_options"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?actionBarSize" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/loading_view"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="@dimen/activity_horizontal_margin">
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading…" />
+        <ProgressBar
+            android:id="@id/refresh_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="8.0dip"
+            android:layout_marginTop="12.0dip"
+            android:max="100"
+            android:progress="0"
+            android:indeterminate="true"
+            style="?android:progressBarStyleHorizontal" />
+    </LinearLayout>
+</RelativeLayout>

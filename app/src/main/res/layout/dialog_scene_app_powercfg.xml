@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="8.0dip"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.85">
+        <TextView
+            android:id="@id/confirm_title"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule_title"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            style="@style/textTitle" />
+        <TextView
+            android:id="@id/confirm_message"
+            android:paddingTop="8.0dip"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_horizontal_margin" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/mode_powersave"
+            app:desc="@string/schedule_powersave_desc"
+            app:iconColor="@color/color_powersave_bg"
+            app:iconSrc="@drawable/mode_powersave"
+            app:title="@string/powersave"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/mode_balance"
+            app:desc="@string/schedule_balance_desc"
+            app:iconColor="@color/color_balance_bg"
+            app:iconSrc="@drawable/mode_balance"
+            app:title="@string/balance"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/mode_performance"
+            app:desc="@string/schedule_perf_desc"
+            app:iconColor="@color/color_performance_bg"
+            app:iconSrc="@drawable/mode_performance"
+            app:title="@string/performance"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/mode_fast"
+            app:desc="@string/schedule_fast_desc"
+            app:iconColor="@color/color_fast_bg"
+            app:iconSrc="@drawable/mode_fast"
+            app:title="@string/fast"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/mode_empty"
+            app:desc="@string/schedule_global_desc"
+            app:iconPadding="10.0dip"
+            app:iconSrc="@drawable/mode_empty"
+            app:title="@string/global_default"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/mode_keep"
+            app:desc="@string/schedule_keep_desc"
+            app:iconPadding="10.0dip"
+            app:iconSrc="@drawable/mode_keep"
+            app:title="@string/schedule_keep"
+            style="@style/ListCardItemSmall" />
+        <Button
+            android:id="@id/action_more"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/schedule_more"
+            android:layout_marginHorizontal="8.0dip"
+            style="@style/SceneButton" />
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

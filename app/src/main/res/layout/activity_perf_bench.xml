@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <com.omarea.ui.BlurViewLinearLayout
+        android:orientation="vertical"
+        android:id="@id/cpu_test_options"
+        android:background="@drawable/list_view_bg"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/pb_cpu_load2"
+                android:layout_weight="1.0"
+                style="@style/textTitle" />
+            <com.omarea.common.ui.Tags
+                android:id="@id/cpu_load_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/pb_threads"
+            style="@style/textSmallTitle" />
+        <com.omarea.common.ui.SeekBar
+            android:id="@id/cpu_bench_threads"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:max="10"
+            app:min="1"
+            app:progress="4"
+            style="@style/SceneSeekBar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/pb_duration"
+            style="@style/textSmallTitle" />
+        <com.omarea.common.ui.SeekBar
+            android:id="@id/cpu_bench_duration"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:max="300"
+            app:min="1"
+            app:progress="60"
+            style="@style/SceneSeekBar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/pb_slice"
+            style="@style/textSmallTitle" />
+        <com.omarea.common.ui.SeekBar
+            android:id="@id/cpu_bench_period"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:max="100"
+            app:min="5"
+            app:progress="10"
+            style="@style/SceneSeekBar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/pb_target_load_r"
+            style="@style/textSmallTitle" />
+        <com.omarea.common.ui.SeekBar
+            android:id="@id/cpu_bench_load"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:max="100"
+            app:min="1"
+            app:progress="80"
+            style="@style/SceneSeekBar" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip">
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:id="@id/nav_core_control"
+                android:background="?actionBarItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_core_control"
+                android:layout_centerVertical="true"
+                style="@style/textDefault" />
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:id="@id/cpu_cpuset"
+                android:background="?actionBarItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pb_target_cores"
+                android:layout_toRightOf="@id/nav_core_control"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12.0dip"
+                style="@style/textDefault" />
+            <Button
+                android:id="@id/cpu_stop"
+                android:visibility="gone"
+                android:text="@string/pb_stop"
+                android:layout_alignParentEnd="true"
+                style="@style/SceneButton" />
+            <Button
+                android:id="@id/cpu_start"
+                android:text="@string/pb_start"
+                android:layout_alignParentEnd="true"
+                style="@style/SceneButton" />
+        </RelativeLayout>
+    </com.omarea.ui.BlurViewLinearLayout>
+    <com.omarea.ui.BlurViewLinearLayout
+        android:orientation="vertical"
+        android:id="@id/gpu_test_options"
+        android:background="@drawable/list_view_bg"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/pb_cpu_load2"
+                android:layout_weight="1.0"
+                style="@style/textTitle" />
+            <com.omarea.common.ui.Tags
+                android:id="@id/gpu_load_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/pb_duration"
+            style="@style/textSmallTitle" />
+        <com.omarea.common.ui.SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:max="300"
+            app:progress="60"
+            style="@style/SceneSeekBar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/pb_slice"
+            style="@style/textSmallTitle" />
+        <com.omarea.common.ui.SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:max="100"
+            app:progress="10"
+            style="@style/SceneSeekBar" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip">
+            <Button
+                android:id="@id/gpu_start"
+                android:text="@string/pb_start"
+                android:layout_alignParentEnd="true"
+                style="@style/SceneButton" />
+        </RelativeLayout>
+    </com.omarea.ui.BlurViewLinearLayout>
+    <com.omarea.ui.BlurViewLinearLayout
+        android:orientation="vertical"
+        android:id="@id/bat_test_options"
+        android:background="@drawable/list_view_bg"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/pb_battery_status"
+                android:layout_weight="1.0"
+                style="@style/textTitle" />
+            <com.omarea.common.ui.Tags
+                android:id="@id/bat_state_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/pb_bat_capacity"
+            style="@style/textSmallTitle" />
+        <com.omarea.common.ui.SeekBar
+            android:id="@id/bat_capacity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:max="100"
+            app:progress="60"
+            style="@style/SceneSeekBar" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip">
+            <Button
+                android:id="@id/bat_stop"
+                android:text="@string/pb_stop"
+                android:layout_toLeftOf="@id/bat_start"
+                android:layout_marginEnd="8.0dip"
+                style="@style/SceneButton" />
+            <Button
+                android:id="@id/bat_start"
+                android:text="@string/pb_start"
+                android:layout_alignParentEnd="true"
+                style="@style/SceneButton" />
+        </RelativeLayout>
+    </com.omarea.ui.BlurViewLinearLayout>
+    <com.omarea.ui.BlurViewLinearLayout
+        android:orientation="vertical"
+        android:id="@id/lmk_test_options"
+        android:background="@drawable/list_view_bg"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/pb_app_start"
+                android:layout_weight="1.0"
+                style="@style/textTitle" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/pb_app_start_count"
+            style="@style/textSmallTitle" />
+        <com.omarea.common.ui.SeekBar
+            android:id="@id/lmk_app_count"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:max="60"
+            app:min="5"
+            app:progress="30"
+            style="@style/SceneSeekBar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/pb_app_start_interval"
+            style="@style/textSmallTitle" />
+        <com.omarea.common.ui.SeekBar
+            android:id="@id/lmk_app_interval"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:max="10"
+            app:min="5"
+            app:progress="5"
+            style="@style/SceneSeekBar" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24.0dip">
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:id="@id/nav_swap_control"
+                android:background="?actionBarItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/menu_swap"
+                android:layout_centerVertical="true"
+                style="@style/textDefault" />
+            <Button
+                android:id="@id/lmk_start"
+                android:text="@string/pb_start"
+                android:layout_alignParentEnd="true"
+                style="@style/SceneButton" />
+        </RelativeLayout>
+    </com.omarea.ui.BlurViewLinearLayout>
+</LinearLayout>

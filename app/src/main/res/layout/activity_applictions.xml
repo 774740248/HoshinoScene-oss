@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@id/tab_list"
+        android:layout_marginEnd="20.0dip"
+        style="@style/SceneTabLayoutTop" />
+    <LinearLayout
+        android:gravity="end|center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/layout_app_bar"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:id="@id/apps_btn_more"
+            android:padding="9.0dip"
+            android:src="@drawable/icon_more"
+            android:layout_marginEnd="8.0dip"
+            style="@style/SceneTitleBarBtn" />
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/tab_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/apps_search_bar"
+        android:layout_below="@id/tab_list"
+        style="@style/SceneViewPager" />
+    <com.omarea.ui.BlurViewLinearLayout
+        android:id="@id/apps_search_bar"
+        android:background="@drawable/filter_toolbar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_alignParentBottom="true"
+        android:paddingEnd="0.0dip"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <EditText
+            android:textSize="16.0dip"
+            android:id="@id/apps_search_box"
+            android:background="@android:color/transparent"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:hint="@string/apps_search"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            android:inputType="textFilter"
+            android:imeOptions="actionSearch"
+            android:paddingStart="10.0dip" />
+        <com.omarea.ui.SelectView
+            android:layout_gravity="center_vertical"
+            android:id="@id/apps_filter"
+            android:focusable="false"
+            android:layout_width="110.0dip"
+            android:layout_height="wrap_content" />
+    </com.omarea.ui.BlurViewLinearLayout>
+</RelativeLayout>

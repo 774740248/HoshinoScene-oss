@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/switch_option_item_icon"
+        android:layout_width="35.0dip"
+        android:layout_height="35.0dip"
+        android:layout_marginStart="10.0dip"
+        android:layout_marginEnd="6.0dip"
+        style="@style/SceneActionIcon" />
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <TextView
+            android:id="@id/switch_option_item_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/textTitle" />
+        <TextView
+            android:id="@id/switch_option_item_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/textSecondary" />
+    </LinearLayout>
+    <Switch
+        android:layout_gravity="center_vertical"
+        android:id="@id/switch_option_item_switch"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="8.0dip" />
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/switch_option_item_arrow"
+        android:visibility="gone"
+        android:layout_width="50.0dip"
+        android:layout_height="55.0dip"
+        android:src="@drawable/arrow"
+        android:layout_marginStart="8.0dip"
+        android:paddingVertical="@dimen/activity_vertical_margin"
+        app:tint="@color/colorPrimary" />
+</merge>

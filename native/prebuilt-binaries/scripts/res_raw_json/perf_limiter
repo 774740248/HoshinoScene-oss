@@ -1,0 +1,66 @@
+[
+  {
+    "title": "@string:limiter_scope",
+    "items": [
+      {
+        "title": "@string:limiter_apps",
+        "desc": "@string:limiter_apps_desc",
+        "visible": "always",
+        "field": {
+          "default": "1",
+          "path": "limiters_in_apps",
+          "type": "boolean"
+        }
+      },
+      {
+        "title": "@string:limiter_games",
+        "desc": "@string:limiter_games_desc",
+        "visible": "always",
+        "field": {
+          "default": "1",
+          "path": "limiters_in_games",
+          "type": "boolean"
+        }
+      }
+    ]
+  },
+  {
+    "title": "@string:limiter_preference",
+    "items": [
+      {
+        "title": "负载计算方法",
+        "desc": "通过何种方式计算CPU负载",
+        "visible": "always",
+        "field": {
+          "path": "stat_source",
+          "type": "select",
+          "default": "1",
+          "options": [
+            {
+              "label": "perf event",
+              "value": "1"
+            },
+            {
+              "label": "/proc/stat",
+              "value": "2"
+            },
+            {
+              "label": "/proc/schedstat",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      {
+        "title": "@string:limiter_toast",
+        "desc": "@string:limiter_toast_desc",
+        "visible": "always",
+        "field": {
+          "path": "status_notify",
+          "type": "boolean",
+          "default": "0"
+        }
+      }
+    ]
+  }
+]

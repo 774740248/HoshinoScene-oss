@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="#88000000"
+    android:fitsSystemWindows="false"
+    android:clipToPadding="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:backgroundTintMode="screen"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@id/start_logo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="200.0dip"
+            android:layout_height="200.0dip"
+            android:src="@drawable/ic_settings" />
+        <TextView
+            android:textSize="35.0dip"
+            android:textStyle="bold"
+            android:textColor="#33ffffff"
+            android:gravity="center"
+            android:id="@id/fullscreen_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50.0dip"
+            android:text="TOOLBOX·SCENE"
+            android:keepScreenOn="true" />
+        <TextView
+            android:textSize="12.0dip"
+            android:textColor="#aaffffff"
+            android:layout_gravity="center"
+            android:id="@id/start_state_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15.0dip"
+            android:layout_marginBottom="40.0dip"
+            android:text="@string/please_wait"
+            android:textAlignment="center" />
+    </LinearLayout>
+</FrameLayout>

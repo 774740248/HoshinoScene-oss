@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<items>
+    <resource dir="file:///android_asset/kr-script/aosp" />
+
+    <group>
+        <switch>
+            <title>@string:kr_aosp_popup_notification</title>
+            <desc>@string:kr_aosp_popup_notification_desc</desc>
+            <get>settings get global heads_up_notifications_enabled</get>
+            <set>settings put global heads_up_notifications_enabled $state</set>
+        </switch>
+        <action>
+            <title>@string:kr_aosp_night_mode</title>
+            <desc>@string:kr_aosp_night_mode_desc</desc>
+            <params>
+                <param name="state" title="@string:kr_aosp_night_mode" value-sh="settings get secure ui_night_mode">
+                    <option value="0">@string:kr_aosp_night_mode_auto</option>
+                    <option value="1">@string:kr_aosp_night_mode_off</option>
+                    <option value="2">@string:kr_aosp_night_mode_on</option>
+                </param>
+                <param name="hotreboot" title="@string:kr_aosp_night_mode_reboot">
+                    <option value="0">@string:kr_aosp_night_mode_reboot_n</option>
+                    <option value="1">@string:kr_aosp_night_mode_reboot_y</option>
+                </param>
+            </params>
+            <set>run night_mode.sh</set>
+        </action>
+        <picker>
+            <title>@string:kr_aosp_rotation</title>
+            <desc>@string:kr_aosp_rotation_desc</desc>
+            <options>
+                <option value="0">@string:kr_aosp_rotation_portrait</option>
+                <option value="1">@string:kr_aosp_rotation_landscape</option>
+                <option value="2">@string:kr_aosp_rotation_inverted_portrait</option>
+                <option value="3">@string:kr_aosp_rotation_inverted_landscape</option>
+            </options>
+            <get>settings get system user_rotation</get>
+            <set>run rotation.sh</set>
+        </picker>
+        <picker multiple="multiple" separator="," visible=". ./kr-script/common/android_n.sh">
+            <title>@string:kr_aosp_status_icons</title>
+            <desc>@string:kr_aosp_status_icons_desc</desc>
+            <options>
+                <option value="mobile">@string:kr_aosp_status_mobile</option>
+                <option value="volte">VoLTE</option>
+                <option value="ims">VoLTE?</option>
+                <option value="airplane">@string:kr_aosp_satus_airplane</option>
+                <option value="location">@String:kr_aosp_status_location</option>
+                <option value="wifi">WIFI</option>
+                <option value="nfc">NFC</option>
+                <option value="vpn">VPN</option>
+                <option value="bluetooth">@string:kr_aosp_status_bluetooth</option>
+                <option value="volume">@string:kr_aosp_status_volume_mute</option>
+                <option value="zen">@string:kr_aosp_status_zen_mode</option>
+                <option value="alarm_clock">@string:kr_aosp_status_alarm_clock</option>
+                <option value="headset">@string:kr_aosp_status_headset</option>
+                <option value="ime">@string:kr_aosp_status_ime</option>
+                <option value="battery">@string:kr_aosp_status_battery</option>
+                <option value="rotate">@string:kr_aosp_status_rotate</option>
+                <option value="cast">@string:kr_aosp_status_cast</option>
+                <option value="su">@string:kr_aosp_status_su</option>
+            </options>
+            <get>
+                settings get secure icon_blacklist
+            </get>
+            <set>
+                settings put secure icon_blacklist "$state"
+            </set>
+        </picker>
+    </group>
+
+    <group>
+        <switch>
+            <title>@string:kr_aosp_low_power</title>
+            <desc>@string:kr_aosp_low_power_desc</desc>
+            <get>run ps/get.sh</get>
+            <set>run ps/set.sh</set>
+        </switch>
+        <action>
+            <title>@string:kr_aosp_low_power_level</title>
+            <desc>@string:kr_aosp_low_power_level_desc</desc>
+            <params>
+                <param name="level" title="@string:kr_aosp_low_power_critical_level"
+                    options-sh="run pl/options.sh"
+                    value-sh="settings get global low_power_trigger_level" />
+                <param name="levelmax" title="@string:kr_aosp_low_power_wran_level"
+                    options-sh="run pl/options.sh"
+                    value-sh="settings get global low_power_trigger_level_max" />
+            </params>
+            <set>run pl/set.sh</set>
+        </action>
+    </group>
+
+    <group>
+        <picker>
+            <title>@string:kr_aosp_net_checker</title>
+            <desc>@string:kr_aosp_net_checker_desc</desc>
+            <summary sh="run network_checker_summary.sh" />
+            <options>
+                <option value="miui">@string:kr_aosp_net_checker_miui</option>
+                <option value="google">@string:kr_aosp_net_checker_google</option>
+                <option value="v2ex">@string:kr_aosp_net_checker_v2ex</option>
+                <option value="disable">@string:kr_aosp_net_checker_disable</option>
+                <option value="default">@string:kr_aosp_net_checker_reset</option>
+            </options>
+            <get>run network_checker_get.sh</get>
+            <set>run network_checker_set.sh</set>
+        </picker>
+        <picker>
+            <title>@string:kr_aosp_ntp</title>
+            <desc>@string:kr_aosp_ntp_desc</desc>
+            <options>
+                <option>pool.ntp.org</option>
+                <option>ntp.ntsc.ac.cn</option>
+                <option>ntp1.aliyun.com</option>
+                <option>cn.pool.ntp.org</option>
+                <option>time.cloudflare.com</option>
+            </options>
+            <get>settings get global ntp_server</get>
+            <set>run ntp_set.sh</set>
+        </picker>
+        <action>
+            <title>@string:kr_aosp_ntp_custom</title>
+            <desc>@string:kr_aosp_ntp_custom_desc</desc>
+            <param name="state" desc="@string:kr_aosp_ntp_address" value-sh="settings get global ntp_server" />
+            <set>run ntp_set.sh</set>
+        </action>
+    </group>
+
+    <group>
+        <page
+            min-sdk="33"
+            id="PrivacyControlsActivity"
+            activity="com.android.settings/com.android.settings.Settings$PrivacyControlsActivity">
+            <title>Privacy Controls</title>
+        </page>
+        <page
+            min-sdk="32"
+            id="TextReadingSettingsActivity"
+            activity="com.android.settings/com.android.settings.Settings$TextReadingSettingsActivity">
+            <title>Text Reading Settings</title>
+        </page>
+        <page
+            min-sdk="32"
+            id="ReduceBrightness"
+            activity="com.android.settings/com.android.settings.Settings$ReduceBrightColorsSettingsActivity">
+            <title>Reduce Brightness</title>
+        </page>
+    </group>
+</items>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:saveEnabled="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <com.omarea.common.ui.OverScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="true">
+        <EditText
+            android:textSize="10.0dip"
+            android:typeface="monospace"
+            android:gravity="top"
+            android:id="@id/cloud_config"
+            android:background="@android:color/transparent"
+            android:padding="5.0dip"
+            android:visibility="gone"
+            android:scrollbars="none"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="如需清空配置，请输入 {}"
+            android:breakStrategy="simple"
+            android:autofillHints="" />
+    </com.omarea.common.ui.OverScrollView>
+    <LinearLayout
+        android:gravity="left"
+        android:orientation="vertical"
+        android:id="@id/actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="140.0dip"
+            android:layout_height="wrap_content"
+            android:text="SmartP"
+            style="@style/textSmallTitle" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+            <TextView
+                android:id="@id/db_smartp_common"
+                android:layout_width="110.0dip"
+                android:layout_height="wrap_content"
+                android:text="common"
+                style="@style/SceneButton" />
+            <TextView
+                android:id="@id/db_smartp_boost"
+                android:layout_width="110.0dip"
+                android:layout_height="wrap_content"
+                android:text="booster"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                style="@style/SceneButton" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="110.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="teg_config"
+            style="@style/textSmallTitle" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@id/db_teg_common"
+                android:layout_width="110.0dip"
+                android:layout_height="wrap_content"
+                android:text="common"
+                style="@style/SceneButton" />
+            <TextView
+                android:id="@id/db_teg_boost"
+                android:layout_width="110.0dip"
+                android:layout_height="wrap_content"
+                android:text="booster"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                style="@style/SceneButton" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="110.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="default_cloud"
+            style="@style/textSmallTitle" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@id/db_default_cloud_boost"
+                android:layout_width="110.0dip"
+                android:layout_height="wrap_content"
+                android:text="booster"
+                style="@style/SceneButton" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

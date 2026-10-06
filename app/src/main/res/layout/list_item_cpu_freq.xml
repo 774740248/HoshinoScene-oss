@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:padding="4.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="85.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="11.0dip"
+            android:textColor="#88888888"
+            android:id="@id/cpu_core_index"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="cpu0"
+            android:textAlignment="center" />
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="32.0dip">
+            <TextView
+                android:textSize="17.0dip"
+                android:textStyle="normal"
+                android:textColor="?android:textColorPrimary"
+                android:id="@id/cpu_core_current_freq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="2048Mhz"
+                android:lines="1"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textAlignment="center" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:id="@id/center"
+            android:paddingLeft="7.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <TextView
+                android:textSize="8.5dip"
+                android:textColor="#88888888"
+                android:id="@id/cpu_core_freq_ranage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="300Mhz ~ 2048Mhz"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

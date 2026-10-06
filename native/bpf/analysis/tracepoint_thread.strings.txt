@@ -1,0 +1,171 @@
+sched_switch_args
+prev_comm
+prev_pid
+prev_prio
+prev_state
+next_comm
+next_pid
+next_prio
+unsigned long long
+char
+__ARRAY_SIZE_TYPE__
+unsigned int
+sched_switch
+tracepoint/sched/sched_switch
+/home/helloklf/scene-daemon/tracepoint_thread.c
+int sched_switch(struct sched_switch_args *ctx)
+    u64 now = bpf_ktime_get_ns();
+    u32 k0 = 0, k1 = 1, k2 = 2, k3 = 3;
+    u64 *e0 = bpf_map_lookup_elem(&slots, &k0);
+    u64 *e1 = bpf_map_lookup_elem(&slots, &k1);
+    u64 *e2 = bpf_map_lookup_elem(&slots, &k2);
+    u64 *e3 = bpf_map_lookup_elem(&slots, &k3);
+    u64 v0 = e0 ? *e0 : 0, v1 = e1 ? *e1 : 0, v2 = e2 ? *e2 : 0, v3 = e3 ? *e3 : 0;
+    track_thread(ctx, (u32)v0, 0, (v0 & SLOT_SYSTEM) ? RUN_F_SYSTEM : 0, now);
+    if (!tid)
+    u32 k_start = slot * 3;
+    u32 k_alert = k_start + 1;
+    u32 k_cpu = k_start + 2;
+    u32 timeout_key = 0;
+    if (ctx->next_pid == tid) {
+        u64 cpu = bpf_get_smp_processor_id();
+        u64 zero64 = 0;
+        bpf_map_update_elem(&run_start, &k_start, &now, BPF_ANY);
+        bpf_map_update_elem(&run_start, &k_alert, &zero64, BPF_ANY);
+    if (ctx->prev_pid == tid) {
+        u64 s = start ? *start : 0;
+        if (s && now > s) {
+            struct run_stats *st = bpf_map_lookup_elem(&stats, &slot);
+            if (st && run >= MIN_SAMPLE_NS) {
+                st->count++;
+                st->total_ns += run;
+                if (run > st->max_ns)
+                    st->max_ns = run;
+                st->avg_ns = st->avg_ns ? ((st->avg_ns * 7 + run) >> 3) : run;
+                u64 *timeout = bpf_map_lookup_elem(&config, &timeout_key);
+                u64 timeout_ns = timeout ? *timeout : 0;
+                if ((timeout_ns && run > timeout_ns) ||
+                    (st->count > 32 && run * 10 > st->avg_ns * 25)) {
+                    struct run_event ev = {};
+                    ev.tid = tid;
+                    ev.cpu = bpf_get_smp_processor_id();
+                    ev.flags = base_flags;
+                    ev.run_ns = run;
+                    ev.ts = now;
+                    ev.avg_ns = st->avg_ns;
+                    bpf_perf_event_output(ctx, &events, BPF_F_CURRENT_CPU, &ev, sizeof(ev));
+        u64 reset = 0;
+        bpf_map_update_elem(&run_start, &k_start, &reset, BPF_ANY);
+        bpf_map_update_elem(&run_start, &k_alert, &reset, BPF_ANY);
+    track_thread(ctx, (u32)v1, 1, (v1 & SLOT_SYSTEM) ? RUN_F_SYSTEM : 0, now);
+        bpf_map_update_elem(&run_start, &k_cpu, &cpu, BPF_ANY);
+    track_thread(ctx, (u32)v2, 2, (v2 & SLOT_SYSTEM) ? RUN_F_SYSTEM : 0, now);
+    track_thread(ctx, (u32)v3, 3, (v3 & SLOT_SYSTEM) ? RUN_F_SYSTEM : 0, now);
+    return 0;
+            u64 *timeout = bpf_map_lookup_elem(&config, &timeout_key);
+            u64 timeout_ns = timeout ? *timeout : 0;
+            if (timeout_ns) {
+                u64 run = now - s;
+                u64 mult = run / timeout_ns;
+                u64 *alerted = bpf_map_lookup_elem(&run_start, &k_alert);
+                u64 last_mult = alerted ? *alerted : 0;
+                u64 next_mult = last_mult ? (last_mult << 1) : 1;
+                if (mult >= next_mult) {
+                    u64 *cpu = bpf_map_lookup_elem(&run_start, &k_cpu);
+                    struct run_stats *st = bpf_map_lookup_elem(&stats, &slot);
+                    ev.cpu = cpu ? (u32)*cpu : 0;
+                    ev.flags = RUN_F_MID_RUN | base_flags;
+                    ev.avg_ns = st ? st->avg_ns : 0;
+                    bpf_map_update_elem(&run_start, &k_alert, &mult, BPF_ANY);
+bpf_map_def
+type
+key_size
+value_size
+max_entries
+map_flags
+config
+slots
+run_start
+stats
+events
+LICENSE
+license
+maps
+JNKLMOP
+.text
+.rel.BTF.ext
+run_start
+slots
+events
+stats
+maps
+.reltracepoint/sched/sched_switch
+.llvm_addrsig
+config
+license
+.strtab
+.symtab
+.rel.BTF
+LICENSE
+LBB0_79
+LBB0_149
+LBB0_39
+LBB0_129
+LBB0_19
+LBB0_109
+LBB0_8
+LBB0_98
+LBB0_78
+LBB0_58
+LBB0_48
+LBB0_138
+LBB0_28
+LBB0_118
+LBB0_137
+LBB0_27
+LBB0_117
+LBB0_6
+LBB0_76
+LBB0_56
+LBB0_146
+LBB0_36
+LBB0_136
+LBB0_26
+LBB0_116
+LBB0_95
+LBB0_85
+LBB0_65
+LBB0_45
+LBB0_145
+LBB0_35
+LBB0_115
+LBB0_4
+LBB0_64
+LBB0_154
+LBB0_44
+LBB0_134
+LBB0_24
+LBB0_93
+LBB0_73
+LBB0_63
+LBB0_153
+LBB0_43
+LBB0_113
+LBB0_2
+LBB0_82
+LBB0_72
+LBB0_152
+LBB0_42
+LBB0_102
+LBB0_81
+LBB0_61
+LBB0_151
+LBB0_41
+LBB0_131
+LBB0_21
+LBB0_121
+LBB0_11
+LBB0_101
+LBB0_80
+LBB0_110
+LBB0_100

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <resource dir="file:///android_asset/kr-script/battery" />
+    <group>
+        <action confirm="true">
+            <title>@string:kr_bat_doze_clear</title>
+            <desc>@string:kr_bat_doze_clear_desc</desc>
+            <set>run doze_clear.sh</set>
+        </action>
+
+        <page
+            id="HighPowerApplicationsActivity"
+            activity="com.android.settings/.Settings$HighPowerApplicationsActivity">
+            <title>@string:kr_bat_opt</title>
+            <desc>@string:kr_bat_opt_desc</desc>
+        </page>
+
+        <switch shell="hidden" min-sdk="30">
+            <title>@string:kr_bat_frozen</title>
+            <desc>@string:kr_bat_frozen_desc</desc>
+            <get>
+                if [[ $(device_config get activity_manager_native_boot use_freezer) == 'true' ]]; then
+                  echo 1
+                else
+                  echo 0
+                fi
+            </get>
+            <set>
+                if [[ $state == 1 ]]; then
+                  state=true
+                else
+                  state=false
+                fi
+                device_config put activity_manager_native_boot use_freezer $state
+                echo '@string:kr_bat_frozen_reboot'
+            </set>
+        </switch>
+    </group>
+</root>

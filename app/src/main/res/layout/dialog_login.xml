@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/confirm_title"
+        android:text="@string/user_register_login"
+        style="@style/dialogTitle" />
+    <TextView
+        android:id="@id/confirm_message"
+        android:text="@string/user_register_login_desc"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        style="@style/dialogDesc" />
+    <LinearLayout
+        style="@style/dialogWarn">
+        <EditText
+            android:id="@id/dialog_email"
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:hint="@string/user_uid_input"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="64"
+            android:imeOptions="actionNext"
+            android:breakStrategy="simple"
+            android:paddingHorizontal="5.0dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        style="@style/dialogWarn">
+        <EditText
+            android:id="@id/dialog_password"
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:hint="@string/user_pwd_input"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="30"
+            android:imeOptions="actionDone"
+            android:breakStrategy="simple"
+            android:paddingHorizontal="5.0dip" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/user_contact"
+            android:background="@drawable/list_item_ripple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin">
+            <ImageView
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:layout_margin="1.0dip"
+                android:src="@drawable/icon_outlook" />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_seek_help"
+                android:layout_marginStart="7.0dip"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <TextView
+            android:id="@id/device_id"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:textIsSelectable="true"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            style="@style/textSmall" />
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:id="@id/reset_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_reset_password"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            style="@style/textDefault" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/krscript_item_ripple_inactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip">
+            <TextView
+                android:id="@id/confirm_title"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/orientation_title"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                style="@style/textTitle" />
+            <TextView
+                android:id="@id/confirm_message"
+                android:paddingTop="8.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/orientation_desc"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/in_card_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/orientation_default"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip"
+                    android:checked="true"
+                    app:desc="@string/orientation_default_desc"
+                    app:iconColor="#8a8e8e8e"
+                    app:iconPadding="7.0dip"
+                    app:iconSrc="@drawable/orientation_default"
+                    app:title="@string/orientation_default" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/orientation_sensor_auto"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip"
+                    app:desc="@string/orientation_auto_desc"
+                    app:iconColor="#ff81c784"
+                    app:iconSrc="@drawable/orientation_auto"
+                    app:title="@string/orientation_auto" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/orientation_sensor_force"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip"
+                    app:desc="@string/orientation_force_auto_desc"
+                    app:iconColor="#ffffb74d"
+                    app:iconSrc="@drawable/orientation_auto"
+                    app:title="@string/orientation_force_auto" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/orientation_landscape"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip"
+                    app:desc="@string/orientation_horizontal_desc"
+                    app:iconColor="#ff4dd0e1"
+                    app:iconSrc="@drawable/orientation_lock"
+                    app:title="@string/orientation_horizontal" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/orientation_portrait"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip"
+                    app:desc="@string/orientation_vertical_desc"
+                    app:iconColor="#ff4fc3f7"
+                    app:iconSrc="@drawable/orientation_lock"
+                    app:title="@string/orientation_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <Button
+                android:id="@id/btn_cancel"
+                android:text="@string/btn_cancel"
+                style="@style/dialogCancelBtn" />
+            <Button
+                android:id="@id/btn_confirm"
+                android:text="@string/btn_confirm"
+                android:layout_marginStart="8.0dip"
+                style="@style/dialogConfirmBtn" />
+        </LinearLayout>
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

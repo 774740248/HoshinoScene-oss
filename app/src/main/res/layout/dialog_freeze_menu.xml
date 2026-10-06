@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8.0dip">
+        <com.omarea.ui.OptionItemView
+            android:id="@id/menu_freeze"
+            app:desc="@string/freezer_freeze_all_desc"
+            app:iconColor="#ff33b5e5"
+            app:iconSrc="@drawable/app_options_freeze"
+            app:title="@string/freezer_freeze_all"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/menu_unfreeze"
+            app:desc="@string/freezer_unfreeze_all_desc"
+            app:iconColor="#ff7cb342"
+            app:iconSrc="@drawable/app_options_freeze"
+            app:title="@string/freezer_unfreeze_all"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/menu_shortcut"
+            app:desc="@string/freezer_shortcuts_create_desc"
+            app:iconColor="#ffb3ca6e"
+            app:iconSrc="@drawable/app_options_shortcut"
+            app:title="@string/freezer_shortcuts_create"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/menu_remove"
+            app:desc="@string/freezer_clear_desc"
+            app:iconColor="#fffb8c00"
+            app:iconSrc="@drawable/app_options_clear2"
+            app:title="@string/freezer_clear"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/menu_auto_add"
+            app:desc="@string/freezer_auto_import_desc"
+            app:iconColor="#ff00acc1"
+            app:iconPadding="10.0dip"
+            app:iconSrc="@drawable/app_options_restore"
+            app:title="@string/freezer_auto_import"
+            style="@style/ListCardItemSmall" />
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.ui.BlurViewRelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+    android:paddingVertical="@dimen/activity_vertical_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@android:id/icon"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:layout_alignParentTop="true"
+        app:tint="?android:colorAccent" />
+    <TextView
+        android:textSize="15.0dip"
+        android:textColor="?android:textColorPrimary"
+        android:id="@android:id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@android:id/icon"
+        android:layout_alignParentBottom="true" />
+</com.omarea.ui.BlurViewRelativeLayout>

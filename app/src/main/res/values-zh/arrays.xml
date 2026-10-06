@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="appops_filter">
+        <item>全部</item>
+        <item>允许</item>
+        <item>前台允许</item>
+        <item>忽略</item>
+        <item>拒绝</item>
+    </string-array>
+    <string-array name="apps_filter">
+        <item>所有应用</item>
+        <item>已禁用</item>
+        <item>已更新</item>
+        <item>已启用</item>
+    </string-array>
+    <string-array name="default_powercfg_mode_options">
+        <item>@string/powersave</item>
+        <item>@string/balance</item>
+        <item>@string/performance</item>
+        <item>@string/fast</item>
+    </string-array>
+    <string-array name="detail_categories">
+        <item>应用</item>
+        <item>游戏</item>
+    </string-array>
+    <string-array name="modules_source_filter">
+        <item>所有来源</item>
+        <item>官方上传</item>
+        <item>用户分享</item>
+        <item>Magisk的仓库</item>
+    </string-array>
+    <string-array name="powercfg_apptype_filter">
+        <item>用户</item>
+        <item>系统</item>
+        <item>全部</item>
+    </string-array>
+    <string-array name="powercfg_modes_filter">
+        <item>全部模式</item>
+        <item>@string/powersave</item>
+        <item>@string/balance</item>
+        <item>@string/performance</item>
+        <item>@string/fast</item>
+        <item>@string/global_default</item>
+        <item>@string/kepp_state</item>
+    </string-array>
+    <string-array name="process_filter">
+        <item>安卓应用</item>
+        <item>其它进程</item>
+        <item>所有进程</item>
+    </string-array>
+    <string-array name="process_sort_modes">
+        <item>按CPU</item>
+        <item>按RES</item>
+        <item>按PID</item>
+        <item>按UID</item>
+        <item>不排序</item>
+    </string-array>
+    <string-array name="sleep_powercfg_mode_options">
+        <item>@string/powersave</item>
+        <item>@string/balance</item>
+        <item>@string/performance</item>
+        <item>@string/kepp_state</item>
+    </string-array>
+</resources>

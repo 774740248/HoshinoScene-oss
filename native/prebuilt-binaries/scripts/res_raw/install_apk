@@ -1,0 +1,22 @@
+install_apk() {
+  path="$1"
+  session=$(pm install-create -r -d | sed 's/.*\[\(.*\)\].*/\1/')
+  if [ -z "$session" ]; then
+    echo "create install session failed" >&2
+    return 1
+  fi
+
+  size=$(wc -c < "$path")
+  cat "$path" | pm install-write -S "$size" "$session" base.apk - || {
+    echo "install-write failed" >&2
+    pm install-abandon "$session" 2>/dev/null
+    return 1
+  }
+
+  pm install-commit "$session" || {
+    echo "install-commit failed" >&2
+    return 1
+  }
+}
+
+install_apk "${APK}" 2>&1

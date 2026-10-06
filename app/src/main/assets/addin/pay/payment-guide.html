@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <title>支付向导</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scrollbar-width: none;
+      line-height: 1.5;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+      /* Chrome Safari */
+    }
+
+    body {
+      line-height: 1.4;
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 0 6px;
+    }
+
+    h4 {
+      font-weight: 100;
+      color: #a0a0a0;
+      font-size: 20px;
+    }
+
+    cite {
+      font-size: 12px;
+    }
+
+    img {
+      margin-bottom: 10px;
+      display: block;
+      max-width: 100%;
+      display: inline-block;
+      vertical-align: top;
+      box-shadow: 0 0 5px #d0d0d0;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 180px;
+      height: 180px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .t {
+      padding-bottom: 4px;
+    }
+
+    .t::before {
+      content: ' ';
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: #98cf00;
+      margin-right: 25px;
+      margin-left: 5px;
+      font-size: 0.8em;
+      color: #000;
+      background-color: rgba(0, 225, 255, 0.781);
+    }
+
+    .d {
+      color: #a0a0a0;
+      font-size: 11px;
+      padding-left: 42px;
+    }
+
+    li {
+      border-radius: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+
+    hr {
+      background-color: transparent;
+      border: none;
+      height: 0;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      /* color: #0094ff; */
+      font-size: 1.25em;
+      color: rgb(0, 140, 255);
+      font-weight: 600;
+    }
+
+    .hl {
+      color: rgb(0, 140, 255);
+    }
+
+    .o-price {
+      color: #aaa;
+      text-decoration: line-through;
+      font-size: 0.8em;
+    }
+
+    .hl {
+      /* color: #0094ff; */
+      color: rgb(0, 140, 255);
+      font-style: normal;
+    }
+
+    code {
+      background-color: #f8f8f8;
+      padding: 10px 20px 10px 10px;
+      display: inline-block;
+      border-radius: 5px;
+    }
+
+    .grey {
+      color: #a0a0a0;
+      font-size: 11px;
+      text-align: justify;
+    }
+
+    a:link {
+      color: #3c435f;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+</head>
+
+<body>
+  <div class="radius">
+    <div class="content">
+      <h4>一、如何激活</h4>
+      <div>
+        <ul>
+          <li>
+            <div class="t">1. 订单验证</div>
+            <div class="d">支付完成后，回到SCENE <span class="hl">注册/登录</span></div>
+            <div class="d">输入<span class="hl">支付宝订单号</span>(格式如2026*******)进行[验证]即可</div>
+          </li>
+          <li>
+            <div class="t">2. 注意事项</div>
+            <div class="d">购买后<span class="hl">24小时内</span>，验证时提示订单未记录，或验证后积分未增加。均属于正常现象，请勿惊慌！</div>
+            <div class="d">如果<span class="hl">24小时后</span>，仍无法验证或积分未到账</div>
+            <div class="d">请通过邮件<a
+                href="mailto:1191634433@qq.com?subject=Scene%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95">1191634433@qq.com</a>联系我们。
+            </div>
+          </li>
+        </ul>
+      </div>
+      <hr>
+
+      <h4>二、套餐定价</h4>
+      <ul>
+        <!--<li>
+            <div class="t">辞旧迎新 <span class="price">￥20</span>&nbsp;<span class="o-price">￥30</span></div>
+            <div class="d">1台永久激活的设备，登录额外送20积分</div>
+            <div class="d">* 此套餐<span class="hl" id="timeout">??天</span>后下架</div>
+          </li>-->
+        <li>
+          <div class="t">积分套餐 <span class="price"><small>￥</small>15</span>&nbsp;<span class="o-price">￥30</span></div>
+          <div class="d">增加16积分，兑换后记录到账号</div>
+          <div class="d">每1台设备每30天消耗1积分</div>
+          <div class="d">同一设备累计消耗16积分后，该设备可永久使用不再消耗积分</div>
+          <div class="d">
+            <b>不支持退款，请试用满意确认需要后再购买。</b>
+          </div>
+        </li>
+      </ul>
+      <hr>
+
+
+      <h4>三、如何付款</h4>
+      <div>
+        <ul>
+          <li>
+            <div class="d">
+              <div class="hl">点按钮或扫下方二维码支付。</div>
+            </div>
+            <br>
+            <div class="t">
+              <img class="qr" id="qrCode" hidden src="./payment-guide/qr-alipay.png" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+      <hr>
+    </div>
+  </div>
+</body>
+
+</html>

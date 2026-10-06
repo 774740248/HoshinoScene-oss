@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:background="?selectableItemBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="12.0dip"
+    android:paddingVertical="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/ItemIcon"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:src="@drawable/folder"
+        android:maxWidth="40.0dip"
+        android:maxHeight="40.0dip"
+        android:minWidth="40.0dip"
+        android:minHeight="40.0dip" />
+    <LinearLayout
+        android:layout_gravity="fill_horizontal|center"
+        android:orientation="vertical"
+        android:id="@id/center"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:paddingStart="7.0dip">
+        <TextView
+            android:textSize="14.0dip"
+            android:textStyle="bold"
+            android:textColor="?android:textColorPrimary"
+            android:id="@id/ItemTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_gravity="fill_horizontal"
+            android:id="@id/ItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textXSmall" />
+    </LinearLayout>
+    <CheckBox
+        android:layout_gravity="center_vertical"
+        android:id="@id/ItemSelected"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="8.0dip" />
+</LinearLayout>

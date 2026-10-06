@@ -1,0 +1,20 @@
+# 星野Scene 还原工程 .gitignore
+*.iml
+.gradle/
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+.idea/
+.DS_Store
+
+# 签名材料：依据用户要求「公开放入源代码中」，故**刻意不排除**
+#   - signing/               原始密钥库与说明（已入库）
+#   - app/keystore/hoshino.jks  工程实际引用的密钥（已入库）
+# 如需改为密钥外置，可在此处恢复以下忽略规则：
+#   # *.jks
+#   # *.keystore
+#   # keystore/
+#   # signing/

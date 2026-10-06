@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.omarea.common.ui.InputView
+        android:id="@id/dialog_addin_mac_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:inputType="text"
+        app:title="MAC" />
+    <CheckBox
+        android:id="@id/dialog_addin_mac_autochange"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="@string/boot_after_auto_modify" />
+</LinearLayout>

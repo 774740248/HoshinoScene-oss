@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/action_retrieve"
+        android:orderInCategory="100"
+        android:title="@string/apps_retrieve" />
+    <item
+        android:id="@id/action_batch_uninstall"
+        android:orderInCategory="100"
+        android:title="@string/apps_sync_download" />
+</menu>

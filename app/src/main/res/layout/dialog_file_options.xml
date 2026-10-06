@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="8.0dip"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.85">
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+            <CheckBox
+                android:id="@id/file_star"
+                android:layout_marginEnd="10.0dip"
+                style="@style/SceneStar" />
+            <TextView
+                android:id="@id/confirm_title"
+                android:focusable="true"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textIsSelectable="true"
+                style="@style/textTitle" />
+        </LinearLayout>
+        <TextView
+            android:id="@id/confirm_message"
+            android:paddingTop="8.0dip"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_horizontal_margin" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/file_share"
+            app:desc="@string/fs_share_file_desc"
+            app:iconColor="#ff673ab7"
+            app:iconPadding="10.0dip"
+            app:iconSrc="@drawable/icon_share"
+            app:title="@string/fs_share_file"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/file_rename"
+            app:desc="@string/fs_rename_desc"
+            app:iconColor="#ffffb300"
+            app:iconPadding="10.0dip"
+            app:iconSrc="@drawable/file_rename"
+            app:title="@string/fs_rename"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/file_copy"
+            app:desc="@string/fs_copy_file_desc"
+            app:iconColor="#ff7cb342"
+            app:iconPadding="10.0dip"
+            app:iconSrc="@drawable/app_options_copy"
+            app:title="@string/fs_copy_file"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/file_move"
+            app:desc="@string/fs_move_file_desc"
+            app:iconColor="#ff039be5"
+            app:iconPadding="9.0dip"
+            app:iconSrc="@drawable/file_options_move"
+            app:title="@string/fs_move_file"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/file_unzip"
+            app:desc="@string/fs_unzip_file_desc"
+            app:iconColor="#ffe91e63"
+            app:iconPadding="9.0dip"
+            app:iconSrc="@drawable/file_unzip"
+            app:title="@string/fs_unzip_file"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/file_compress"
+            app:desc="@string/fs_zip_desc"
+            app:iconColor="#ffe0a100"
+            app:iconPadding="10.0dip"
+            app:iconSrc="@drawable/file_compress"
+            app:title="@string/fs_zip"
+            style="@style/ListCardItemSmall" />
+        <com.omarea.ui.OptionItemView
+            android:id="@id/file_stat"
+            app:desc="@string/fs_stat_size_desc"
+            app:iconColor="#ff00b9c2"
+            app:iconPadding="8.0dip"
+            app:iconSrc="@drawable/ic_bat_stats"
+            app:title="@string/fs_stat_size"
+            style="@style/ListCardItemSmall" />
+        <Button
+            android:textSize="12.0dip"
+            android:id="@id/file_delete"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/fs_delete"
+            android:layout_marginStart="8.0dip"
+            style="@style/SceneButtonDanger" />
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

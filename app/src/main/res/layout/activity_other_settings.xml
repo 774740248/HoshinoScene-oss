@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:fitsSystemWindows="false"
+    android:clipToPadding="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.omarea.common.ui.OverScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?android:actionBarSize">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.omarea.ui.BlurViewLinearLayout
+                android:layout_marginTop="0.0dip"
+                style="@style/ListCardItem">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_theme"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <ImageView
+                        android:tag="999"
+                        android:background="@drawable/theme_wallpaper2"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_margin="2.0dip"
+                        android:onClick="onThemeClick"
+                        android:layout_marginStart="6.0dip"
+                        android:elevation="2.0dip"
+                        android:outlineAmbientShadowColor="#ff808080" />
+                    <ImageView
+                        android:tag="10"
+                        android:background="@drawable/theme_wallpaper"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_margin="2.0dip"
+                        android:onClick="onThemeClick"
+                        android:layout_marginStart="6.0dip"
+                        android:elevation="2.0dip"
+                        android:outlineAmbientShadowColor="#ff808080" />
+                    <ImageView
+                        android:tag="-2"
+                        android:background="#ff505050"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_margin="2.0dip"
+                        android:onClick="onThemeClick"
+                        android:layout_marginStart="6.0dip"
+                        android:elevation="2.0dip"
+                        android:outlineAmbientShadowColor="#ff808080" />
+                    <ImageView
+                        android:tag="-3"
+                        android:background="#fff0f0f0"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_margin="2.0dip"
+                        android:onClick="onThemeClick"
+                        android:layout_marginStart="6.0dip" />
+                    <ImageView
+                        android:tag="-1"
+                        android:background="@drawable/theme_light"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_margin="2.0dip"
+                        android:onClick="onThemeClick"
+                        android:layout_marginStart="6.0dip"
+                        android:elevation="2.0dip"
+                        android:outlineAmbientShadowColor="#ff808080" />
+                </LinearLayout>
+                <Switch
+                    android:id="@id/settings_language_package"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/settings_language_package" />
+                <TextView
+                    android:id="@id/settings_language_package_export"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_language_package_desc"
+                    style="@style/textSmall" />
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@id/shortcut_slots"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="桌面图标长按"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <ImageView
+                        android:tag="0"
+                        android:background="?actionBarItemBackground"
+                        android:padding="2.0dip"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_margin="2.0dip"
+                        android:src="@drawable/icon_add"
+                        android:onClick="onAddShortcutClick"
+                        android:layout_marginStart="6.0dip"
+                        app:tint="?android:colorAccent" />
+                    <ImageView
+                        android:tag="1"
+                        android:background="?actionBarItemBackground"
+                        android:padding="2.0dip"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_margin="2.0dip"
+                        android:src="@drawable/icon_add"
+                        android:onClick="onAddShortcutClick"
+                        android:layout_marginStart="6.0dip"
+                        app:tint="?android:colorAccent" />
+                    <ImageView
+                        android:tag="2"
+                        android:background="?actionBarItemBackground"
+                        android:padding="2.0dip"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_margin="2.0dip"
+                        android:src="@drawable/icon_add"
+                        android:onClick="onAddShortcutClick"
+                        android:layout_marginStart="6.0dip"
+                        app:tint="?android:colorAccent" />
+                    <ImageView
+                        android:tag="3"
+                        android:background="?actionBarItemBackground"
+                        android:padding="2.0dip"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_margin="2.0dip"
+                        android:src="@drawable/icon_add"
+                        android:onClick="onAddShortcutClick"
+                        android:layout_marginStart="6.0dip"
+                        app:tint="?android:colorAccent" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                style="@style/ListCardItem">
+                <Switch
+                    android:id="@id/settings_debug_layer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_debug_layer" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_debug_layer_desc"
+                    style="@style/textSmall" />
+                <Switch
+                    android:id="@id/settings_ft_monitor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/settings_ft_monitor" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_ft_monitor_desc"
+                    style="@style/textSmall" />
+                <Switch
+                    android:id="@id/settings_next_release"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/settings_next_release" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_next_release_desc"
+                    style="@style/textSmall" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                style="@style/ListCardItem">
+                <Switch
+                    android:id="@id/settings_layer_keep"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_layer_keep" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_layer_keep_desc"
+                    style="@style/textSmall" />
+                <Switch
+                    android:id="@id/settings_kernel_mem"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="使用/proc/meminfo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="首页和监视器里计算可用RAM使用/proc/meminfo的MemAvailable"
+                    style="@style/textSmall" />
+                <Switch
+                    android:id="@id/settings_keep_alive"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/settings_keep_alive" />
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_keep_alive_desc"
+                    style="@style/textSmall" />
+                <Switch
+                    android:id="@id/settings_daemon_alive"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/settings_daemon_alive" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_daemon_alive_desc"
+                    style="@style/textSmall" />
+                <Switch
+                    android:id="@id/settings_daemon_auto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/settings_daemon_auto" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_daemon_auto_desc"
+                    style="@style/textSmall" />
+                <EditText
+                    android:textSize="10.0dip"
+                    android:id="@id/settings_log_content"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="200.0dip" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/sync_menu"
+                style="@style/ListCardItem">
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sync"
+                    android:layout_weight="1.0"
+                    style="@style/textTitle" />
+                <Button
+                    android:id="@id/sync_upload"
+                    android:text="@string/upload"
+                    style="@style/SceneButton" />
+                <Button
+                    android:id="@id/sync_download"
+                    android:text="@string/download"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    style="@style/SceneButton" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <TextView
+                android:textSize="10.0dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:text="湘ICP备2023024708号-2A\n© 2018-2026 omarea.com, All rights reserved."
+                android:textAlignment="center" />
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@id/privacy_policy"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="🌐 Privacy Policy"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
+                style="@style/textSmall" />
+        </LinearLayout>
+    </com.omarea.common.ui.OverScrollView>
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/layout_app_bar" />
+</FrameLayout>

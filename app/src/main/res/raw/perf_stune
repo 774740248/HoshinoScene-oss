@@ -1,0 +1,137 @@
+[{
+  "title": "*",
+  "items": [
+    {
+      "id": "*/boost",
+      "title": "boost",
+      "field": {
+        "path": "/dev/stune/cpu.schedtune.boost",
+        "type": "number",
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "*/prefer_idle",
+      "title": "prefer_idle",
+      "field": {
+        "path": "/dev/stune/schedtune.prefer_idle",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "*/sched_boost_no_override",
+      "title": "sched_boost_no_override",
+      "field": {
+        "path": "/dev/stune/schedtune.sched_boost_no_override",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    }
+  ]
+}, {
+  "title": "background",
+  "items": [
+    {
+      "id": "background/boost",
+      "title": "boost",
+      "field": {
+        "path": "/dev/stune/background/cpu.schedtune.boost",
+        "type": "number",
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "background/prefer_idle",
+      "title": "prefer_idle",
+      "field": {
+        "path": "/dev/stune/background/schedtune.prefer_idle",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "background/sched_boost_no_override",
+      "title": "sched_boost_no_override",
+      "field": {
+        "path": "/dev/stune/background/schedtune.sched_boost_no_override",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    }
+  ]
+}, {
+  "title": "foreground",
+  "items": [
+    {
+      "id": "foreground/boost",
+      "title": "boost",
+      "field": {
+        "path": "/dev/stune/foreground/cpu.schedtune.boost",
+        "type": "number",
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "foreground/prefer_idle",
+      "title": "prefer_idle",
+      "field": {
+        "path": "/dev/stune/foreground/schedtune.prefer_idle",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "foreground/sched_boost_no_override",
+      "title": "sched_boost_no_override",
+      "field": {
+        "path": "/dev/stune/foreground/schedtune.sched_boost_no_override",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    }
+  ]
+}, {
+  "title": "top-app",
+  "items": [
+    {
+      "id": "top-app/boost",
+      "title": "boost",
+      "field": {
+        "path": "/dev/stune/top-app/cpu.schedtune.boost",
+        "type": "number",
+        "min": 0,
+        "max": 100
+      }
+    },
+    {
+      "id": "top-app/prefer_idle",
+      "title": "prefer_idle",
+      "field": {
+        "path": "/dev/stune/top-app/schedtune.prefer_idle",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "top-app/sched_boost_no_override",
+      "title": "sched_boost_no_override",
+      "field": {
+        "path": "/dev/stune/top-app/schedtune.sched_boost_no_override",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    }
+  ]
+}]

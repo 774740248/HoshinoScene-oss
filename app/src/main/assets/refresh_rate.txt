@@ -1,0 +1,40 @@
+com.miui.huanji 60 60
+com.miui.backup 60 60
+
+com.taobao.idlefish 60 90
+# com.taobao.taobao 60 90
+com.jingdong.app.mall 60 90
+# com.sankuai.meituan 60 90
+com.baidu.BaiduMap 60 90
+com.autonavi.minimap 60 90
+com.tencent.map 60 90
+com.sdu.didi.psnger 60 90
+
+com.miHoYo.Yuanshen 60 60
+com.miHoYo.ys.mi 60 60
+com.miHoYo.ys.bilibili 60 60
+com.miHoYo.GenshinImpact 60 60
+
+com.tencent.tmgp.pubgmhd 60 90
+com.tencent.tmgp.pubgmhd 60 90
+com.tencent.msgame 60 60
+com.tencent.tmgp.sgame 120 120
+com.tencent.tmgp.sgamece 120 120
+com.netease.party 60 60
+
+com.miHoYo.hkrpg 60 60
+com.miHoYo.hkrpg.bilibili 60 60
+com.HoYoverse.hkrpgoversea 60 60
+xyz.aethersx2.android 60 60
+com.activision.callofduty.warzone 60 60
+
+com.oplus.camera 60 60
+com.android.camera 60 60
+
+com.netease.l22 60 60
+com.netease.l22.mi 60 60
+
+com.activision.callofduty.warzone 60 60
+
+com.kurogame.mingchao 60 60
+com.kurogame.wutheringwaves.global 60 60

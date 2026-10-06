@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <ImageView
+        android:id="@id/upload_settings"
+        android:padding="9.0dip"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/icon_upload"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneTitleBarBtn" />
+    <ImageView
+        android:id="@id/trace_settings"
+        android:padding="4.0dip"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/settings"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_toStartOf="@id/upload_settings"
+        style="@style/SceneTitleBarBtn" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_app_bar">
+        <com.omarea.ui.BlurViewLinearLayout
+            android:orientation="horizontal"
+            android:id="@id/fps_device_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.0dip"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            style="@style/ListCardItem">
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip"
+                    android:text="Platform"
+                    style="@style/textXSmall" />
+                <ImageView
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:src="@drawable/icon_chart_cpu" />
+                <TextView
+                    android:id="@id/chart_platform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="SOC"
+                    style="@style/textDefault" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip"
+                    android:text="Model"
+                    style="@style/textXSmall" />
+                <ImageView
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:src="@drawable/icon_chart_phone" />
+                <TextView
+                    android:id="@id/chart_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="Model"
+                    android:textAlignment="center"
+                    style="@style/textDefault" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip"
+                    android:text="OS"
+                    style="@style/textXSmall" />
+                <ImageView
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:src="@drawable/icon_chart_android" />
+                <TextView
+                    android:id="@id/chart_os"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="Android X"
+                    style="@style/textDefault" />
+            </LinearLayout>
+        </com.omarea.ui.BlurViewLinearLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:paddingHorizontal="@dimen/activity_horizontal_margin">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/chart_sessions"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/chart_apps"
+                android:isScrollContainer="true"
+                style="@style/SceneScrollView" />
+            <TextView
+                android:id="@id/chart_sessions_empty"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="8.0dip"
+                android:text="@string/fps_record_empty" />
+            <LinearLayout
+                android:id="@id/chart_apps"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_alignParentBottom="true">
+                <HorizontalScrollView
+                    android:scrollbars="none"
+                    android:layout_width="0.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_weight="1.0"
+                    android:overScrollMode="always">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:orientation="horizontal"
+                            android:id="@id/chart_apps_list"
+                            android:scrollbars="none"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:overScrollMode="never" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/chart_delete"
+                    android:padding="8.0dip"
+                    android:layout_width="32.0dip"
+                    android:layout_height="32.0dip"
+                    android:src="@drawable/delete"
+                    android:scaleType="centerInside"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    app:tint="#ffffffff"
+                    style="@style/SceneButton" />
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/chart_delete_confirm"
+                    android:padding="6.0dip"
+                    android:visibility="gone"
+                    android:layout_width="32.0dip"
+                    android:layout_height="32.0dip"
+                    android:src="@drawable/ic_back"
+                    android:scaleType="centerInside"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    style="@style/SceneButton" />
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/chart_add"
+                    android:padding="2.0dip"
+                    android:layout_width="32.0dip"
+                    android:layout_height="32.0dip"
+                    android:src="@drawable/add"
+                    android:scaleType="centerInside"
+                    android:layout_marginEnd="12.0dip"
+                    style="@style/SceneButton" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

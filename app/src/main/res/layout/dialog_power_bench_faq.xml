@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/krscript_item_ripple_inactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"> ‘ <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="线程数"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="负载线程的数量，强烈建议设为“目标核心”的整数倍，以便能够自动为每个核心均匀分配线程。"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="测试时长"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="每档频率测试持续时长(秒)，更长的测试时间能减少波动误差，有些设备电流数据10秒才更新一次，则测试时长应相应延长至少5倍。"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="时间片"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="负载计算周期，例如时间片设为10ms，且目标负载为90%，则每运行9ms后暂停1ms"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RAM随机访问"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="在Int/Float运算循环中，每N次循环插入一次随机地址的内存访问    N = 1024 >> [?]   其中[?]指用户设置的值"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="目标负载"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="指单个线程处于运行状态的时间比例，并不保证线程所在核心的负载与预期一致"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="运算类型"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="int,float：常规的数值运算；json: 指json的序列化、反序列化处理；pi：丘德诺夫斯基算法计算圆周率；"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CPU频率上限/下限"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="自动对指定范围内的各档频率进行能耗测试，期间CPU使用Performance调速器定频运行。如果频率出现明显波动，或核心温度达到指定阈值，会提前结束测试"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="为何低频Score/mW更低？"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="系统本身和性能检测属于固定开销，当CPU频率非常低时，固定开销的占比很高，真正用于模拟运算的性能很少。导致每mW得分更低，并非是低频能效更差"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

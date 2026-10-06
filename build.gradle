@@ -1,0 +1,9 @@
+// 根 build.gradle — 集中声明插件版本（不使用 apply false 之外的逻辑）
+// AGP 版本 8.13.0：本环境 GRADLE_USER_HOME 已缓存该版本；支持 compileSdk 36
+plugins {
+    id 'com.android.application' version '8.13.0' apply false
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.layout.buildDirectory
+}

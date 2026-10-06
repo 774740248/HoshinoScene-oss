@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:paddingTop="8.0dip"
+    android:paddingBottom="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="14.0dip"
+        android:layout_weight="1.0"
+        android:paddingHorizontal="10.0dip">
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@id/threadName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thread"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:breakStrategy="simple"
+            style="@style/textSmallTitle" />
+        <TextView
+            android:id="@id/threadID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="6.0dip"
+            android:layout_toEndOf="@id/threadName"
+            style="@style/textXSmall" />
+        <TextView
+            android:id="@id/threadDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:layout_centerVertical="true"
+            android:fontFamily="monospace"
+            android:layout_alignParentEnd="true"
+            style="@style/textXSmall" />
+    </RelativeLayout>
+    <com.omarea.ui.fps.ThreadCPUView
+        android:id="@id/threadTime"
+        android:layout_width="fill_parent"
+        android:layout_height="60.0dip" />
+</LinearLayout>

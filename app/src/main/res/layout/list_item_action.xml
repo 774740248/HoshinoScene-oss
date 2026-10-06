@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.omarea.ui.BlurViewRelativeLayout
+        android:orientation="vertical"
+        android:background="@drawable/krscript_item_ripple"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+        <TextView
+            android:id="@id/Title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:layout_toStartOf="@id/Arrow"
+            style="@style/textTitle" />
+        <TextView
+            android:id="@id/Desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Title"
+            android:layout_toStartOf="@id/Arrow"
+            style="@style/textSmall" />
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/Arrow"
+            android:background="@null"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:src="@drawable/arrow"
+            android:scaleType="centerInside"
+            android:layout_centerInParent="true"
+            android:alpha="0.8"
+            android:layout_marginStart="5.0dip"
+            android:layout_alignParentEnd="true"
+            app:tint="#ff808080" />
+    </com.omarea.ui.BlurViewRelativeLayout>
+</FrameLayout>

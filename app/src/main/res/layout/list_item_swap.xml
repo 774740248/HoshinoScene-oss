@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="11.0dip"
+        android:id="@id/itemPath"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.0" />
+    <TextView
+        android:textSize="11.0dip"
+        android:gravity="center"
+        android:id="@id/itemType"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" />
+    <TextView
+        android:textSize="11.0dip"
+        android:gravity="center"
+        android:id="@id/itemSize"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" />
+    <TextView
+        android:textSize="11.0dip"
+        android:gravity="center"
+        android:id="@id/itemUsed"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" />
+    <TextView
+        android:textSize="11.0dip"
+        android:gravity="center"
+        android:id="@id/itemPriority"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" />
+</LinearLayout>

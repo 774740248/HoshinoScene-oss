@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <ImageButton
+        android:id="@id/action_history"
+        android:padding="10.0dip"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/icon_history"
+        android:layout_toStartOf="@id/action_delete"
+        style="@style/SceneTitleBarBtn" />
+    <ImageButton
+        android:id="@id/action_delete"
+        android:padding="11.0dip"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/delete"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneTitleBarBtn" />
+    <com.omarea.common.ui.OverScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.omarea.ui.BlurViewRelativeLayout
+                android:layout_marginTop="0.0dip"
+                android:paddingStart="16.0dip"
+                android:paddingEnd="0.0dip"
+                style="@style/ListCardItem">
+                <TextView
+                    android:id="@id/view_time_title"
+                    android:paddingTop="1.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/power_curve"
+                    style="@style/textTitle" />
+                <com.omarea.ui.HelpIcon
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="@id/view_time_title"
+                    android:layout_marginStart="4.0dip"
+                    android:layout_toEndOf="@id/view_time_title"
+                    app:layout_res="@layout/dialog_power_legend" />
+                <TextView
+                    android:textSize="17.0dip"
+                    android:textColor="?android:textColorPrimary"
+                    android:id="@id/battery_capacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0%"
+                    android:layout_alignParentTop="true"
+                    android:alpha="0.7"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:layout_alignParentEnd="true" />
+                <com.omarea.ui.power.PowerStatView
+                    android:id="@id/view_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="220.0dip"
+                    android:layout_below="@id/view_time_title" />
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@id/view_realtime_values"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_below="@id/view_time"
+                    android:paddingEnd="@dimen/activity_horizontal_margin">
+                    <ImageView
+                        android:layout_width="15.0dip"
+                        android:layout_height="15.0dip"
+                        android:src="@drawable/ic_capacity"
+                        app:tint="#ff808080" />
+                    <TextView
+                        android:textSize="11.0dip"
+                        android:id="@id/battery_size"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="0000mAh"
+                        android:layout_weight="5.0"
+                        android:layout_marginStart="2.0dip" />
+                    <ImageView
+                        android:layout_width="15.0dip"
+                        android:layout_height="15.0dip"
+                        android:src="@drawable/ic_temperature"
+                        app:tint="#ff808080" />
+                    <TextView
+                        android:textSize="11.0dip"
+                        android:id="@id/battery_temperature"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="00℃"
+                        android:layout_weight="4.0"
+                        android:layout_marginStart="2.0dip" />
+                    <ImageView
+                        android:layout_width="15.0dip"
+                        android:layout_height="15.0dip"
+                        android:src="@drawable/ic_voltage"
+                        app:tint="#ff808080" />
+                    <TextView
+                        android:textSize="11.0dip"
+                        android:id="@id/battery_voltage"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="3.85V"
+                        android:layout_weight="4.0"
+                        android:layout_marginStart="2.0dip" />
+                    <ImageView
+                        android:layout_width="15.0dip"
+                        android:layout_height="15.0dip"
+                        android:src="@drawable/ic_power_supply"
+                        app:tint="#ff808080" />
+                    <TextView
+                        android:textSize="11.0dip"
+                        android:id="@id/battery_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="--"
+                        android:layout_marginStart="2.0dip" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewRelativeLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingTop="12.0dip"
+                android:paddingBottom="6.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1.0dip"
+                style="@style/ListCardItem">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    <TextView
+                        android:textSize="16.0dip"
+                        android:textColor="?android:colorAccent"
+                        android:gravity="center_vertical"
+                        android:id="@id/avg_power"
+                        android:layout_width="fill_parent"
+                        android:layout_height="20.0dip"
+                        android:text="----mW"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4.0dip"
+                        android:text="@string/power_avg"
+                        android:textAlignment="center"
+                        style="@style/textXSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    <TextView
+                        android:textSize="16.0dip"
+                        android:textColor="?android:colorAccent"
+                        android:gravity="center_vertical"
+                        android:id="@id/screen_on_duration"
+                        android:layout_width="fill_parent"
+                        android:layout_height="20.0dip"
+                        android:text="00:00"
+                        android:fontFamily="@font/aldrich"
+                        android:textAlignment="center" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4.0dip"
+                        android:text="@string/power_used"
+                        android:textAlignment="center"
+                        style="@style/textXSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin">
+                    <TextView
+                        android:textSize="16.0dip"
+                        android:textColor="?android:colorAccent"
+                        android:gravity="center"
+                        android:id="@id/predict_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="20.0dip"
+                        android:text="00:00"
+                        android:fontFamily="@font/aldrich" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4.0dip"
+                        android:text="@string/power_predict"
+                        android:textAlignment="center"
+                        style="@style/textXSmall" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+            <include
+                android:id="@id/nav_scene_service_not_active"
+                layout="@layout/layout_accessibility_state" />
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="vertical"
+                android:padding="0.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/ListCardItem">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@id/settings_step_charge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/power_app_records"
+                        style="@style/textTitle" />
+                    <com.omarea.ui.HelpIcon
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4.0dip"
+                        app:text="@string/power_app_records_desc" />
+                    <View
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" />
+                    <ImageView
+                        android:id="@id/watt_mode"
+                        android:background="?android:actionBarItemBackground"
+                        android:layout_width="24.0dip"
+                        android:layout_height="24.0dip"
+                        android:src="@drawable/ic_ma"
+                        android:layout_marginStart="4.0dip"
+                        android:layout_marginEnd="10.0dip"
+                        app:tint="@color/chartLightBlue" />
+                    <ImageView
+                        android:id="@id/group_by_type"
+                        android:background="?android:actionBarItemBackground"
+                        android:padding="2.0dip"
+                        android:layout_width="24.0dip"
+                        android:layout_height="24.0dip"
+                        android:src="@drawable/ic_user_group"
+                        android:layout_marginStart="4.0dip"
+                        android:layout_marginEnd="10.0dip"
+                        app:tint="@color/chartLightBlue" />
+                    <ImageView
+                        android:id="@id/sort_by_time"
+                        android:background="?android:actionBarItemBackground"
+                        android:padding="2.0dip"
+                        android:layout_width="24.0dip"
+                        android:layout_height="24.0dip"
+                        android:src="@drawable/icon_sort_by_time"
+                        app:tint="@color/chartLightBlue" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@id/battery_stats"
+                        android:padding="8.0dip"
+                        android:scrollbars="none"
+                        android:descendantFocusability="blocksDescendants"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:overScrollMode="never"
+                        android:nestedScrollingEnabled="false"
+                        app:fastScrollEnabled="false" />
+                </RelativeLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/in_card_item"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                android:layout_marginVertical="@dimen/activity_vertical_margin">
+                <TextView
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/look_other"
+                    style="@style/textDefault" />
+                <com.google.android.flexbox.FlexboxLayout
+                    android:orientation="horizontal"
+                    android:id="@id/nav_more"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    app:flexWrap="wrap">
+                    <TextView
+                        android:textColor="@color/colorAccent"
+                        android:id="@id/electricity_adj_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/electricity_unit_adj"
+                        android:layout_marginEnd="20.0dip"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:textColor="@color/colorAccent"
+                        android:id="@id/more_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_charge"
+                        android:layout_marginEnd="20.0dip"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:textColor="@color/colorAccent"
+                        android:id="@id/charge_controller"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/menu_charge_control"
+                        android:layout_marginEnd="20.0dip"
+                        style="@style/textTitle" />
+                </com.google.android.flexbox.FlexboxLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+        </LinearLayout>
+    </com.omarea.common.ui.OverScrollView>
+</RelativeLayout>

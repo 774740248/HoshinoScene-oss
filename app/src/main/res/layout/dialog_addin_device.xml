@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/addin_deviceinfo"
+        android:paddingStart="0.0dip"
+        style="@style/dialogTitle" />
+    <TextView
+        android:textSize="11.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/dialog_addin_device_warn"
+        android:paddingStart="0.0dip"
+        style="@style/dialogDesc" />
+    <com.omarea.common.ui.InputView
+        android:id="@id/dialog_addin_model"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:inputType="text"
+        app:title="@string/ro_product_model" />
+    <com.omarea.common.ui.InputView
+        android:id="@id/dialog_addin_brand"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:inputType="text"
+        app:title="@string/ro_product_brand" />
+    <com.omarea.common.ui.InputView
+        android:id="@id/dialog_addin_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:inputType="text"
+        app:title="@string/ro_product_name" />
+    <com.omarea.common.ui.InputView
+        android:id="@id/dialog_addin_device"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:inputType="text"
+        app:title="@string/ro_product_device" />
+    <com.omarea.common.ui.InputView
+        android:id="@id/dialog_addin_manufacturer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:inputType="text"
+        app:title="@string/ro_product_manufacturer" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+        <Button
+            android:textSize="11.0dip"
+            android:id="@id/dialog_chooser"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:text="@string/dialog_addin_device_template_select"
+            android:layout_marginEnd="6.0dip"
+            style="@style/SceneButton" />
+        <Button
+            android:textSize="11.0dip"
+            android:id="@id/dialog_addin_default"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:text="@string/btn_restore"
+            android:layout_marginEnd="6.0dip"
+            style="@style/SceneButton" />
+        <Button
+            android:textSize="11.0dip"
+            android:id="@id/dialog_help"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:text="@string/btn_help"
+            android:layout_marginEnd="6.0dip"
+            style="@style/SceneButton" />
+    </LinearLayout>
+    <TextView
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/dialog_addin_device_danger"
+        style="@style/textSmall" />
+</LinearLayout>

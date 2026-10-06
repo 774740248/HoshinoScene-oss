@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="?android:selectableItemBackground"
+    android:paddingTop="10.0dip"
+    android:paddingBottom="6.0dip"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40.0dip"
+    android:paddingStart="8.0dip"
+    android:paddingEnd="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/itemExpand"
+        android:padding="2.0dip"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_width="22.0dip"
+        android:layout_height="22.0dip"
+        android:src="@drawable/ic_select_arrow"
+        android:importantForAccessibility="no"
+        app:tint="?android:textColorSecondary" />
+    <TextView
+        android:id="@id/itemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="1.0"
+        android:layout_marginStart="6.0dip"
+        style="@style/textTitle" />
+    <TextView
+        android:id="@id/itemAvgIO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6.0dip"
+        style="@style/textSmallTitle" />
+    <View
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:layout_weight="1.0" />
+    <TextView
+        android:id="@id/itemCounts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/textSmallTitle" />
+</LinearLayout>

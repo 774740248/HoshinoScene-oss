@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.0dip"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="FAS(HP/LP)"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="FAS(Frame Aware Scheduling)是一种基于帧(时间或帧率)的性能调节实现，Scene FAS目前仅支持游戏。适用于帧率稳定的游戏，有时比传统调度更节能。如果由于SOC性能不足、游戏优化差、温度过高等原因帧率无法保持稳定，FAS会异常甚至让情况变更糟。\nScene默认优先使用系统自带的FAS(FEAS等)，HP配置下仅对手动开启FAS的游戏生效，LP配置下则对所有未手动关闭FAS的游戏生效。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="FAS Lite"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="FAS(Frame Aware Scheduling) Lite是增加了帧率检测的辅助调速器(基于负载和余量实现)，通过定期检查帧数并根据帧率平稳度，自动的调节余量，效果可能不及Scene FAS和相似技术实现的FAS，但可以提供更广泛的兼容(特指不支持ebpf的老旧Linux内核设备)。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="FAS(EP)"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="EP配置中的FAS仅用于卡顿检测并主动提升CPU频率。它主要用于应对优化较差，schedutil、walt无法保证流畅的游戏。由于实用性不强，目前EP的FAS已被移除。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="辅助调速器"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="辅助调速器用于在一定范围内根据负载调节CPU频率上下限，避免内核级调速器(schedutil、walt等)过于灵敏产生额外耗电。有时也用于动态调节CPU频率下限，避免内核级调速器降频过快造成游戏帧率波动。\n启用仅代表允许Scene使用辅助调速器，而是否真的会使用取决于配置文件。辅助调速器永远不会与Scene FAS同时工作，Scene FAS开始工作时，辅助调速器会自动停止。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="核心分配"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="有时soc或手机制造商为了在低负载游戏中降低功耗，会故意降低大核超大核调用积极性，导致在重负载或未适配的冷门游戏中性能和功耗表现不佳，有时也导致日常使用滑动卡顿。核心分配功能用于检测线程负载，并主动将重负载线程固定在更高性能的CPU核心上，大多时候能提高帧率，有时还能明显降低功耗。\n核心分配与AsoulOpt作用类似且冲突，如果安装了AsoulOpt，则应设置核心分配不对游戏启用"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="旁路供电"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="如果在运行游戏时连接了充电器，并且设备出现发热，则主动减缓或停止向电池充电以缓解发热，此时充电器仍会为手机供电，大多情况下可以保持电池电量不变。当然，如果设备继续升温，系统/硬件底层温控可能会直接禁止充电，导致电池开始放电。\n切勿与同时使用非Scene自带的充电加速、充电控制模块，以免产生冲突。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="刷新率管理"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="刷新率管理主要为了实现顺滑连贯的操控体验，避免设备厂商为了控制耗电而在部分应用中限制刷新率。刷新率管理也可以帮助极个别的机型，解决进入游戏后未自动禁用LTPO产生的卡顿和丢帧。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="温控配置"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="修改温控配置或移除温控有助于更好的发挥调度性能。Scene为Meizu、OPPO、Xiaomi及其子品牌的设备，提供了移除温控功能(需要自行启用)，未受支持的机型也可以使用其它非Scene的温控移除模块。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="配置更新"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="Scene的配置文件库按大版本隔离，这是因为配置需要与框架匹配才能正常使用。不同处理器使用不同配置，更新频率取决于适配进度和用户反馈情况，一般刚开始适配的新处理器配置更新频率更高。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="功耗"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="日常使用场景中，功耗和续航主要取决于使用习惯和环境，如：后台情况、屏幕亮度、信号强度等。调度对续航有一定影响，但差距常在±20%以内，功耗异常时应首先考虑负载异常和使用环境差异。简而言之，调度不是魔法，不可能让重负载使用的功耗和轻负载一样。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="操控性"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="在竞技类游戏中，处理器响应速度可能会比触控采样率更重要。散热允许的情况下，选择更激进的调度可显著提高操控性，即使帧率统计呈现的平均帧率相差不大。例如：使用LP配置时操控性会比EP更差。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="锁帧"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="锁帧是指游戏过程中，随电池或机身温度升高，出现平稳且规律的降帧现象，例如120帧的游戏突然变成90帧，或缓慢平滑大的下降到90帧等。锁帧系统控制发热的手段，但会严重影响调度(尤其是FAS/FEAS)的正常发挥。\n锁帧可能会通过限制刷新率，或直接控制帧率实现。前者通常可以启用Scene的刷新率管理解决，后者则根据具体的手机厂家，选择修改或去除部分云控设定解决。"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="云控/系统调度"
+                style="@style/textTitle" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="云控是个模糊的概念，通常指厂家为各种场景特调的参数配置，这些配置参数有固化在ROM里的版本，也支持通过云端下发配置的方式更新。如果没有出现明显的锁帧、锁频现象，通常不建议以粗暴的方式破坏系统调度。尽管官调必然会和第三方调度冲突，但有时肆意破坏产生的副作用比冲突更可怕。"
+                style="@style/textSmall" />
+        </LinearLayout>
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

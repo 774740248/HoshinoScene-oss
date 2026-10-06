@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="vertical"
+                android:id="@id/block1"
+                android:background="@drawable/list_view_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.0dip"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                style="@style/ListCardItem">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/img_device"
+                    style="@style/textTitle" />
+                <LinearLayout
+                    android:id="@id/slot_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/img_slot"
+                        android:layout_marginEnd="8.0dip"
+                        style="@style/textSmall" />
+                    <TextView
+                        android:id="@id/slot"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/img_space"
+                        android:layout_marginEnd="8.0dip"
+                        style="@style/textSmall" />
+                    <TextView
+                        android:id="@id/space"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/img_os"
+                        android:layout_marginEnd="8.0dip"
+                        style="@style/textSmall" />
+                    <TextView
+                        android:id="@id/os_incremental"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/img_kernel"
+                        android:layout_marginEnd="8.0dip"
+                        style="@style/textSmall" />
+                    <TextView
+                        android:id="@id/kernel_version"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="vertical"
+                android:id="@id/block2"
+                android:background="@drawable/list_view_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_below="@id/block1"
+                style="@style/ListCardItem">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/img_flash_in"
+                    style="@style/textTitle" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="@string/img_flash_desc"
+                    style="@style/textSmall" />
+                <Button
+                    android:id="@id/choose_img_flash"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="@string/img_choose_file"
+                    style="@style/SceneButton" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="vertical"
+                android:id="@id/block3"
+                android:background="@drawable/list_view_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/block2"
+                style="@style/ListCardItem">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/img_backup"
+                    style="@style/textTitle" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="@string/img_backup_desc"
+                    style="@style/textSmall" />
+                <Button
+                    android:id="@id/choose_partition_export"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="@string/img_choose_partition"
+                    style="@style/SceneButton" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="vertical"
+                android:id="@id/block4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/block3"
+                style="@style/ListCardItemLast">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/img_twrp_inject"
+                    style="@style/textTitle" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="@string/img_twrp_inject_desc"
+                    style="@style/textSmall" />
+                <Button
+                    android:id="@id/twrp_injector"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="@string/img_choose_img"
+                    style="@style/SceneButton" />
+            </com.omarea.ui.BlurViewLinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

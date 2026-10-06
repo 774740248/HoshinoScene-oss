@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <com.omarea.ui.BlurViewLinearLayout
+        android:id="@id/overview"
+        android:layout_marginTop="?actionBarSize"
+        style="@style/ListCardItem">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/am_general"
+            style="@style/textTitle" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:minWidth="70.0dip"
+                android:text="@string/am_state"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/textTitle" />
+            <TextView
+                android:id="@id/state_enable"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                style="@style/textDefault" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="70.0dip"
+                android:text="@string/am_export"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/textTitle" />
+            <TextView
+                android:id="@id/state_exported"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                style="@style/textDefault" />
+        </LinearLayout>
+        <TextView
+            android:background="@drawable/in_card_item_inactive"
+            android:padding="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/am_exported_desc"
+            style="@style/textSmall" />
+    </com.omarea.ui.BlurViewLinearLayout>
+    <com.omarea.ui.BlurViewLinearLayout
+        android:id="@id/editor"
+        android:layout_below="@id/overview"
+        style="@style/ListCardItem">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/am_shortcut"
+            style="@style/textTitle" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="50.0dip"
+                android:text="@string/am_icon"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                style="@style/textSmallTitle" />
+            <ImageView
+                android:id="@id/edit_icon"
+                android:layout_width="40.0dip"
+                android:layout_height="40.0dip"
+                android:src="@drawable/process_android" />
+        </LinearLayout>
+        <com.omarea.common.ui.InputView
+            android:id="@id/edit_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:hint="@string/am_input"
+            app:title="@string/am_title" />
+        <com.omarea.common.ui.InputView
+            android:id="@id/edit_pkg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:hint="@string/am_input"
+            app:title="@string/am_package_name" />
+        <com.omarea.common.ui.InputView
+            android:id="@id/edit_activity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:hint="@string/am_input"
+            app:title="@string/am_activity" />
+    </com.omarea.ui.BlurViewLinearLayout>
+    <LinearLayout
+        android:gravity="end"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editor">
+        <Button
+            android:id="@id/action_start"
+            android:text="@string/am_start"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            style="@style/SceneButton" />
+        <Button
+            android:id="@id/action_save"
+            android:text="@string/btn_save"
+            style="@style/SceneButton" />
+    </LinearLayout>
+</RelativeLayout>

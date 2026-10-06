@@ -1,0 +1,37 @@
+pt_regs
+sys_execve
+kprobe/sys_execve
+/mnt/d/Android/vtools-private/daemon/kprobe_sys_execve.c
+int sys_execve(struct pt_regs *ctx)
+    struct event event = {};
+    u64 pid_tgid = bpf_get_current_pid_tgid();
+    event.tid = pid_tgid;
+    event.pid = pid_tgid >> 32;
+    event.uid = bpf_get_current_uid_gid() & 0xFFFFFFFF;
+    bpf_get_current_comm(&event.comm, sizeof(event.comm));
+    bpf_perf_event_output(ctx, &events, BPF_F_CURRENT_CPU, &event, sizeof(event));
+    return 0;
+bpf_map_def
+type
+key_size
+value_size
+max_entries
+map_flags
+unsigned int
+events
+char
+__ARRAY_SIZE_TYPE__
+LICENSE
+license
+maps
+.text
+.rel.BTF.ext
+events
+maps
+.llvm_addrsig
+.relkprobe/sys_execve
+license
+.strtab
+.symtab
+.rel.BTF
+LICENSE

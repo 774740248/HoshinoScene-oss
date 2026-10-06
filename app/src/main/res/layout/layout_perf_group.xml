@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/ItemTop"
+        android:paddingTop="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10.0dip">
+        <TextView
+            android:id="@id/ItemTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/textSmallTitle" />
+        <TextView
+            android:id="@id/ItemDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:textIsSelectable="true"
+            style="@style/textSmall" />
+    </LinearLayout>
+    <com.omarea.ui.BlurViewLinearLayout
+        android:orientation="vertical"
+        android:id="@id/perf_group_list"
+        android:background="@drawable/krscript_item_ripple_inactive"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_below="@id/ItemTop"
+        android:paddingHorizontal="@dimen/activity_horizontal_margin" />
+</RelativeLayout>

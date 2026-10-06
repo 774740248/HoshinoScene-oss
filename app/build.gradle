@@ -1,0 +1,153 @@
+// app/build.gradle — 星野Scene 还原工程（模块构建脚本）
+// 证据链：
+//   compileSdk/targetSdk 36  ← Manifest platformBuildVersionCode/Name
+//   namespace com.omarea.vtools ← Manifest package
+//   viewBinding true         ← a.b20.i(this, 2131361919) + a.d81(cls,"action_graph",...)
+//   appComponentFactory      ← androidx.core.app.CoreComponentFactory → 需 androidx.core
+//   extractNativeLibs=false  ← Manifest 属性 → AGP useLegacyPackaging=false
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.omarea.vtools'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.omarea.vtools"
+        // U-1：Manifest 无 uses-sdk 节点；依据 TileService(API24+)、FOREGROUND_SERVICE_SPECIAL_USE(API34)
+        // 与大量 SDK_INT>=30 判断，推断 minSdk 26（Android 8.0）
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName "1.0-recovered"
+
+        // 仅有一个 ABI：lib/arm64-v8a/libnative-lib.so
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+
+        // 保留多语言中文资源
+        resourceConfigurations += ['en', 'zh', 'zh-rCN']
+    }
+
+    // ★ ViewBinding 必开（证据充分）
+    buildFeatures {
+        viewBinding true
+        dataBinding false            // 无 <layout> 包装布局；关闭以免触发库布局的 binding 校验
+        buildConfig false
+        aidl false
+        renderScript false
+        shaders false
+    }
+
+    // 签名配置：别名 HoshinoSCENEOPPO，口令 pass1234（见 README 安全警告）
+    signingConfigs {
+        release {
+            storeFile file('keystore/hoshino.jks')
+            storePassword 'pass1234'
+            keyAlias 'HoshinoSCENEOPPO'
+            keyPassword 'pass1234'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        debug {
+            storeFile file('keystore/hoshino.jks')
+            storePassword 'pass1234'
+            keyAlias 'HoshinoSCENEOPPO'
+            keyPassword 'pass1234'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false           // 还原工程不做混淆
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                          'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            // jniLibs 未压缩打包（对齐 Manifest extractNativeLibs=false）
+            packaging {
+                jniLibs {
+                    useLegacyPackaging = false
+                }
+            }
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        encoding "UTF-8"                  // ★ 中文资源/注释必需
+    }
+
+    // 源码为纯 Java（实测零 kotlin/、零 @Metadata），不引入 kotlin-android
+
+    // 显式声明源集：a/ 、androidx/ 、android/ 与 com/ 同根
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+            jniLibs.srcDirs = ['src/main/jniLibs']
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    packaging {
+        resources {
+            excludes += ['META-INF/*.version', 'META-INF/*.kotlin_module', 'META-INF/*.proto']
+        }
+    }
+
+    // androidx 实体源码（src/main/java/androidx/**）与 Maven 依赖共存时，
+    // 优先保留 Maven 依赖以避免版本漂移；此处不额外 exclude，交由编译期判定（见 docs/REcovery-notes.md）
+}
+
+dependencies {
+    // =========================================================================
+    // 依赖策略说明（还原工程专用，关键洞察）
+    // -------------------------------------------------------------------------
+    // 反编译 APK 的 res/ 是「已合并的最终资源集」，其中已包含 appcompat / material /
+    // constraintlayout / core 等库的全部资源（attr/style/color/dimen/string...）。
+    // 若以 AAR 形式引入这些库，会与 app res 产生 Duplicate value 冲突，且会带来
+    // 资源 ID 漂移，破坏 public.xml 的 ID 一致性（L1 资产）。
+    //
+    // 因此本工程采用「库类文件 jar（classes only，不含资源）」方式接入：
+    //   app/libs/*.jar 由 tools/extract_lib_classes.py 从 GRADLE_USER_HOME 缓存的
+    //   AAR 中提取 classes.jar 得到（45 个）。资源统一由 app/src/main/res 提供。
+    // 这样既满足编译期类符号解析，又避免资源重复冲突。
+    // =========================================================================
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // viewBinding=true 时 AGP 自动附加 androidx.databinding:viewbinding，其传递依赖
+    // annotation:1.0.0 离线不可解；用 constraint 提升到缓存的 1.9.1。
+    constraints {
+        implementation('androidx.annotation:annotation:1.9.1') {
+            because 'AGP viewbinding 传递依赖 annotation:1.0.0 离线不可解，对齐缓存 1.9.1'
+        }
+        implementation('org.jetbrains:annotations:23.0.0') {
+            because 'AGP 工具链传递依赖 org.jetbrains:annotations:13.0 离线不可解，对齐缓存 23.0.0'
+        }
+    }
+
+    // 说明：实测 a 包与 com.omarea 中的 "kotlin.*" 均为字符串字面量（put() 值、
+    // checkNotNullParameter 提示串），**不存在真实 kotlin 类/方法调用**，故不引入
+    // kotlin-stdlib（引入反而带出离线不可解的 org.jetbrains:annotations:13.0）。
+}
+
+// [临时诊断] 提升 javac 错误上限，便于一次看到全部还原缺陷（仅影响报错数量显示，不影响产物）
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += ['-Xmaxerrs', '5000']
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <ImageView
+        android:id="@id/module_upload"
+        android:padding="9.0dip"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/icon_upload"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_marginEnd="56.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneTitleBarBtn" />
+    <ImageView
+        android:id="@id/module_refresh"
+        android:padding="6.0dip"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/icon_refresh"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneTitleBarBtn" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/module_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="8.0dip"
+        android:divider="@null"
+        android:layout_above="@id/search_bar"
+        android:layout_below="@id/layout_app_bar"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        style="@style/SceneScrollView" />
+    <com.omarea.ui.BlurViewLinearLayout
+        android:id="@id/search_bar"
+        android:background="@drawable/filter_toolbar_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="10.0dip"
+        android:paddingEnd="0.0dip"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <EditText
+            android:textSize="16.0dip"
+            android:id="@id/module_search"
+            android:background="@android:color/transparent"
+            android:padding="8.0dip"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:hint="@string/magisk_search"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            android:inputType="textFilter"
+            android:imeOptions="actionSearch" />
+        <com.omarea.ui.SelectView
+            android:layout_gravity="center_vertical"
+            android:id="@id/module_source"
+            android:layout_width="130.0dip"
+            android:layout_height="wrap_content" />
+    </com.omarea.ui.BlurViewLinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/loading_view"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="@dimen/activity_horizontal_margin">
+        <ProgressBar
+            android:id="@id/refresh_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="8.0dip"
+            android:layout_marginTop="12.0dip"
+            android:max="100"
+            android:progress="0"
+            android:indeterminate="true"
+            style="?android:progressBarStyleHorizontal" />
+    </LinearLayout>
+</RelativeLayout>

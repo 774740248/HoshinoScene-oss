@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="12.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/krscript_item_ripple_inactive"
+        android:paddingBottom="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.0dip">
+        <TextView
+            android:id="@id/confirm_title"
+            android:text="@string/swap_outside_module"
+            style="@style/dialogTitle" />
+        <TextView
+            android:id="@id/confirm_message"
+            android:text="@string/swap_outside_module_desc"
+            style="@style/dialogDesc" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/swap_outside_effect1"
+            style="@style/dialogWarn" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.0dip"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/swap_outside_effect2"
+            style="@style/dialogWarn" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.0dip"
+            android:layout_marginBottom="4.0dip"
+            android:text="@string/swap_outside_effect3"
+            style="@style/dialogWarn" />
+        <TextView
+            android:layout_marginTop="8.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:text="@string/swap_module_install_desc"
+            android:alpha="0.8"
+            android:textAlignment="center"
+            style="@style/dialogDesc" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+        <Button
+            android:id="@id/btn_cancel"
+            android:text="@string/btn_cancel"
+            style="@style/dialogCancelBtn" />
+        <Button
+            android:id="@id/btn_confirm"
+            android:text="@string/download"
+            android:layout_marginStart="8.0dip"
+            style="@style/dialogConfirmBtn" />
+    </LinearLayout>
+</LinearLayout>

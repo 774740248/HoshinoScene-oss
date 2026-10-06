@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/mode_name"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fs_sort_name" />
+    <item
+        android:id="@id/mode_size"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fs_sort_size" />
+    <item
+        android:id="@id/mode_time"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fs_sort_time" />
+    <item
+        android:id="@id/mode_type"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fs_sort_type" />
+</menu>

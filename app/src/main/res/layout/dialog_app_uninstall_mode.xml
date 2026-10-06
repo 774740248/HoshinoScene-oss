@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/krscript_item_ripple"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip">
+            <TextView
+                android:id="@id/confirm_title"
+                android:text="@string/apps_op_uninstall"
+                style="@style/dialogTitle" />
+            <TextView
+                android:id="@id/confirm_message"
+                android:layout_marginBottom="6.0dip"
+                android:text="@string/apps_op_uninstall_confirm"
+                style="@style/dialogDesc" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/in_card_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/uninstall_keep_data"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70.0dip"
+                    app:desc="@string/apps_op_uninstall_keep_desc"
+                    app:iconColor="#ffffc107"
+                    app:iconSrc="@drawable/app_options_uninstall_apk"
+                    app:title="@string/apps_op_uninstall_keep" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/uninstall_user_only"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70.0dip"
+                    app:desc="@string/apps_op_uninstall_user_desc"
+                    app:iconColor="#ffffc107"
+                    app:iconSrc="@drawable/app_options_uninstall_user"
+                    app:title="@string/apps_op_uninstall_user" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <Button
+                android:id="@id/btn_cancel"
+                android:text="@string/btn_cancel"
+                android:layout_marginEnd="8.0dip"
+                style="@style/dialogCancelBtn" />
+            <Button
+                android:id="@id/btn_confirm"
+                android:text="@string/btn_confirm"
+                style="@style/dialogConfirmBtn" />
+        </LinearLayout>
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

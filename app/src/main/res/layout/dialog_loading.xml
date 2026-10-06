@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/confirm_dialog_bg"
+        android:padding="26.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:keepScreenOn="true"
+        android:layout_marginHorizontal="16.0dip"
+        android:layout_marginVertical="12.0dip">
+        <com.omarea.common.ui.RippleLoadingView
+            android:layout_gravity="center_horizontal"
+            android:id="@id/dialog_app_details_progress"
+            android:layout_width="60.0dip"
+            android:layout_height="60.0dip"
+            android:layout_margin="30.0dip" />
+        <TextView
+            android:textSize="15.0dip"
+            android:id="@id/dialog_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/execute_wait"
+            android:minLines="2"
+            android:textAlignment="center" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:fitsSystemWindows="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="true">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@id/tab_list"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:minWidth="140.0dip"
+            style="@style/SceneTabLayout" />
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:layout_weight="1.0" />
+        <ImageButton
+            android:id="@id/action_graph"
+            android:padding="5.0dip"
+            android:src="@drawable/graph"
+            style="@style/SceneTitleBarBtn" />
+        <ImageButton
+            android:id="@id/action_power"
+            android:padding="5.0dip"
+            android:src="@drawable/ic_power"
+            style="@style/SceneTitleBarBtn" />
+        <ImageButton
+            android:id="@id/action_settings"
+            android:padding="5.0dip"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@drawable/settings"
+            style="@style/SceneTitleBarBtn" />
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@id/tab_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        style="@style/SceneViewPager" />
+</RelativeLayout>

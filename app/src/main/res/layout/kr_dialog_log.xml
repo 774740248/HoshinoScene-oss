@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:focusable="true"
+    android:clickable="true"
+    style="@style/dialogRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton
+        android:id="@id/btn_hide"
+        android:padding="7.0dip"
+        android:src="@drawable/kr_hide"
+        android:scaleType="centerInside"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:layout_marginStart="8.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneButton" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/btn_hide"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@id/title"
+            android:paddingTop="0.0dip"
+            android:paddingStart="0.0dip"
+            android:paddingEnd="0.0dip"
+            style="@style/dialogTitle" />
+        <TextView
+            android:id="@id/desc"
+            android:paddingTop="0.0dip"
+            android:paddingStart="0.0dip"
+            android:paddingEnd="0.0dip"
+            style="@style/dialogDesc" />
+    </LinearLayout>
+    <ScrollView
+        android:background="@drawable/krscript_item_ripple_inactive"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="16.0dip"
+        android:layout_above="@id/bottom_actions"
+        android:layout_below="@id/top_bar">
+        <TextView
+            android:textSize="12.0sp"
+            android:id="@id/shell_output"
+            android:padding="12.0dip"
+            android:saveEnabled="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:fontFamily="monospace"
+            android:breakStrategy="simple" />
+    </ScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/bottom_actions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@id/btn_copy"
+            android:text="@string/btn_copy_output"
+            style="@style/dialogCancelBtn" />
+        <Button
+            android:id="@id/btn_exit"
+            android:text="@string/btn_exit"
+            style="@style/dialogConfirmBtn" />
+    </LinearLayout>
+    <ProgressBar
+        android:id="@id/action_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip"
+        android:layout_marginTop="12.0dip"
+        android:max="100"
+        android:progress="0"
+        android:indeterminate="true"
+        android:layout_below="@id/top_bar"
+        style="?android:progressBarStyleHorizontal" />
+</RelativeLayout>

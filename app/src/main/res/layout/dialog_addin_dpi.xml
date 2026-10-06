@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/dialog_dpi_warn"
+        style="@style/dialogWarn" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/in_card_item_inactive"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:paddingHorizontal="10.0dip"
+        android:paddingVertical="4.0dip">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="DPI"
+            style="@style/textSmall" />
+        <EditText
+            android:textSize="14.0dip"
+            android:id="@id/dialog_addin_dpi_dpiinput"
+            android:background="@null"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="min:96"
+            android:maxLength="3"
+            android:inputType="number" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/in_card_item_inactive"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        android:paddingHorizontal="10.0dip"
+        android:paddingVertical="4.0dip">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_resolution"
+            style="@style/textSmall" />
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textSize="14.0dip"
+                android:id="@id/dialog_addin_dpi_height"
+                android:background="@null"
+                android:layout_width="60.0dip"
+                android:hint="min:480"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_row="0" />
+            <TextView
+                android:layout_width="20.0dip"
+                android:text="×"
+                android:textAlignment="center" />
+            <EditText
+                android:textSize="14.0dip"
+                android:id="@id/dialog_addin_dpi_width"
+                android:background="@null"
+                android:layout_width="60.0dip"
+                android:hint="min:320"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_row="0"
+                android:textAlignment="textEnd" />
+        </GridLayout>
+    </LinearLayout>
+    <CheckBox
+        android:id="@id/dialog_addin_dpi_quickchange"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:text="@string/dialog_dpi_quickly"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin" />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="6.0dip"
+        android:text="@string/dialog_addin_device_inner"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        style="@style/textSmall" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <Button
+            android:textSize="12.0dip"
+            android:id="@id/dialog_dpi_720"
+            android:layout_width="50.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="6.0dip"
+            android:text="HD"
+            style="@style/SceneButton" />
+        <Button
+            android:textSize="12.0dip"
+            android:id="@id/dialog_dpi_1080"
+            android:layout_width="50.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="6.0dip"
+            android:text="FHD"
+            style="@style/SceneButton" />
+        <Button
+            android:textSize="12.0dip"
+            android:id="@id/dialog_dpi_2k"
+            android:layout_width="50.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="6.0dip"
+            android:text="2K"
+            style="@style/SceneButton" />
+        <Button
+            android:textSize="12.0dip"
+            android:id="@id/dialog_dpi_4k"
+            android:layout_width="40.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="6.0dip"
+            android:text="4K"
+            style="@style/SceneButton" />
+        <Button
+            android:textSize="12.0dip"
+            android:id="@id/dialog_dpi_reset"
+            android:layout_width="70.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="6.0dip"
+            android:text="@string/btn_restore"
+            style="@style/SceneButton" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/action_export_img"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fps_export_type_img" />
+    <item
+        android:id="@id/action_export_csv"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fps_export_type_csv" />
+</menu>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="top"
+    android:orientation="vertical"
+    android:background="@drawable/shape_corner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/fw_chart_list"
+        android:padding="4.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3.0dip">
+            <FrameLayout
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip">
+                <com.omarea.ui.FloatMonitorChartView
+                    android:id="@id/fw_cpu_load"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:textSize="7.299988dip"
+                    android:textStyle="bold"
+                    android:textColor="#ffffffff"
+                    android:layout_gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CPU"
+                    android:textAlignment="center" />
+            </FrameLayout>
+            <TextView
+                android:textSize="5.5999756dip"
+                android:textStyle="bold"
+                android:textColor="#ffffffff"
+                android:layout_gravity="center"
+                android:id="@id/fw_cpu_freq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1.0dip"
+                android:text="0Mhz"
+                android:textAlignment="center" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@id/fw_gpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3.0dip">
+            <FrameLayout
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip">
+                <com.omarea.ui.FloatMonitorChartView
+                    android:id="@id/fw_gpu_load"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:textSize="7.299988dip"
+                    android:textStyle="bold"
+                    android:textColor="#ffffffff"
+                    android:layout_gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GPU"
+                    android:textAllCaps="false"
+                    android:textAlignment="center" />
+            </FrameLayout>
+            <TextView
+                android:textSize="5.5999756dip"
+                android:textStyle="bold"
+                android:textColor="#ffffffff"
+                android:layout_gravity="center"
+                android:id="@id/fw_gpu_freq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1.0dip"
+                android:text="0Mhz" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@id/fw_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip">
+                <com.omarea.ui.FloatMonitorBatteryView
+                    android:id="@id/fw_battery_chart"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:textSize="7.299988dip"
+                    android:textStyle="bold"
+                    android:textColor="#ffffffff"
+                    android:layout_gravity="center"
+                    android:id="@id/fw_battery_level"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\?%"
+                    android:textAlignment="center" />
+            </FrameLayout>
+            <TextView
+                android:textSize="5.5999756dip"
+                android:textStyle="bold"
+                android:textColor="#ffffffff"
+                android:layout_gravity="center"
+                android:id="@id/fw_battery_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1.0dip"
+                android:text="0℃" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:textSize="7.0dip"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:textColor="#bbffffff"
+        android:layout_gravity="center_vertical"
+        android:id="@id/fw_other_info"
+        android:paddingTop="4.0dip"
+        android:paddingBottom="4.0dip"
+        android:visibility="gone"
+        android:layout_width="70.0dip"
+        android:layout_height="wrap_content"
+        android:text="Loading……"
+        android:fontFamily="monospace" />
+</LinearLayout>

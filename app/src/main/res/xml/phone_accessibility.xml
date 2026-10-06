@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service
+    android:description="@string/accessibility_service_description"
+    android:settingsActivity="com.omarea.vtools.activities.ActivityMain"
+    android:accessibilityEventTypes="typeViewClicked|typeViewFocused|typeViewLongClicked|typeViewScrolled|typeViewSelected|typeWindowContentChanged|typeWindowStateChanged|typeWindowsChanged"
+    android:packageNames="@null"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:notificationTimeout="100"
+    android:accessibilityFlags="flagDefault|flagIncludeNotImportantViews|flagReportViewIds|flagRequestFilterKeyEvents|flagRetrieveInteractiveWindows"
+    android:canRetrieveWindowContent="true"
+    android:canRequestTouchExplorationMode="false"
+    android:canRequestEnhancedWebAccessibility="false"
+    android:canRequestFilterKeyEvents="false"
+    android:canPerformGestures="false"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pages>
+    <resource dir="file:///android_asset/kr-script/common" />
+
+    <group>
+        <page
+            id="page-xiaomi"
+            config="miui/miui.xml"
+            desc="@string:kr_miui_desc" title="@string:kr_miui"
+            visible="run common/miui_support.sh" />
+        <page
+            id="page-oppo"
+            config="oppo/oppo.xml"
+            desc="@string:kr_oppo_desc" title="@string:kr_oppo"
+            visible="run common/oppo_support.sh" />
+        <page
+            id="page-flyme"
+            config="flyme/flyme.xml"
+            desc="@string:kr_flyme_desc" title="@string:kr_flyme"
+            visible="run common/flyme_support.sh" />
+        <page
+            id="page-vivo"
+            config="vivo/vivo.xml"
+            desc="@string:kr_vivo_desc" title="@string:kr_vivo"
+            visible="run common/vivo_support.sh" />
+        <page
+            id="page-google"
+            config="aosp/aosp.xml"
+            desc="@string:kr_aosp_desc" title="@string:kr_aosp" />
+    </group>
+
+    <group>
+        <resource dir="file:///android_asset/kr-script/mtk" />
+        <page
+            id="page-mtk"
+            config-sh="file:///android_asset/kr-script/mtk/mtk.sh"
+            desc="@string:kr_mtk_desc" title="@string:kr_mtk"
+            visible="run common/mtk_ppm.sh" />
+        <page
+            id="page-mtk-v2"
+            config-sh="file:///android_asset/kr-script/mtk/mtk_v2.sh"
+            desc="@string:kr_mtk_desc" title="@string:kr_mtk"
+            visible="run common/mtk_v2.sh" />
+        <page
+            id="page-qualcomm"
+            config="qualcomm/qualcomm.xml"
+            desc="@string:kr_qcom_desc" title="@string:kr_qcom"
+            visible="run common/qualcomm.sh" />
+    </group>
+
+    <group>
+        <page
+            id="page-display"
+            config="display/display.xml"
+            desc="@string:kr_ui_desc" title="@string:kr_ui" />
+        <page
+            id="page-battery"
+            config="battery/battery.xml"
+            desc="@string:kr_battery_desc" title="@string:kr_battery" />
+        <page
+            id="page-apps"
+            config="apps/apps.xml"
+            desc="@string:kr_app_desc" title="@string:kr_app" />
+    </group>
+
+    <group>
+        <page
+            id="page-developer"
+            config="developer/developer.xml"
+            desc="@string:kr_dev_desc" title="@string:kr_dev" />
+        <page
+            id="page-other"
+            config="other/other.xml"
+            desc="@string:kr_others_desc" title="@string:kr_others" />
+    </group>
+
+    <group exist="/data/blacklist.conf">
+        <action shell="hidden">
+            <title>冻结名单</title>
+            <desc>配置Magisk模块[应用冻结者]的自动冻结(应用)名单</desc>
+            <param name="apps" type="app" multiple="multiple" value-sh="cat /data/blacklist.conf | grep -E -v '^#'" />
+            <summary sh="echo 已添加 $(cat /data/blacklist.conf | grep -E -v '^#' | wc -l) 个应用" />
+            <set>
+                echo "# scene_freezer target apps\n$apps" > /data/blacklist.conf
+                killall scene-freezer 2>/dev/null
+                MODDIR=/data/adb/modules/scene_freezer
+                nohup $MODDIR/scene-freezer > /dev/null 2>&amp;1 &amp;
+            </set>
+        </action>
+    </group>
+</pages>

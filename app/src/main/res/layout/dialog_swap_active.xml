@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/krscript_item_ripple_inactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip">
+            <TextView
+                android:id="@id/confirm_title"
+                android:text="@string/swap_activate"
+                style="@style/dialogTitle" />
+            <TextView
+                android:id="@id/confirm_message"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/swap_activate_step2"
+                style="@style/dialogDesc" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/in_card_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/swap_mount_loop"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70.0dip"
+                    app:desc="@string/swap_use_loop_desc"
+                    app:iconColor="@android:color/darker_gray"
+                    app:iconSrc="@drawable/swap_loop"
+                    app:title="@string/swap_use_loop" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/in_card_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/swap_priority_low"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:minHeight="70.0dip"
+                    app:desc="@string/swap_zram_first_desc"
+                    app:iconColor="#ff8bc34a"
+                    app:iconSrc="@drawable/swap_after"
+                    app:title="@string/swap_zram_first" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/swap_priority_middle"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70.0dip"
+                    app:desc="@string/swap_zram_concurrent_desc"
+                    app:iconColor="#ffffc107"
+                    app:iconSrc="@drawable/swap_sync"
+                    app:title="@string/swap_zram_concurrent" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/swap_priority_high"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="70.0dip"
+                    app:desc="@string/swap_swapfile_first_desc"
+                    app:iconColor="#ffff9800"
+                    app:iconSrc="@drawable/icon_danger"
+                    app:title="@string/swap_swapfile_first" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/in_card_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/swap_auto_start"
+                    android:padding="6.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:minHeight="70.0dip"
+                    app:desc="@string/swap_auto_start_short_desc"
+                    app:iconColor="#ff2196f3"
+                    app:iconSrc="@drawable/swap_auto_start"
+                    app:title="@string/swap_auto_start_short" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <Button
+                android:id="@id/btn_cancel"
+                android:text="@string/btn_cancel"
+                android:layout_marginEnd="8.0dip"
+                style="@style/dialogCancelBtn" />
+            <Button
+                android:id="@id/btn_confirm"
+                android:text="@string/btn_confirm"
+                style="@style/dialogConfirmBtn" />
+        </LinearLayout>
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

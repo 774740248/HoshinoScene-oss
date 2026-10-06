@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <LinearLayout
+        android:gravity="end|center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/layout_app_bar"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:id="@id/freeze_settings"
+            android:padding="6.0dip"
+            android:src="@drawable/settings"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            style="@style/SceneTitleBarBtn" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@id/tab_freeze_apps"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_below="@id/layout_app_bar"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <com.omarea.ui.BlurViewRelativeLayout
+            android:id="@id/apps_search_bar"
+            android:background="@drawable/list_view_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8.0dip"
+            android:layout_alignParentTop="true">
+            <EditText
+                android:textSize="16.0dip"
+                android:gravity="center_vertical"
+                android:id="@id/freeze_apps_search"
+                android:background="@null"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:nextFocusDown="@id/freeze_apps_search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/apps_search"
+                android:singleLine="true"
+                android:maxLength="10"
+                android:inputType="textFilter" />
+            <ImageButton
+                android:layout_gravity="center_vertical"
+                android:id="@id/freeze_sort"
+                android:background="?android:actionBarItemBackground"
+                android:padding="4.0dip"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:src="@drawable/icon_sort"
+                android:scaleType="centerInside"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_toStartOf="@id/freeze_menu"
+                android:layout_marginVertical="12.0dip"
+                app:tint="?android:colorAccent" />
+            <ImageButton
+                android:layout_gravity="center_vertical"
+                android:id="@id/freeze_sort_confirm"
+                android:background="?android:actionBarItemBackground"
+                android:padding="2.0dip"
+                android:visibility="gone"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:src="@drawable/icon_confirm"
+                android:scaleType="centerInside"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="12.0dip"
+                app:tint="?android:colorAccent" />
+            <ImageButton
+                android:layout_gravity="center_vertical"
+                android:id="@id/freeze_menu"
+                android:background="?android:actionBarItemBackground"
+                android:padding="5.0dip"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:src="@drawable/icon_menu"
+                android:scaleType="centerInside"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="12.0dip"
+                app:tint="?android:colorAccent" />
+        </com.omarea.ui.BlurViewRelativeLayout>
+        <com.omarea.ui.BlurViewRecyclerView
+            android:id="@id/freeze_apps"
+            android:background="@drawable/list_view_bg"
+            android:paddingTop="8.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:numColumns="4"
+            android:layout_below="@id/apps_search_bar"
+            android:layout_alignParentBottom="true"
+            android:paddingVertical="12.0dip"
+            style="@style/SceneScrollView" />
+    </RelativeLayout>
+</RelativeLayout>

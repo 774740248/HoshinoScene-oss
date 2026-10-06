@@ -1,0 +1,2 @@
+echo "$1" > $HOME/daemon-stdin &
+cat $HOME/daemon-stdout

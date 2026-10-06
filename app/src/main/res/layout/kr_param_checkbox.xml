@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox
+        android:textSize="14.0dip"
+        android:textStyle="normal"
+        android:textColor="?android:textColorPrimary"
+        android:id="@id/kr_param_checkbox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:alpha="0.8"
+        android:paddingStart="4.0dip"
+        style="@style/SceneCheckBox" />
+</LinearLayout>

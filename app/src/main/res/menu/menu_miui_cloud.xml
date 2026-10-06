@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/action_save"
+        android:visible="false"
+        android:title="@string/editor_save" />
+    <item
+        android:id="@id/action_auto"
+        android:visible="false"
+        android:title="@string/editor_auto_clear" />
+    <item
+        android:id="@id/action_import"
+        android:visible="false"
+        android:title="@string/editor_import_content" />
+    <item
+        android:id="@id/action_export"
+        android:visible="false"
+        android:title="@string/editor_export" />
+    <item
+        android:id="@id/action_mt"
+        android:visible="false"
+        android:title="@string/editor_mt" />
+    <item
+        android:id="@id/action_reset"
+        android:title="@string/editor_reset" />
+</menu>

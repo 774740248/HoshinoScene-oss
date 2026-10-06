@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="15.0dip"
+        android:textColor="?android:textColorPrimary"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:id="@id/kr_param_file_text"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:minHeight="35.0dip"
+        android:hint="@string/kr_please_choose_file"
+        android:layout_weight="1.0"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:breakStrategy="simple" />
+    <EditText
+        android:textSize="15.0dip"
+        android:layout_gravity="center_vertical"
+        android:id="@id/kr_param_file_path"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:layout_weight="1.0" />
+    <RelativeLayout
+        android:id="@id/kr_param_file_btn"
+        android:layout_width="30.0dip"
+        android:layout_height="fill_parent"
+        android:minHeight="40.0dip">
+        <ImageButton
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:src="@drawable/kr_folder"
+            android:scaleType="centerInside"
+            android:tint="@android:color/darker_gray"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4.0dip"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

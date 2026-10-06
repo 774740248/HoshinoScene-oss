@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <CheckBox
+        android:gravity="center"
+        android:id="@id/process_float_window"
+        android:layout_marginBottom="9.0dip"
+        android:button="@drawable/ic_float_window_action"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_toStartOf="@id/process_group_toggle"
+        style="@style/SceneTitleBarSwitch" />
+    <CheckBox
+        android:id="@id/process_group_toggle"
+        android:layout_marginBottom="9.0dip"
+        android:button="@drawable/ic_user_group_action"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:contentDescription="@string/process_group_mode"
+        android:layout_marginEnd="4.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneTitleBarSwitch" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@id/process_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar">
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8.0dip"
+            android:layout_above="@id/process_search_bar"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="10.0dip"
+            app:cardElevation="0.0dip">
+            <com.omarea.ui.BlurView
+                android:background="@drawable/list_view_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:paddingEnd="16.0dip">
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="48.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="■"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        style="@style/textSmall" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="PID"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="RES"
+                        android:layout_weight="1.0"
+                        style="@style/textSmall" />
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="50.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="CPU"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@id/process_list"
+                    android:background="@null"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="30.0dip"
+                    android:overScrollMode="never" />
+                <com.omarea.ui.procs.ProcessGroupView
+                    android:id="@id/process_group"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="30.0dip" />
+            </com.omarea.ui.BlurView>
+        </androidx.cardview.widget.CardView>
+        <com.omarea.ui.BlurViewLinearLayout
+            android:id="@id/process_search_bar"
+            android:background="@drawable/filter_toolbar_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_alignParentBottom="true"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="0.0dip"
+            android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+            <EditText
+                android:textSize="16.0dip"
+                android:id="@id/process_search"
+                android:background="@android:color/transparent"
+                android:padding="8.0dip"
+                android:nextFocusDown="@id/process_search"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:hint="@string/process_search"
+                android:singleLine="true"
+                android:layout_weight="1.0"
+                android:inputType="textFilter"
+                android:imeOptions="actionSearch" />
+            <com.omarea.ui.SelectView
+                android:layout_gravity="center_vertical"
+                android:id="@id/process_sort_mode"
+                android:focusable="false"
+                android:layout_width="100.0dip"
+                android:layout_height="wrap_content" />
+            <com.omarea.ui.SelectView
+                android:layout_gravity="center_vertical"
+                android:id="@id/process_filter"
+                android:focusable="false"
+                android:layout_width="110.0dip"
+                android:layout_height="wrap_content" />
+        </com.omarea.ui.BlurViewLinearLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@id/process_unsupported"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="@string/process_fail"
+        android:layout_below="@id/layout_app_bar"
+        android:textAlignment="center" />
+</RelativeLayout>

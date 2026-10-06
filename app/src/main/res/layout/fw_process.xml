@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/krscript_item_ripple_inactive"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="6.0dip"
+    android:alpha="0.92"
+    app:cardCornerRadius="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" tools:viewBindingIgnore="true">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@id/fw_float_pin"
+                android:background="@android:color/transparent"
+                android:paddingTop="5.0dip"
+                android:paddingBottom="3.0dip"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/dialog_pin"
+                android:scaleType="fitCenter"
+                android:tint="?android:textColorSecondary"
+                android:alpha="0.3"
+                android:paddingHorizontal="4.0dip" />
+            <TextView
+                android:textSize="11.0dip"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/process"
+                android:layout_weight="1.0"
+                style="@style/textTitle" />
+            <TextView
+                android:textSize="11.0dip"
+                android:id="@id/process_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2.0dip"
+                android:text="@string/process_app" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/fw_float_minimize"
+                android:background="@android:color/transparent"
+                android:padding="5.0dip"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/dialog_minimize"
+                android:scaleType="fitCenter"
+                android:tint="?android:textColorSecondary" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/fw_float_close"
+                android:background="@android:color/transparent"
+                android:padding="6.0dip"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/close_black"
+                android:scaleType="fitCenter"
+                android:tint="?android:textColorSecondary"
+                android:layout_marginEnd="2.0dip" />
+        </LinearLayout>
+        <com.omarea.common.ui.OverScrollListView
+            android:id="@id/process_list"
+            android:layout_width="155.0dip"
+            android:layout_height="170.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:divider="@null"
+            android:fastScrollEnabled="false"
+            android:fastScrollAlwaysVisible="false" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

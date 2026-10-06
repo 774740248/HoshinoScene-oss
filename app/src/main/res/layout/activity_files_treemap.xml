@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="40.0dip"
+        android:layout_marginBottom="9.0dip"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_alignParentEnd="true" />
+    <com.omarea.ui.files.BreadcrumbView
+        android:id="@id/breadcrumb_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9.0dip"
+        android:layout_below="@id/layout_app_bar"
+        android:layout_marginHorizontal="12.0dip" />
+    <com.omarea.ui.TreemapView
+        android:id="@id/treemap_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_below="@id/breadcrumb_bar"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin" />
+</RelativeLayout>

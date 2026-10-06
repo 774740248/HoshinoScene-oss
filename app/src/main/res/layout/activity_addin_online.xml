@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/drawer_layout"
+    android:fitsSystemWindows="false"
+    android:clipToPadding="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="false"
+    android:backgroundTintMode="screen"
+    xmlns:android="http://schemas.android.com/apk/res/android" tools:viewBindingIgnore="true">
+    <WebView
+        android:id="@id/vtools_online"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</androidx.drawerlayout.widget.DrawerLayout>

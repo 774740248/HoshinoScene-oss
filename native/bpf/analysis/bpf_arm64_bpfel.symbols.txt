@@ -1,0 +1,16 @@
+
+Symbol table '.symtab' contains 13 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 SECTION LOCAL  DEFAULT    3 uretprobe/libgui
+     2: 00000000000000e8     0 NOTYPE  LOCAL  DEFAULT    3 LBB0_6
+     3: 00000000000000d8     0 NOTYPE  LOCAL  DEFAULT    3 LBB0_5
+     4: 0000000000000000     0 SECTION LOCAL  DEFAULT    5 uretprobe/libgui_acquire
+     5: 0000000000000060     0 NOTYPE  LOCAL  DEFAULT    5 LBB1_3
+     6: 0000000000000000   320 FUNC    GLOBAL DEFAULT    3 uretprobe_libgui
+     7: 0000000000000028    20 OBJECT  GLOBAL DEFAULT    8 track_config
+     8: 0000000000000014    20 OBJECT  GLOBAL DEFAULT    8 pending_count
+     9: 0000000000000000    20 OBJECT  GLOBAL DEFAULT    8 events
+    10: 0000000000000000   112 FUNC    GLOBAL DEFAULT    5 uretprobe_libgui_acquire
+    11: 0000000000000000    13 OBJECT  GLOBAL DEFAULT    7 __license
+    12: 0000000000000000     8 OBJECT  GLOBAL DEFAULT    9 unused

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <CheckBox
+        android:id="@id/threads_show_all"
+        android:visibility="gone"
+        android:button="@drawable/ic_show_all_action"
+        android:layout_alignTop="@id/export_screenshot"
+        android:layout_toStartOf="@id/export_screenshot"
+        style="@style/SceneTitleBarSwitch" />
+    <ImageView
+        android:id="@id/export_screenshot"
+        android:padding="10.0dip"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/icon_export"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneTitleBarBtn" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/thread_stats_container"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.omarea.ui.BlurViewRelativeLayout
+                android:background="@drawable/krscript_item_ripple_inactive"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+                <ImageView
+                    android:id="@id/chart_session_logo"
+                    android:layout_width="32.0dip"
+                    android:layout_height="32.0dip"
+                    android:src="@mipmap/ic_launcher_round" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/chart_session_logo"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_toEndOf="@id/chart_session_logo">
+                    <TextView
+                        android:id="@id/chart_session_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-light"
+                        style="@style/textDefault" />
+                    <TextView
+                        android:id="@id/chart_view_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/textXSmall" />
+                </LinearLayout>
+                <TextView
+                    android:gravity="end|center"
+                    android:id="@id/chart_session_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36.0dip"
+                    android:layout_alignBaseline="@id/chart_session_logo"
+                    android:layout_alignParentEnd="true"
+                    style="@style/textSmall" />
+            </com.omarea.ui.BlurViewRelativeLayout>
+            <com.omarea.ui.BlurViewRecyclerView
+                android:id="@id/thread_stats"
+                android:background="@drawable/krscript_item_ripple_inactive"
+                android:padding="8.0dip"
+                android:scrollbars="none"
+                android:descendantFocusability="blocksDescendants"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                app:fastScrollEnabled="false" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

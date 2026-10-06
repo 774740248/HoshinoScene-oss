@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/option_item_icon"
+        style="@style/SceneActionIcon" />
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <TextView
+            android:id="@id/option_item_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4.0dip"
+            style="@style/textTitle" />
+        <TextView
+            android:id="@id/option_item_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/textSmall" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <title>支付向导</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scrollbar-width: none;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+      /* Chrome Safari */
+    }
+
+    body {
+      line-height: 1.4;
+      font-size: 14px;
+    }
+
+    .content {
+      padding: 16px;
+    }
+
+    h4 {}
+
+    cite {
+      font-size: 12px;
+    }
+
+    img {
+      margin-bottom: 10px;
+      display: block;
+      max-width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .t {
+      padding-bottom: 4px;
+    }
+
+    .t::before {
+      content: ' ';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #98cf00;
+      margin-right: 10px;
+      font-size: 0.8em;
+      color: #000;
+      background-color: rgba(255, 230, 0, 0.781);
+    }
+
+    .d {
+      color: #a0a0a0;
+      font-size: 11px;
+      padding-left: 20px;
+    }
+
+    li {
+      border-radius: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+    }
+
+    hr {
+      background-color: transparent;
+      border: none;
+      height: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      /* color: #0094ff; */
+      font-size: 1.25em;
+      color: rgb(0, 140, 255);
+      font-weight: 600;
+    }
+
+    .o-price {
+      color: #aaa;
+      text-decoration: line-through;
+      font-size: 0.8em;
+    }
+
+    .hl {
+      /* color: #0094ff; */
+      color: rgb(0, 140, 255);
+      font-style: normal;
+    }
+
+    code {
+      background-color: #f8f8f8;
+      padding: 10px 20px 10px 10px;
+      display: inline-block;
+      border-radius: 5px;
+    }
+
+    .grey {
+      color: #a0a0a0;
+      font-size: 11px;
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="radius">
+    <div class="content">
+      <h4>1. The basic information</h4>
+      <ul>
+        <li>
+          <div class="d">Each device has a free 15-day trial of all SCENE5 features.</div>
+          <div class="d">After that, you need to make a payment to use Pro's features.</div>
+          <div class="d">Pro features usually refer to functions that rely on ROOT permissions.</div>
+          <div class="d">
+            <span class="price">$4.5(USD)</span> Get 32 points (up to two devices can be used permanently)
+          </div>
+        </li>
+      </ul>
+      <hr>
+
+      <h4>2. How to pay</h4>
+      <div>
+        <br>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="encrypted"
+            value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+          <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_buynow_SM.gif" border="0" name="submit"
+            alt="PayPal – The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/zh_XC/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </div>
+      <hr>
+
+      <h4>3. How to activate</h4>
+      <div>
+        <ul>
+          <li>
+            <div class="t">Send payment information</div>
+            <div class="d">
+              <div>- Send the message to <a
+                  href="mailto:1191634433@qq.com?subject=Scene5%E6%94%AF%E4%BB%98%E8%AE%B0%E5%BD%95">1191634433@qq.com</a>
+                in the following format</div>
+              <code>
+                  <b>Subject: SCENE(Paypal)</b>
+                  <br>
+                  <b>Body:</b><br>
+                  DateTime:202X-MM-DD<br>
+                  Amount:$XX<br>
+                  Translation ID:XXXXX<br>
+                  Screenshots(optional):<br>
+                </code>
+            </div>
+          </li>
+          <li>
+            <div class="t">- The next?</div>
+            <div class="d">I will reply to your email and send you the activation code</div>
+          </li>
+          <li>
+            <div class="t">- Unexpected</div>
+            <div class="d">If you do not hear from me within 24 hours, please contact me again</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

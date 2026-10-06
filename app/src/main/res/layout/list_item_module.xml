@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.ui.BlurViewLinearLayout
+    android:orientation="vertical"
+    android:background="@drawable/krscript_item_ripple"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8.0dip"
+    android:paddingHorizontal="12.0dip"
+    android:paddingVertical="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_gravity="fill_horizontal|center"
+            android:orientation="vertical"
+            android:id="@id/center"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <ImageView
+                    android:id="@id/ItemCredible"
+                    android:visibility="gone"
+                    android:layout_width="15.0dip"
+                    android:layout_height="15.0dip"
+                    android:src="@drawable/icon_credible"
+                    android:layout_marginEnd="3.0dip"
+                    app:tint="@color/colorAccent" />
+                <TextView
+                    android:id="@id/ItemTitle"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:layout_weight="1.0"
+                    style="@style/textTitle" />
+            </LinearLayout>
+            <TextView
+                android:id="@id/ItemVersion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/textSmall" />
+            <TextView
+                android:id="@id/ItemSource"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/textSmall" />
+        </LinearLayout>
+        <Button
+            android:layout_gravity="center_vertical"
+            android:id="@id/download"
+            android:text="@string/download"
+            style="@style/SceneButton" />
+    </LinearLayout>
+    <TextView
+        android:layout_gravity="fill_horizontal"
+        android:id="@id/ItemText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/textSmall" />
+</com.omarea.ui.BlurViewLinearLayout>

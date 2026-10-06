@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<group>
+    <resource dir="file:///android_asset/kr-script/other" />
+    <group>
+        <action>
+            <title>@string:kr_others_ufs_health</title>
+            <summary sh="run ufs/ufs_summary.sh" />
+            <set>run ufs/ufs_detail.sh</set>
+            <desc>@string:kr_others_ufs_health_desc</desc>
+        </action>
+        <action visible="item_exist.sh /sys/block/mmcblk0/device/life_time">
+            <title>@string:kr_others_emmc_health</title>
+            <summary sh="run emmc/emmc_summary.sh" />
+            <set>run emmc/emmc_detail.sh</set>
+            <desc>@string:kr_others_ufs_health_desc</desc>
+        </action>
+    </group>
+
+    <group>
+        <action>
+            <title>@string:kr_others_self_rescue</title>
+            <desc>@string:kr_others_self_rescue_desc</desc>
+            <set>run resurgence/set.sh</set>
+        </action>
+        <action>
+            <title>@string:kr_others_thermal_remove</title>
+            <desc>@string:kr_others_thermal_remove_desc</desc>
+            <param name="selected" multiple="multiple" value-sh="run thermal/value.sh" options-sh="run thermal/options.sh" />
+            <set>run thermal/set.sh</set>
+        </action>
+    </group>
+
+    <group>
+        <action confirm="false">
+            <title>@string:kr_others_temperature_sensors</title>
+            <desc>@string:kr_others_temperature_sensors_desc</desc>
+            <set>run sensor_values.sh</set>
+        </action>
+        <picker
+            visible="run 377_key/support.sh"
+            options-sh="run 377_key/options.sh"
+            shell="hidden">
+            <title>@string:kr_others_google_key</title>
+            <summary sh="run 377_key/summary.sh" />
+            <get>run 377_key/get.sh</get>
+            <set>run 377_key/set.sh</set>
+        </picker>
+    </group>
+
+    <group>
+        <action>
+            <title>@string:kr_others_fstrim</title>
+            <desc>@string:kr_others_fstrim_desc</desc>
+            <set>
+                echo 'fstrim /data'; fstrim /data;
+                echo 'fstrim /cache'; fstrim /cache;
+                echo 'fstrim /system'; fstrim /system 2>/dev/null;
+                sm fstrim 2>/dev/null
+            </set>
+        </action>
+    </group>
+
+    <group>
+        <switch min-sdk="29">
+            <title>USAP pool</title>
+            <get>
+                if [[ $(getprop persist.device_config.runtime_native.usap_pool_enabled) == 'true' || $(getprop persist.sys.usap_pool_enabled) == 'true' ]]; then
+                echo 1
+                else
+                echo 0
+                fi
+            </get>
+            <set>
+                prop=persist.device_config.runtime_native.usap_pool_enabled
+                prop2=persist.sys.usap_pool_enabled
+                if [[ $state == '1' ]]; then
+                setprop $prop true
+                setprop $prop2 true
+                else
+                setprop $prop false
+                setprop $prop2 false
+                fi
+                echo '@string:kr_others_usap_reboot'
+            </set>
+        </switch>
+    </group>
+</group>

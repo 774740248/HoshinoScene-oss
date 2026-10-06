@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/krscript_item_ripple_inactive"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:id="@id/ProcessIcon"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:src="@drawable/process_linux" />
+            <TextView
+                android:id="@id/ProcessName"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textIsSelectable="true"
+                android:layout_marginStart="5.0dip"
+                style="@style/textTitle" />
+            <ImageButton
+                android:id="@id/ProcessMemoryCompact"
+                android:padding="6.0dip"
+                android:layout_width="25.0dip"
+                android:layout_height="25.0dip"
+                android:src="@drawable/icon_harddisk"
+                android:scaleType="centerInside"
+                android:layout_marginStart="8.0dip"
+                style="@style/SceneButton" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/ProcessBasic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Pid"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessPID"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    style="@style/textSmall" />
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="PPid"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessPPid"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    style="@style/textSmall" />
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessUSER"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    style="@style/textSmall" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="CPU(AVG)"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessCPU"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    style="@style/textSmall" />
+                <TextView
+                    android:textColor="@color/colorAccent"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="65.0dip"
+                    android:text="Show Threads…"
+                    android:layout_weight="1.0"
+                    style="@style/textSmallTitle" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="RES"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessMEM"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    style="@style/textSmall" />
+                <TextView
+                    android:layout_width="40.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="SHR"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessSHR"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    style="@style/textSmall" />
+                <TextView
+                    android:layout_width="40.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="SWAP"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessSWAP"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    style="@style/textSmall" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/process_app_name"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessFriendlyName"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    style="@style/textSmall" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/process_command"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessCommand"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    style="@style/textSmall" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/process_command_line"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessCmdline"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:maxLines="8"
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    android:breakStrategy="simple"
+                    style="@style/textSmall" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/process_state"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessState"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    style="@style/textSmall" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="cpuset"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessCpuSet"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    style="@style/textSmall" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="cgroup"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessCGroup"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    style="@style/textSmall" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="cpus"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessCpus"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    style="@style/textSmall" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip">
+                <TextView
+                    android:layout_width="65.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="oom_adj"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessOOMADJ"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    style="@style/textSmall" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="oom_score_adj"
+                    android:paddingEnd="10.0dip"
+                    style="@style/textSmallTitle" />
+                <TextView
+                    android:id="@id/ProcessOOMScoreAdj"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    style="@style/textSmall" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip">
+                <Button
+                    android:id="@id/ProcessAppOptions"
+                    android:visibility="gone"
+                    android:text="@string/process_manage"
+                    android:layout_marginEnd="10.0dip"
+                    style="@style/SceneButton" />
+                <Button
+                    android:id="@id/ProcessStopApp"
+                    android:paddingLeft="6.0dip"
+                    android:paddingRight="6.0dip"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:text="@string/process_stop_android"
+                    android:layout_toLeftOf="@id/ProcessKill"
+                    android:layout_marginEnd="10.0dip"
+                    style="@style/SceneButton" />
+                <Button
+                    android:id="@id/ProcessKill"
+                    android:text="@string/process_kill"
+                    android:layout_alignParentEnd="true"
+                    style="@style/SceneButton" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

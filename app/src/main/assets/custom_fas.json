@@ -1,0 +1,11 @@
+{
+  "version": "9.0 Customized",
+  "versionCode": 9000,
+  "author": "SCENE9",
+  "projectUrl": "http://vtools.omarea.com/",
+  "features": {
+    "strict": true,
+    "pedestal": false,
+    "fas": true
+  }
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="12.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="@drawable/krscript_item_ripple_inactive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip">
+            <TextView
+                android:id="@id/confirm_title"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/monitor_title"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                style="@style/textTitle" />
+            <TextView
+                android:id="@id/confirm_message"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="@string/monitor_desc"
+                style="@style/dialogDesc" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/in_card_item"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin">
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/monitor_perf2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="新版系统监视器，可自定义内容"
+                    app:iconSrc="@drawable/fw_float_monitor"
+                    app:title="系统监视器" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/monitor_perf"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/monitor_perf_desc"
+                    app:iconSrc="@drawable/fw_float_monitor"
+                    app:title="@string/monitor_perf" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/monitor_proc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/monitor_process_desc"
+                    app:iconSrc="@drawable/ic_processes"
+                    app:title="@string/monitor_process" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/monitor_threads"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/monitor_threads_desc"
+                    app:iconColor="#ff808080"
+                    app:iconSrc="@drawable/icon_threads"
+                    app:title="@string/monitor_threads" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/monitor_game"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/monitor_mini_desc"
+                    app:iconColor="#ff808080"
+                    app:iconSrc="@drawable/fw_float_monitor_mini"
+                    app:title="@string/monitor_mini" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/monitor_watch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/monitor_fps_desc"
+                    app:iconColor="#ffffb700"
+                    app:iconSrc="@drawable/fw_float_fps"
+                    app:title="@string/monitor_fps" />
+                <com.omarea.ui.SwitchOptionItemView
+                    android:id="@id/monitor_temperature"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:desc="@string/monitor_temperature_desc"
+                    app:iconColor="@color/color_pedestal"
+                    app:iconSrc="@drawable/fw_icon_temperature"
+                    app:title="@string/monitor_temperature" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+            <Button
+                android:id="@id/btn_cancel"
+                android:text="@string/btn_confirm"
+                style="@style/dialogCancelBtn" />
+        </LinearLayout>
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

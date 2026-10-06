@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+    android:paddingVertical="12.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/ItemIcon"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:src="@android:drawable/sym_def_app_icon"
+        android:maxWidth="40.0dip"
+        android:maxHeight="40.0dip"
+        android:minWidth="40.0dip"
+        android:minHeight="40.0dip" />
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@id/center"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginStart="8.0dip">
+        <TextView
+            android:id="@id/ItemTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="1"
+            style="@style/textTitle" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#ff0094ff"
+                android:id="@id/ItemSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="60.0dip"
+                android:textAlignment="textStart"
+                android:layout_marginEnd="10.0dip"
+                style="@style/textSmall" />
+            <TextView
+                android:layout_gravity="fill_horizontal"
+                android:id="@id/ItemDesc"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:lines="1"
+                android:layout_weight="1.0"
+                style="@style/textSmall" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

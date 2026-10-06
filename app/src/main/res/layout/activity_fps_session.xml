@@ -1,0 +1,1358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9.0dip"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:id="@id/module_filter"
+            android:padding="12.0dip"
+            android:src="@drawable/icon_filter"
+            style="@style/SceneTitleBarBtn" />
+        <ImageView
+            android:id="@id/module_compare"
+            android:padding="10.0dip"
+            android:src="@drawable/icon_pk"
+            style="@style/SceneTitleBarBtn" />
+        <ImageView
+            android:id="@id/module_share"
+            android:padding="10.0dip"
+            android:src="@drawable/icon_share"
+            style="@style/SceneTitleBarBtn" />
+        <ImageView
+            android:id="@id/module_export"
+            android:padding="10.0dip"
+            android:src="@drawable/icon_export"
+            style="@style/SceneTitleBarBtn" />
+    </LinearLayout>
+    <com.omarea.common.ui.OverScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/session_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <com.omarea.ui.BlurView
+                    android:id="@id/fps_warning_container"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.0dip"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    style="@style/ListCardItem">
+                    <TextView
+                        android:textSize="13.0dip"
+                        android:textColor="@color/orangeDark"
+                        android:id="@id/fps_warning"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1024"
+                        android:breakStrategy="simple" />
+                </com.omarea.ui.BlurView>
+                <com.omarea.ui.BlurViewLinearLayout
+                    android:orientation="horizontal"
+                    android:id="@id/chart_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10.0dip"
+                            android:text="Platform"
+                            style="@style/textXSmall" />
+                        <ImageView
+                            android:layout_width="32.0dip"
+                            android:layout_height="32.0dip"
+                            android:src="@drawable/icon_chart_cpu" />
+                        <TextView
+                            android:textStyle="normal"
+                            android:id="@id/chart_platform"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:text="SOC ?"
+                            style="@style/textSmallTitle" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10.0dip"
+                            android:text="Model"
+                            style="@style/textXSmall" />
+                        <ImageView
+                            android:layout_width="32.0dip"
+                            android:layout_height="32.0dip"
+                            android:src="@drawable/icon_chart_phone" />
+                        <TextView
+                            android:textStyle="normal"
+                            android:id="@id/chart_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:text="Model ?"
+                            android:textAlignment="center"
+                            style="@style/textSmallTitle" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10.0dip"
+                            android:text="OS"
+                            style="@style/textXSmall" />
+                        <ImageView
+                            android:layout_width="32.0dip"
+                            android:layout_height="32.0dip"
+                            android:src="@drawable/icon_chart_android" />
+                        <TextView
+                            android:textStyle="normal"
+                            android:id="@id/chart_os"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:text="Android ?"
+                            style="@style/textSmallTitle" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10.0dip"
+                            android:text="Profile"
+                            style="@style/textXSmall" />
+                        <ImageView
+                            android:layout_width="32.0dip"
+                            android:layout_height="32.0dip"
+                            android:src="@drawable/icon_chart_scheduler" />
+                        <TextView
+                            android:textStyle="normal"
+                            android:id="@id/chart_mode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:text="\###"
+                            style="@style/textSmallTitle" />
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewLinearLayout>
+                <com.omarea.ui.BlurViewLinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1.0dip"
+                    style="@style/ListCardItem">
+                    <EditText
+                        android:textSize="13.0dip"
+                        android:id="@id/fps_remark_hint"
+                        android:background="@null"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0.0dip"
+                        android:hint="@string/fps_remark_hint"
+                        android:maxLines="1024"
+                        android:imeOptions="actionDone"
+                        android:breakStrategy="simple" />
+                </com.omarea.ui.BlurViewLinearLayout>
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <ImageView
+                        android:id="@id/chart_session_logo"
+                        android:layout_width="32.0dip"
+                        android:layout_height="32.0dip"
+                        android:src="@mipmap/ic_launcher_round" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/chart_session_logo"
+                        android:layout_marginStart="8.0dip"
+                        android:layout_toEndOf="@id/chart_session_logo">
+                        <TextView
+                            android:id="@id/chart_session_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed-light"
+                            style="@style/textDefault" />
+                        <TextView
+                            android:id="@id/chart_view_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/textXSmall" />
+                    </LinearLayout>
+                    <TextView
+                        android:gravity="end|center"
+                        android:id="@id/chart_session_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36.0dip"
+                        android:layout_alignBaseline="@id/chart_session_logo"
+                        android:layout_alignParentEnd="true"
+                        style="@style/textSmall" />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@id/chart_fps_overview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="10.0dip"
+                        android:layout_below="@id/chart_session_logo">
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MAX"
+                                style="@style/textXSmall" />
+                            <TextView
+                                android:textSize="20.0dip"
+                                android:textColor="?android:colorAccent"
+                                android:id="@id/chart_fps_max"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FPS"
+                                style="@style/textXSmall" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MIN"
+                                style="@style/textXSmall" />
+                            <TextView
+                                android:textSize="20.0dip"
+                                android:textColor="?android:colorAccent"
+                                android:id="@id/chart_fps_min"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FPS"
+                                style="@style/textXSmall" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AVG"
+                                style="@style/textXSmall" />
+                            <TextView
+                                android:textSize="20.0dip"
+                                android:textColor="?android:colorAccent"
+                                android:id="@id/chart_fps_avg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FPS"
+                                style="@style/textXSmall" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="JITTER"
+                                style="@style/textXSmall" />
+                            <TextView
+                                android:textSize="20.0dip"
+                                android:textColor="?android:colorAccent"
+                                android:id="@id/chart_fps_cv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FPS"
+                                style="@style/textXSmall" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@id/chart_other_overview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_below="@id/chart_fps_overview">
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5% LOW"
+                                style="@style/textXSmall" />
+                            <TextView
+                                android:textSize="20.0dip"
+                                android:textColor="?android:colorAccent"
+                                android:id="@id/chart_low_fps"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FPS"
+                                style="@style/textXSmall" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AVG"
+                                style="@style/textXSmall" />
+                            <TextView
+                                android:textSize="20.0dip"
+                                android:textColor="?android:colorAccent"
+                                android:id="@id/chart_soc_temp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SOC(℃)"
+                                style="@style/textXSmall" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MAX"
+                                style="@style/textXSmall" />
+                            <TextView
+                                android:textSize="20.0dip"
+                                android:textColor="?android:colorAccent"
+                                android:id="@id/chart_temp_max"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.0℃" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Battery(℃)"
+                                style="@style/textXSmall" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AVG"
+                                style="@style/textXSmall" />
+                            <TextView
+                                android:textSize="20.0dip"
+                                android:textColor="?android:colorAccent"
+                                android:gravity="center_vertical"
+                                android:id="@id/chart_power_avg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Power(W)"
+                                style="@style/textXSmall" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewRelativeLayout>
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/chart_dimension"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:text="FPS"
+                            android:layout_weight="5.0"
+                            android:layout_marginStart="2.0dip" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:gravity="center_vertical"
+                            android:id="@id/chart_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0.0dip"
+                            android:text="Temperature(℃)"
+                            android:paddingStart="0.0dip"
+                            android:paddingEnd="0.0dip"
+                            android:layout_marginEnd="2.0dip" />
+                        <ImageView
+                            android:id="@id/chart_right_icon"
+                            android:background="?android:actionBarItemBackground"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/source_switch"
+                            app:tint="@color/chartLightBlue" />
+                    </LinearLayout>
+                    <com.omarea.ui.fps.FpsDataView
+                        android:id="@id/chart_session"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_below="@id/chart_dimension" />
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chart_session">
+                        <TextView
+                            android:textSize="12.0dip"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="■ FPS" />
+                        <TextView
+                            android:textSize="12.0dip"
+                            android:textColor="#80ff7e00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="■ TEMP(℃)"
+                            android:layout_marginStart="8.0dip" />
+                        <TextView
+                            android:textSize="12.0dip"
+                            android:textColor="#80fc6bc5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="■ CPU(%)"
+                            android:layout_marginStart="8.0dip" />
+                        <TextView
+                            android:textSize="12.0dip"
+                            android:textColor="@color/chartLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="■ GPU(%)"
+                            android:layout_marginStart="8.0dip" />
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewRelativeLayout>
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:id="@id/chart_jank"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/chart_dimension_jank"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="20.0dip"
+                            android:text="JANK"
+                            android:layout_weight="5.0"
+                            android:layout_marginStart="2.0dip" />
+                    </LinearLayout>
+                    <com.omarea.ui.fps.FpsJankView
+                        android:id="@id/chart_jank_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="70.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_below="@id/chart_dimension_jank" />
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chart_jank_view">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="@color/chartLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="JANK:"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="@color/chartLightBlue"
+                            android:id="@id/jank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3.0dip" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="#80fc6bc5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BIG JANK:"
+                            android:layout_marginStart="40.0dip" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="#80fc6bc5"
+                            android:id="@id/big_jank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3.0dip" />
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewRelativeLayout>
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:id="@id/chart_ftime"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/chart_dimension_ftime"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="20.0dip"
+                            android:text="Frame Time(ms)"
+                            android:layout_weight="5.0"
+                            android:layout_marginStart="2.0dip" />
+                    </LinearLayout>
+                    <com.omarea.ui.fps.FrameTimeView
+                        android:id="@id/chart_ftime_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_below="@id/chart_dimension_ftime" />
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chart_ftime_view">
+                        <TextView
+                            android:textSize="10.0dip"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MAX:" />
+                        <TextView
+                            android:textSize="10.0dip"
+                            android:textColor="@android:color/darker_gray"
+                            android:id="@id/ftime_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3.0dip" />
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewRelativeLayout>
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:id="@id/chart_2"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/chart_dimension2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CPU Usage(%)"
+                            android:layout_marginStart="2.0dip" />
+                        <ImageView
+                            android:id="@id/cpu_load_stat"
+                            android:background="?android:actionBarItemBackground"
+                            android:padding="1.0dip"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/ic_bat_stats"
+                            android:layout_marginStart="6.0dip"
+                            app:tint="@color/chartLightBlue" />
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0.0dip"
+                            android:text="Chart Options"
+                            android:paddingStart="0.0dip"
+                            android:paddingEnd="0.0dip"
+                            android:layout_marginEnd="2.0dip" />
+                        <ImageView
+                            android:id="@id/cpu_core_options"
+                            android:background="?android:actionBarItemBackground"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/icon_switchs"
+                            app:tint="@color/chartLightBlue" />
+                    </LinearLayout>
+                    <com.omarea.ui.fps.CpuLoadsView
+                        android:id="@id/chart_cpu_loads"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_below="@id/chart_dimension2" />
+                    <TextView
+                        android:textSize="12.0dip"
+                        android:id="@id/chart_cpu_loads_legend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chart_cpu_loads"
+                        android:layout_centerHorizontal="true" />
+                </com.omarea.ui.BlurViewRelativeLayout>
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:id="@id/chart_3"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/chart_dimension3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CPU Frequency(MHz)"
+                            android:layout_marginStart="2.0dip" />
+                        <ImageView
+                            android:id="@id/cpu_freq_stat"
+                            android:background="?android:actionBarItemBackground"
+                            android:padding="1.0dip"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/ic_bat_stats"
+                            android:layout_marginStart="6.0dip"
+                            app:tint="@color/chartLightBlue" />
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0.0dip"
+                            android:text="Chart Options"
+                            android:paddingStart="0.0dip"
+                            android:paddingEnd="0.0dip"
+                            android:layout_marginEnd="2.0dip" />
+                        <ImageView
+                            android:id="@id/cpu_core_options4"
+                            android:background="?android:actionBarItemBackground"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/icon_switchs"
+                            app:tint="@color/chartLightBlue" />
+                        <ImageView
+                            android:id="@id/cpu_stat_switch"
+                            android:background="?android:actionBarItemBackground"
+                            android:padding="1.0dip"
+                            android:visibility="gone"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/ic_bat_stats"
+                            android:layout_marginStart="6.0dip"
+                            app:tint="@color/chartLightBlue" />
+                    </LinearLayout>
+                    <com.omarea.ui.fps.CpuFrequencyView
+                        android:id="@id/chart_cpu_frequencies"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_marginBottom="15.0dip"
+                        android:layout_below="@id/chart_dimension3" />
+                    <com.omarea.ui.fps.CpuFrequencyStat
+                        android:id="@id/chart_cpu_frequencies_stat"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_marginBottom="15.0dip"
+                        android:layout_below="@id/chart_dimension3" />
+                    <TextView
+                        android:textSize="12.0dip"
+                        android:id="@id/chart_cpu_frequencies_legend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true" />
+                </com.omarea.ui.BlurViewRelativeLayout>
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:id="@id/chart_cycles"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/chart_dimension_cycles"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CPU Cycles(M)"
+                            android:layout_marginStart="2.0dip" />
+                        <ImageView
+                            android:id="@id/cpu_cycles_stat"
+                            android:background="?android:actionBarItemBackground"
+                            android:padding="1.0dip"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/ic_bat_stats"
+                            android:layout_marginStart="6.0dip"
+                            app:tint="@color/chartLightBlue" />
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5.0" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0.0dip"
+                            android:text="CPU Temperature(℃)"
+                            android:paddingStart="0.0dip"
+                            android:paddingEnd="0.0dip"
+                            android:layout_marginEnd="2.0dip" />
+                    </LinearLayout>
+                    <com.omarea.ui.fps.CpuCyclesView
+                        android:id="@id/chart_cpu_cycles"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_below="@id/chart_dimension_cycles" />
+                    <TextView
+                        android:textSize="11.0dip"
+                        android:id="@id/chart_cpu_cycles_legend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chart_cpu_cycles"
+                        android:layout_centerHorizontal="true" />
+                </com.omarea.ui.BlurViewRelativeLayout>
+                <com.omarea.ui.fps.PerfStallDimensionList
+                    android:id="@id/session_perf_stall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:id="@id/chart_gpu"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/chart_dimension4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GPU Frequency(MHz)"
+                            android:layout_marginStart="2.0dip" />
+                        <ImageView
+                            android:id="@id/gpu_freq_stat"
+                            android:padding="1.0dip"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/ic_bat_stats"
+                            android:layout_marginStart="6.0dip"
+                            app:tint="@color/chartLightBlue" />
+                        <View
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0.0dip"
+                            android:text="Usage(%)"
+                            android:paddingStart="0.0dip"
+                            android:paddingEnd="0.0dip"
+                            android:layout_marginEnd="2.0dip" />
+                        <ImageView
+                            android:id="@id/gpu_usage_stat"
+                            android:background="?android:actionBarItemBackground"
+                            android:padding="1.0dip"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/ic_bat_stats"
+                            android:layout_marginStart="6.0dip"
+                            app:tint="@color/chartLightBlue" />
+                    </LinearLayout>
+                    <com.omarea.ui.fps.GpuLoadView
+                        android:id="@id/chart_gpu_frequency"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_below="@id/chart_dimension4" />
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chart_gpu_frequency">
+                        <TextView
+                            android:textSize="12.0dip"
+                            android:textColor="@color/chartLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="■ Frequency(MHz)" />
+                        <TextView
+                            android:textSize="12.0dip"
+                            android:textColor="@color/chartDarkBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="■ Usage(%)"
+                            android:layout_marginStart="8.0dip" />
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewRelativeLayout>
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:id="@id/chart_ddr"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/chart_dimension_ddr"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DDR(MHz | Mbps)"
+                            android:layout_marginStart="2.0dip" />
+                        <ImageView
+                            android:id="@id/ddr_freq_stat"
+                            android:background="?android:actionBarItemBackground"
+                            android:padding="1.0dip"
+                            android:layout_width="15.0dip"
+                            android:layout_height="15.0dip"
+                            android:src="@drawable/ic_bat_stats"
+                            android:layout_marginStart="6.0dip"
+                            app:tint="@color/chartLightBlue" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:gravity="center_vertical"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30.0dip"
+                            android:layout_marginTop="0.0dip"
+                            android:text="Usage(%)"
+                            android:paddingStart="0.0dip"
+                            android:paddingEnd="0.0dip"
+                            android:layout_marginEnd="2.0dip" />
+                    </LinearLayout>
+                    <com.omarea.ui.fps.DDRView
+                        android:id="@id/chart_ddr_frequency"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_below="@id/chart_dimension_ddr" />
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chart_ddr_frequency">
+                        <TextView
+                            android:textSize="12.0dip"
+                            android:textColor="@color/chartLightBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="■ Frequency(MHz)" />
+                        <TextView
+                            android:textSize="12.0dip"
+                            android:textColor="@color/chartDarkBlue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="■ Usage(%)"
+                            android:layout_marginStart="8.0dip" />
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewRelativeLayout>
+                <FrameLayout
+                    android:id="@id/chart_power"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <com.omarea.ui.BlurViewRelativeLayout
+                        android:id="@id/chart_power_mA"
+                        android:paddingTop="10.0dip"
+                        android:paddingBottom="6.0dip"
+                        android:visibility="gone"
+                        style="@style/ListCardItem">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:id="@id/chart_dimension5"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6.0dip">
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:id="@id/chart_toggle_w_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Battery Current(mA)"
+                                android:layout_marginStart="2.0dip" />
+                            <ImageView
+                                android:id="@id/chart_toggle_w"
+                                android:background="?android:actionBarItemBackground"
+                                android:layout_width="15.0dip"
+                                android:layout_height="15.0dip"
+                                android:src="@drawable/source_switch"
+                                android:layout_marginStart="2.0dip"
+                                app:tint="@color/chartLightBlue" />
+                            <View
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5.0" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30.0dip"
+                                android:layout_marginTop="0.0dip"
+                                android:text="Capacity %"
+                                android:paddingStart="0.0dip"
+                                android:paddingEnd="0.0dip"
+                                android:layout_marginEnd="2.0dip"
+                                style="?actionButtonStyle" />
+                        </LinearLayout>
+                        <com.omarea.ui.fps.BatteryIOView
+                            android:id="@id/chart_battery_io"
+                            android:layout_width="fill_parent"
+                            android:layout_height="200.0dip"
+                            android:layout_marginTop="4.0dip"
+                            android:layout_below="@id/chart_dimension5" />
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@id/chart_battery_legend"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chart_battery_io">
+                            <TextView
+                                android:textSize="12.0dip"
+                                android:textColor="@color/chartDarkBlue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="■ Current(mA)" />
+                            <TextView
+                                android:textSize="12.0dip"
+                                android:textColor="@color/chartLightBlue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="■ Capacity(%)"
+                                android:layout_marginStart="8.0dip" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:layout_below="@id/chart_battery_legend">
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MAX:" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:id="@id/battery_io_max"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3.0dip" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MIN:"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:id="@id/battery_io_min"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3.0dip" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AVG:"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:id="@id/battery_io_avg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3.0dip" />
+                        </LinearLayout>
+                    </com.omarea.ui.BlurViewRelativeLayout>
+                    <com.omarea.ui.BlurViewRelativeLayout
+                        android:id="@id/chart_power_watt"
+                        android:paddingTop="10.0dip"
+                        android:paddingBottom="6.0dip"
+                        android:visibility="visible"
+                        style="@style/ListCardItem">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:id="@id/chart_dimension5_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6.0dip">
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:id="@id/chart_toggle_ma_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Power(W)"
+                                android:layout_marginStart="2.0dip" />
+                            <ImageView
+                                android:id="@id/chart_toggle_ma"
+                                android:background="?android:actionBarItemBackground"
+                                android:layout_width="15.0dip"
+                                android:layout_height="15.0dip"
+                                android:src="@drawable/source_switch"
+                                android:layout_marginStart="2.0dip"
+                                app:tint="@color/chartLightBlue" />
+                            <View
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.0dip"
+                                android:text="Capacity %"
+                                android:paddingStart="0.0dip"
+                                android:paddingEnd="0.0dip"
+                                android:layout_marginEnd="2.0dip" />
+                        </LinearLayout>
+                        <com.omarea.ui.fps.PowerView
+                            android:id="@id/chart_power_w"
+                            android:layout_width="fill_parent"
+                            android:layout_height="200.0dip"
+                            android:layout_marginTop="4.0dip"
+                            android:layout_below="@id/chart_dimension5_2" />
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@id/chart_power_legend"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/chart_power_w">
+                            <TextView
+                                android:textSize="12.0dip"
+                                android:textColor="@color/chartDarkBlue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="■ Power(W)" />
+                            <TextView
+                                android:textSize="12.0dip"
+                                android:textColor="@color/chartLightBlue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="■ Capacity(%)"
+                                android:layout_marginStart="8.0dip" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:layout_below="@id/chart_power_legend">
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MAX:" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:id="@id/power_max"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3.0dip" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MIN:"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:id="@id/power_min"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3.0dip" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AVG:"
+                                android:layout_marginStart="@dimen/activity_horizontal_margin" />
+                            <TextView
+                                android:textSize="11.0dip"
+                                android:textColor="#a0808080"
+                                android:id="@id/power_avg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="3.0dip" />
+                        </LinearLayout>
+                    </com.omarea.ui.BlurViewRelativeLayout>
+                </FrameLayout>
+                <com.omarea.ui.BlurViewRelativeLayout
+                    android:id="@id/chart_cpu_t"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="6.0dip"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/chart_dimension6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6.0dip">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:gravity="center_vertical"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:text="CPU Temperature(℃)"
+                            android:layout_weight="5.0"
+                            android:layout_marginStart="2.0dip" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30.0dip"
+                            android:layout_marginTop="0.0dip"
+                            android:text="GPU Temperature(℃)"
+                            android:paddingStart="0.0dip"
+                            android:paddingEnd="0.0dip"
+                            android:layout_marginEnd="2.0dip"
+                            style="?actionButtonStyle" />
+                    </LinearLayout>
+                    <com.omarea.ui.fps.CpuTemperatureView
+                        android:id="@id/chart_cpu_temperature"
+                        android:layout_width="fill_parent"
+                        android:layout_height="200.0dip"
+                        android:layout_marginTop="4.0dip"
+                        android:layout_below="@id/chart_dimension6" />
+                    <LinearLayout
+                        android:gravity="center_horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chart_cpu_temperature">
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="#a0808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MAX:" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="#a0808080"
+                            android:id="@id/cpu_temperature_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3.0dip" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="#a0808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MIN:"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="#a0808080"
+                            android:id="@id/cpu_temperature_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3.0dip" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="#a0808080"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AVG:"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin" />
+                        <TextView
+                            android:textSize="11.0dip"
+                            android:textColor="#a0808080"
+                            android:id="@id/cpu_temperature_avg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="3.0dip" />
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewRelativeLayout>
+            </LinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="horizontal"
+                android:id="@id/session_threads"
+                android:background="@drawable/krscript_item_ripple"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:minHeight="65.0dip"
+                android:layout_weight="1.0"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                style="@style/ListCardItemSmall">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/action_menu_icon_bg"
+                    android:padding="10.0dip"
+                    android:layout_width="40.0dip"
+                    android:layout_height="40.0dip"
+                    android:src="@drawable/icon_threads"
+                    android:scaleType="centerInside"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:backgroundTint="@color/colorSecondary"
+                    app:tint="#ffffffff" />
+                <LinearLayout
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4.0dip"
+                        android:text="@string/fps_threads"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fps_threads_desc"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:layout_width="25.0dip"
+                    android:layout_height="25.0dip"
+                    android:src="@drawable/arrow"
+                    android:scaleType="centerInside"
+                    android:alpha="0.8"
+                    app:tint="#ff808080" />
+            </com.omarea.ui.BlurViewLinearLayout>
+        </LinearLayout>
+    </com.omarea.common.ui.OverScrollView>
+</RelativeLayout>

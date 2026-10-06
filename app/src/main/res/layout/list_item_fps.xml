@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@id/ItemIcon"
+        android:layout_width="45.0dip"
+        android:layout_height="45.0dip"
+        android:src="@drawable/process_android"
+        android:maxWidth="45.0dip"
+        android:maxHeight="45.0dip"
+        android:minWidth="45.0dip"
+        android:minHeight="45.0dip"
+        android:layout_marginEnd="5.0dip" />
+    <View
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_vertical"
+        android:id="@id/Selected"
+        android:background="@drawable/powercfg_powersave"
+        android:layout_width="3.0dip"
+        android:layout_height="15.0dip"
+        android:alpha="0.7" />
+    <com.omarea.ui.BlurViewLinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_ripple_solid"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:paddingHorizontal="12.0dip"
+        android:paddingVertical="8.0dip">
+        <LinearLayout
+            android:layout_gravity="fill_horizontal|center"
+            android:orientation="vertical"
+            android:id="@id/center"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2.0dip">
+                <TextView
+                    android:textSize="9.0dip"
+                    android:textColor="@android:color/white"
+                    android:id="@id/NewTag"
+                    android:background="@drawable/powercfg_balance"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="20.0dip"
+                    android:text="today"
+                    android:alpha="0.7"
+                    android:layout_marginEnd="2.0dip"
+                    android:paddingHorizontal="4.0dip"
+                    android:paddingVertical="1.0dip" />
+                <TextView
+                    android:textSize="14.0dip"
+                    android:textStyle="bold"
+                    android:textColor="?android:textColorPrimary"
+                    android:id="@id/ItemTitle"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Example"
+                    android:lines="1"
+                    android:layout_weight="1.0" />
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/ItemCloud"
+                    android:layout_width="12.0dip"
+                    android:layout_height="12.0dip"
+                    android:src="@drawable/icon_cloud"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    app:tint="@color/colorSecondary" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="11.0dip"
+                    android:textColor="?android:textColorTertiary"
+                    android:layout_gravity="fill_horizontal"
+                    android:id="@id/ItemTime"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="00:00:00"
+                    android:lines="1"
+                    android:layout_weight="3.0"
+                    android:fontFamily="sans-serif-condensed-light" />
+                <View
+                    android:layout_gravity="center_vertical"
+                    android:id="@id/ItemModeDot"
+                    android:background="@drawable/powercfg_powersave"
+                    android:layout_width="4.0dip"
+                    android:layout_height="4.0dip"
+                    android:layout_marginEnd="4.0dip" />
+                <TextView
+                    android:textSize="11.0dip"
+                    android:textColor="?android:textColorTertiary"
+                    android:id="@id/ItemSummary"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="0.00  000mA"
+                    android:layout_weight="4.0"
+                    android:fontFamily="sans-serif-condensed-light" />
+                <TextView
+                    android:textSize="11.0dip"
+                    android:textColor="?android:textColorTertiary"
+                    android:id="@id/ItemDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="47.0dip"
+                    android:text="00m00s"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:textAlignment="textEnd"
+                    android:layout_marginStart="16.0dip"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="11.0dip"
+                    android:textColor="?android:textColorTertiary"
+                    android:id="@id/ItemDesc"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:lines="1"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@id/delete"
+                android:padding="8.0dip"
+                android:layout_width="32.0dip"
+                android:src="@drawable/delete"
+                android:scaleType="centerInside"
+                android:tint="@android:color/white"
+                style="@style/SceneButton" />
+            <ImageButton
+                android:id="@id/confirm"
+                android:padding="4.0dip"
+                android:visibility="gone"
+                android:layout_width="32.0dip"
+                android:src="@drawable/check"
+                android:scaleType="centerInside"
+                android:tint="@android:color/white"
+                style="@style/SceneButton" />
+        </FrameLayout>
+    </com.omarea.ui.BlurViewLinearLayout>
+</LinearLayout>

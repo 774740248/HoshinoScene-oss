@@ -1,0 +1,65 @@
+Dual MIT/GPL
+pt_regs
+uretprobe_libgui
+uretprobe/libgui
+/mnt/d/Android/vtools-private/daemon/scheduler_fas_bpf.c
+int uretprobe_libgui(struct pt_regs *ctx) {
+	u32 key = 0;
+	event.time = bpf_ktime_get_boot_ns();
+	event.pending = PENDING_UNKNOWN;
+	u32 *enabled = bpf_map_lookup_elem(&track_config, &key);
+	if (enabled && *enabled) {
+		u64 *pending = bpf_map_lookup_elem(&pending_count, &key);
+		if (pending) {
+			u64 v = *pending + 1;
+			if (v > MAX_PENDING)
+			*pending = v;
+			event.pending = (u32)v;
+	bpf_perf_event_output(ctx, &events, BPF_F_CURRENT_CPU, &event, sizeof(event));
+	return 0;
+uretprobe_libgui_acquire
+uretprobe/libgui_acquire
+int uretprobe_libgui_acquire(struct pt_regs *ctx) {
+	u64 *pending = bpf_map_lookup_elem(&pending_count, &key);
+	if (pending && *pending > 0) {
+		*pending = *pending - 1;
+char
+__ARRAY_SIZE_TYPE__
+__license
+bpf_map_def
+type
+key_size
+value_size
+max_entries
+map_flags
+unsigned int
+events
+pending_count
+track_config
+event
+time
+pending
+unused
+.bss
+license
+maps
+.text
+.rel.BTF.ext
+pending_count
+events
+.bss
+maps
+uretprobe_libgui
+.reluretprobe/libgui
+.llvm_addrsig
+track_config
+__license
+uretprobe_libgui_acquire
+.reluretprobe/libgui_acquire
+unused
+.strtab
+.symtab
+.rel.BTF
+LBB0_6
+LBB0_5
+LBB1_3

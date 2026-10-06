@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@id/kr_param_value"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:breakStrategy="simple" />
+    <TextView
+        android:textColor="?android:textColorPrimary"
+        android:gravity="center_vertical"
+        android:id="@id/kr_param_single_select"
+        android:background="@drawable/abc_spinner_mtrl_am_alpha"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="35.0dip"
+        android:hint="@string/kr_please_select"
+        android:breakStrategy="simple" />
+</LinearLayout>

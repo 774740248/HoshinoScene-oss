@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/mode_file"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fs_new_file" />
+    <item
+        android:id="@id/mode_folder"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fs_new_folder" />
+    <item
+        android:id="@id/mode_stat"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fs_stat_size" />
+    <item
+        android:id="@id/mode_copy_path"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fs_copy_path" />
+    <item
+        android:id="@id/mode_select"
+        android:visible="true"
+        android:orderInCategory="100"
+        android:title="@string/fs_multi_select" />
+</menu>

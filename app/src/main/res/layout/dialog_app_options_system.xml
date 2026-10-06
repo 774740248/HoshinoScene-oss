@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/app_options_single_only"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:paddingHorizontal="8.0dip">
+            <include
+                layout="@layout/dialog_app_options_header" />
+            <com.omarea.ui.OptionItemView
+                android:id="@id/app_options_backup_apk"
+                app:desc="@string/apps_op_backup_desc"
+                app:iconColor="@android:color/holo_green_dark"
+                app:iconSrc="@drawable/app_options_apk"
+                app:title="@string/apps_op_backup"
+                style="@style/ListCardItemSmall" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8.0dip">
+            <com.omarea.ui.OptionItemView
+                android:id="@id/app_options_clear"
+                app:desc="@string/apps_op_clear_desc"
+                app:iconColor="#ffff9800"
+                app:iconSrc="@drawable/app_options_clear2"
+                app:title="@string/apps_op_clear"
+                style="@style/ListCardItemSmall" />
+            <com.omarea.ui.OptionItemView
+                android:id="@id/app_options_uninstall"
+                app:desc="@string/apps_op_uninstall_updated_desc"
+                app:iconColor="#ffff9800"
+                app:iconSrc="@drawable/app_options_uninstall"
+                app:title="@string/apps_op_uninstall_updated"
+                style="@style/ListCardItemSmall" />
+            <com.omarea.ui.OptionItemView
+                android:id="@id/app_options_uninstall_user"
+                app:desc="@string/apps_op_uninstall_user_desc"
+                app:iconColor="#ffff5722"
+                app:iconSrc="@drawable/app_options_uninstall_user"
+                app:title="@string/apps_op_uninstall_user"
+                style="@style/ListCardItemSmall" />
+            <com.omarea.ui.OptionItemView
+                android:id="@id/app_options_delete"
+                android:tag="root"
+                app:desc="@string/apps_op_delete_desc"
+                app:iconColor="@android:color/holo_red_dark"
+                app:iconSrc="@drawable/app_options_uninstall"
+                app:title="@string/apps_op_delete"
+                style="@style/ListCardItemSmall" />
+            <com.omarea.ui.OptionItemView
+                android:id="@id/app_options_app_freeze"
+                app:desc="@string/apps_op_frozen_unfrozen_desc"
+                app:iconColor="@android:color/holo_blue_light"
+                app:iconSrc="@drawable/app_options_freeze"
+                app:title="@string/apps_op_frozen_unfrozen"
+                style="@style/ListCardItemSmall" />
+            <com.omarea.ui.OptionItemView
+                android:id="@id/app_options_dex2oat"
+                app:desc="@string/apps_op_dex2oat_desc"
+                app:iconColor="#ffb3ca6e"
+                app:iconSrc="@drawable/app_options_dex2oat"
+                app:title="@string/apps_op_dex2oat"
+                style="@style/ListCardItemSmall" />
+        </LinearLayout>
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

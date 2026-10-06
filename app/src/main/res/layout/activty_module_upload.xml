@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:saveEnabled="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <ImageView
+        android:id="@id/module_delete"
+        android:padding="11.0dip"
+        android:visibility="gone"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/delete"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneTitleBarBtn" />
+    <com.omarea.ui.CornerScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_bar"
+        android:layout_below="@id/layout_app_bar">
+        <com.omarea.ui.BlurViewLinearLayout
+            android:orientation="vertical"
+            android:id="@id/module_view"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.omarea.common.ui.InputView
+                android:id="@id/module_id"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="50"
+                app:title="@string/module_id" />
+            <com.omarea.common.ui.InputView
+                android:id="@id/module_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:maxLength="50"
+                app:title="@string/module_name" />
+            <com.omarea.common.ui.InputView
+                android:id="@id/module_author"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:maxLength="50"
+                app:title="@string/module_author" />
+            <com.omarea.common.ui.InputView
+                android:id="@id/module_version_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="1.0.0"
+                android:maxLength="50"
+                app:title="@string/module_version_name" />
+            <com.omarea.common.ui.InputView
+                android:id="@id/module_version_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:hint="1"
+                android:maxLength="50"
+                app:title="@string/module_version_code" />
+            <com.omarea.common.ui.InputView
+                android:id="@id/module_download_url"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:maxLength="1024"
+                app:title="@string/module_download_url" />
+            <com.omarea.common.ui.InputView
+                android:gravity="top"
+                android:id="@id/module_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:minLines="2"
+                android:maxLength="500"
+                app:title="@string/module_summary" />
+            <com.omarea.common.ui.InputView
+                android:gravity="top"
+                android:id="@id/module_detail_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:minLines="7"
+                android:maxLength="5000"
+                app:title="@string/module_detail" />
+        </com.omarea.ui.BlurViewLinearLayout>
+    </com.omarea.ui.CornerScrollView>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@id/bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <Button
+            android:id="@id/btn_cancel"
+            android:text="@string/btn_cancel"
+            style="@style/dialogCancelBtn" />
+        <Button
+            android:id="@id/btn_confirm"
+            android:text="@string/btn_save"
+            style="@style/dialogConfirmBtn" />
+    </LinearLayout>
+</RelativeLayout>

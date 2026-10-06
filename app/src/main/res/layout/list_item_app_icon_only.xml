@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:background="@drawable/list_item_ripple"
+    android:layout_width="fill_parent"
+    android:layout_height="50.0dip"
+    android:layout_marginEnd="6.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@id/ItemIcon"
+        android:layout_width="45.0dip"
+        android:layout_height="45.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:maxWidth="45.0dip"
+        android:maxHeight="45.0dip"
+        android:minWidth="45.0dip"
+        android:minHeight="45.0dip"
+        android:layout_centerHorizontal="true" />
+    <View
+        android:background="@color/colorAccent"
+        android:visibility="gone"
+        android:layout_width="20.0dip"
+        android:layout_height="3.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:textSize="20.0dip"
+        android:textStyle="bold"
+        android:textColor="#ff888888"
+        android:id="@id/ItemTitle"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:lines="1"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:overScrollMode="always" />
+</RelativeLayout>

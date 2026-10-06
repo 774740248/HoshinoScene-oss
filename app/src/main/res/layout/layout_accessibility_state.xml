@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.ui.BlurViewLinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_marginLeft="0.0dip"
+    android:layout_marginTop="10.0dip"
+    android:layout_marginRight="0.0dip"
+    android:layout_marginHorizontal="16.0dip"
+    style="@style/ListCardItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="22.0dip"
+        android:layout_height="22.0dip"
+        android:src="@drawable/nav_icon_warn"
+        app:tint="?android:colorAccent" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginStart="10.0dip">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accessibility_activate"
+            style="@style/textSmallTitle" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:text="@string/accessibility_activate_desc"
+            style="@style/textSmall" />
+    </LinearLayout>
+</com.omarea.ui.BlurViewLinearLayout>

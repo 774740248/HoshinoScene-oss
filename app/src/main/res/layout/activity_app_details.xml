@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/drawer_layout"
+    android:fitsSystemWindows="false"
+    android:clipToPadding="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="false"
+    android:backgroundTintMode="screen"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/layout_app_bar" />
+    <com.omarea.common.ui.OverScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?actionBarSize">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.omarea.ui.BlurViewLinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="0.0dip"
+                style="@style/ListCardItem">
+                <ImageView
+                    android:id="@id/app_details_icon"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:src="@drawable/linux" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="8.0dip">
+                    <TextView
+                        android:id="@id/app_details_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5.0dip"
+                        android:text="@string/app_name"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:id="@id/app_details_packagename"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        style="@style/textSmall" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+            <Switch
+                android:layout_gravity="center_horizontal"
+                android:id="@id/scene_mode_allow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/detail_automate"
+                android:switchPadding="6.0dip"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/scene_mode_config"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <com.omarea.ui.BlurViewLinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/app_details_perf"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_schedule"
+                            style="@style/scene_config_item" />
+                        <TextView
+                            android:gravity="end|center"
+                            android:id="@id/app_details_dynamic"
+                            android:paddingTop="8.0dip"
+                            android:paddingBottom="8.0dip"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:paddingEnd="8.0dip" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:id="@id/app_game"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="40.0dip">
+                        <TextView
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_category"
+                            android:layout_weight="1.0"
+                            style="@style/scene_config_item" />
+                        <com.omarea.common.ui.Tags
+                            android:id="@id/app_category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:id="@id/app_fas"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="40.0dip">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fas_enable"
+                            style="@style/scene_config_item" />
+                        <Switch
+                            android:id="@id/app_fas_enable"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            style="@style/scene_config_item" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@id/app_fas_external"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:id="@id/app_fas_adjust"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="40.0dip">
+                            <TextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fas_fps_adjust"
+                                android:layout_weight="1.0"
+                                style="@style/scene_config_item" />
+                            <com.omarea.common.ui.SeekBar
+                                android:id="@id/app_fas_adjust_fps"
+                                android:layout_width="78.0dip"
+                                android:layout_height="wrap_content"
+                                app:max="10"
+                                app:min="-50" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:id="@id/app_fas_offset"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="40.0dip">
+                            <TextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fas_offset_adjust"
+                                android:layout_weight="1.0"
+                                style="@style/scene_config_item" />
+                            <com.omarea.common.ui.SeekBar
+                                android:id="@id/app_fas_adjust_offset"
+                                android:layout_width="78.0dip"
+                                android:layout_height="wrap_content"
+                                app:max="25"
+                                app:min="-50" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:id="@id/app_fas_levels"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="40.0dip">
+                            <TextView
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fas_fps_levels"
+                                android:layout_weight="1.0"
+                                style="@style/scene_config_item" />
+                            <TextView
+                                android:gravity="end|center"
+                                android:id="@id/app_fas_fps_levels_btn"
+                                android:paddingTop="8.0dip"
+                                android:paddingBottom="8.0dip"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:paddingEnd="8.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:id="@id/app_refresh_rate_max"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="40.0dip">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_refresh_rate_max"
+                            style="@style/scene_config_item" />
+                        <TextView
+                            android:gravity="end|center"
+                            android:id="@id/app_refresh_rate_max_btn"
+                            android:paddingTop="8.0dip"
+                            android:paddingBottom="8.0dip"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:paddingEnd="8.0dip" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:id="@id/app_refresh_rate_min"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="40.0dip">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_refresh_rate_min"
+                            style="@style/scene_config_item" />
+                        <TextView
+                            android:gravity="end|center"
+                            android:id="@id/app_refresh_rate_min_btn"
+                            android:paddingTop="8.0dip"
+                            android:paddingBottom="8.0dip"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:paddingEnd="8.0dip" />
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewLinearLayout>
+                <com.omarea.ui.BlurViewLinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/app_details_auto"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="40.0dip">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_brightness_manual"
+                            style="@style/scene_config_item" />
+                        <Switch
+                            android:id="@id/app_details_aloowlight"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            style="@style/scene_config_item" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="40.0dip">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_gps_on"
+                            style="@style/scene_config_item" />
+                        <Switch
+                            android:id="@id/app_details_gps"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            style="@style/scene_config_item" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="40.0dip">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_rotation"
+                            style="@style/scene_config_item" />
+                        <TextView
+                            android:gravity="end|center"
+                            android:id="@id/scene_orientation"
+                            android:layout_width="0.0dip"
+                            android:layout_height="40.0dip"
+                            android:layout_weight="1.0"
+                            android:paddingEnd="8.0dip" />
+                    </LinearLayout>
+                </com.omarea.ui.BlurViewLinearLayout>
+                <com.omarea.ui.BlurViewLinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/app_details_assist"
+                    style="@style/ListCardItem">
+                    <LinearLayout
+                        android:id="@id/app_details_immerse"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <Switch
+                            android:id="@id/app_details_hidenav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_immerse_nav"
+                            android:layout_weight="1.0"
+                            style="@style/scene_config_item" />
+                        <Switch
+                            android:id="@id/app_details_hidestatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_immerse_status"
+                            android:layout_weight="1.0"
+                            android:layout_marginStart="50.0dip"
+                            style="@style/scene_config_item" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <Switch
+                            android:id="@id/app_details_hidenotice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/detail_dis_notification"
+                            android:layout_weight="1.0"
+                            style="@style/scene_config_item" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4.0dip"
+                        android:text="@string/detail_immerse_tip"
+                        style="@style/textSmall" />
+                </com.omarea.ui.BlurViewLinearLayout>
+                <com.omarea.ui.BlurViewLinearLayout
+                    style="@style/ListCardItem">
+                    <Switch
+                        android:id="@id/app_monitor"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_scene_monitor"
+                        style="@style/scene_config_item" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4.0dip"
+                        android:text="@string/detail_scene_monitor_desc"
+                        style="@style/textSmall" />
+                </com.omarea.ui.BlurViewLinearLayout>
+                <com.omarea.ui.BlurViewLinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/ListCardItemLast">
+                    <RelativeLayout
+                        android:gravity="top"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/task_actions"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            style="@style/textTitle" />
+                        <ImageButton
+                            android:id="@id/custom_actions_list"
+                            android:padding="8.0dip"
+                            android:layout_width="50.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_marginBottom="4.0dip"
+                            android:src="@drawable/kr_list"
+                            android:scaleType="centerInside"
+                            android:tint="?android:colorAccent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="4.0dip"
+                            android:layout_toStartOf="@id/custom_actions_add"
+                            style="@style/SceneButtonLight" />
+                        <ImageButton
+                            android:id="@id/custom_actions_add"
+                            android:padding="8.0dip"
+                            android:layout_width="50.0dip"
+                            android:layout_height="28.0dip"
+                            android:layout_marginBottom="4.0dip"
+                            android:src="@drawable/kr_plus"
+                            android:scaleType="centerInside"
+                            android:tint="?android:colorAccent"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            style="@style/SceneButtonLight" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@id/task_custom_actions"
+                        android:background="@drawable/in_card_item"
+                        android:padding="8.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/textSmall" />
+                </com.omarea.ui.BlurViewLinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.omarea.common.ui.OverScrollView>
+</FrameLayout>

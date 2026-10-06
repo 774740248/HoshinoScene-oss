@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    style="@style/dialogRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:text="@string/please_input_number"
+        style="@style/dialogTitle" />
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+        <ImageButton
+            android:id="@id/number_input_minus"
+            android:background="@android:color/transparent"
+            android:padding="10.0dip"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@drawable/kr_minus"
+            android:scaleType="centerInside"
+            android:tint="?android:colorAccent" />
+        <EditText
+            android:layout_gravity="center_vertical"
+            android:id="@id/number_input_value"
+            android:layout_width="100.0dip"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:textAlignment="center"
+            style="@style/textTitle" />
+        <ImageButton
+            android:id="@id/number_input_plus"
+            android:background="@android:color/transparent"
+            android:padding="10.0dip"
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@drawable/kr_plus"
+            android:scaleType="centerInside"
+            android:tint="?android:colorAccent" />
+    </LinearLayout>
+    <TextView
+        android:id="@id/number_input_help"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:textAlignment="center" />
+</LinearLayout>

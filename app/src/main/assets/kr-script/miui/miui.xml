@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<items>
+    <resource dir="file:///android_asset/kr-script/miui" />
+    <group title="界面">
+        <switch max-sdk="32">
+            <title>MIUI 10/11/12 隐藏导航栏</title>
+            <desc>通过主题资源修改导航栏高度的方式隐藏掉导航栏，方便使用第三方手势</desc>
+            <get>run miui_hide_nav_get.sh</get>
+            <set>run miui_hide_nav_set.sh</set>
+        </switch>
+        <action
+            visible="run edge/support.sh"
+            shell="hidden">
+            <title>边缘防误触</title>
+            <summary sh="run edge/summary.sh" />
+            <param
+                title="区域大小(%)"
+                desc="系统设置里的可调节范围是20%~100%"
+                min="0" max="200" name="level" value-sh="run edge/get.sh" type="seekbar" />
+            <set>run edge/set.sh</set>
+        </action>
+    </group>
+
+    <group title="单手模式" visible="if [[ $(getprop ro.build.version.sdk) -lt 31 ]]; then echo 1; fi">
+        <switch shell="hidden" id="@node-handy-switch">
+            <title>单手模式</title>
+            <desc>是否启用单手模式功能</desc>
+            <get>settings get system handy_mode_state</get>
+            <set>
+                settings put system handy_mode_state 0
+                settings put system handy_mode_state $state
+            </set>
+        </switch>
+        <picker shell="hidden">
+            <title>单手模式-尺寸</title>
+            <get>settings get system handy_mode_size</get>
+            <set>settings put system handy_mode_size $state</set>
+            <options>
+                <option value="3.0">3.0英寸</option>
+                <option value="3.5">3.5英寸</option>
+                <option value="4.0">4.0英寸</option>
+                <option value="4.5">4.5英寸</option>
+                <option value="5.0">5.0英寸</option>
+                <option value="5.2">5.2英寸</option>
+                <option value="5.5">5.5英寸</option>
+                <option value="5.7">5.7英寸</option>
+            </options>
+        </picker>
+        <picker shell="hidden" value="1" reload="@node-handy-switch">
+            <title>切换显示模式</title>
+            <options>
+                <option value="1">左手</option>
+                <option value="2">右手</option>
+            </options>
+            <set>
+                settings put system handy_mode_state 0
+                settings put system handy_mode_state 1
+                am broadcast -a miui.action.handymode.changemode --ei mode $state
+            </set>
+        </picker>
+    </group>
+
+    <group title="硬件">
+        <action
+            visible="run haptic/support.sh"
+            shell="hidden">
+            <title>振动反馈</title>
+            <summary sh="run haptic/summary.sh" />
+            <param
+                title="振动强度(%)"
+                desc="超过150%可能会没有明显效果"
+                min="0" max="400" name="level" value-sh="run haptic/get.sh" type="seekbar" />
+            <set>run haptic/set.sh</set>
+        </action>
+        <picker
+            visible="run ai_key/support.sh"
+            options-sh="run ai_key/options.sh"
+            shell="hidden">
+            <title>AI键事件</title>
+            <summary sh="run ai_key/summary.sh" />
+            <get>run ai_key/get.sh</get>
+            <set>run ai_key/set.sh</set>
+        </picker>
+    </group>
+
+    <group title="温控" id="thermal">
+        <page
+            id="miui-thermal"
+            config="miui-thermal.xml"
+            desc="更改温控配置和锁帧配置" title="温控&amp;锁帧" />
+    </group>
+
+    <group title="功能">
+        <action shell="hidden">
+            <title>启用USB安装</title>
+            <desc>跳过插卡验证，强制开启USB安装、USB安全设置</desc>
+            <set>
+                setprop presist.security.adbinput 1
+                setprop presist.fastboot.enable 1
+                setprop persist.security.adbinput 1
+            </set>
+        </action>
+        <switch id="miui_update">
+            <title>【MIUI10】在线更新检查</title>
+            <desc>关闭此开关可以屏蔽在线更新检查</desc>
+            <get>run miui_update_get.sh</get>
+            <set>run miui_update_set.sh</set>
+        </switch>
+        <switch shell="hidden">
+            <title>【MIUI11】相机实验室功能</title>
+            <desc>开启相机设置界面里的实验室功能设置</desc>
+            <get>
+                if [[ -e /sdcard/DCIM/Camera/Lab_options_visible ]]; then
+                    echo 1
+                fi
+            </get>
+            <set>
+                if [[ "$state" == "1" ]]; then
+                    mkdir -p /sdcard/DCIM/Camera/Lab_options_visible
+                else
+                    rm -rf /sdcard/DCIM/Camera/Lab_options_visible
+                fi
+                am force-stop com.android.camera 2>/dev/null
+                killall -9 com.android.camera 2>/dev/null
+            </set>
+        </switch>
+    </group>
+</items>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_gravity="fill"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:paddingStart="6.0dip"
+        android:paddingEnd="6.0dip">
+        <ImageButton
+            android:id="@id/kr_task_stop"
+            android:background="@android:color/transparent"
+            android:layout_width="25.0dip"
+            android:layout_height="25.0dip"
+            android:src="@drawable/kr_stop"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="6.0dip" />
+        <TextView
+            android:id="@id/kr_task_title"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:breakStrategy="simple"
+            style="@style/TextAppearance.Compat.Notification.Title" />
+    </LinearLayout>
+    <TextView
+        android:id="@id/kr_task_log"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="always"
+        android:paddingStart="6.0dip"
+        android:paddingEnd="6.0dip"
+        android:breakStrategy="simple"
+        style="@style/TextAppearance.Compat.Notification.Info" />
+    <ProgressBar
+        android:id="@id/kr_task_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="4.0dip"
+        android:layout_marginTop="10.0dip"
+        android:progressDrawable="@drawable/kr_progress_shape"
+        android:layout_marginStart="6.0dip"
+        android:layout_marginEnd="6.0dip"
+        style="@android:style/Widget.ProgressBar.Horizontal" />
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/activity_vertical_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <View
+            android:background="@color/colorAccent"
+            android:layout_width="10.0dip"
+            android:layout_height="1.0dip" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/power_legend_sc_on"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            style="@style/textSmall" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <View
+            android:background="#ff808080"
+            android:layout_width="10.0dip"
+            android:layout_height="1.0dip" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/power_legend_sc_off"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            style="@style/textSmall" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <ImageView
+            android:layout_width="10.0dip"
+            android:layout_height="10.0dip"
+            android:src="@drawable/legend_dotted_line"
+            android:scaleType="centerInside"
+            app:tint="@color/colorAccent" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/power_legend_sc_on_miss"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            style="@style/textSmall" />
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
+        <ImageView
+            android:layout_width="10.0dip"
+            android:layout_height="10.0dip"
+            android:src="@drawable/legend_dotted_line"
+            android:scaleType="centerInside" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/power_legend_sc_off_pause"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            style="@style/textSmall" />
+    </LinearLayout>
+    <TextView
+        android:background="@drawable/in_card_item"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:text="@string/power_legend_pause_desc"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        style="@style/textSmall" />
+    <TextView
+        android:background="@drawable/in_card_item"
+        android:padding="@dimen/activity_vertical_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:text="@string/power_legend_miss_desc"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        style="@style/textSmall" />
+</LinearLayout>

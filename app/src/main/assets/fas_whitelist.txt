@@ -1,0 +1,15 @@
+com.tencent.tmgp.sgame=1
+com.garena.game.kgtw=1
+com.tencent.lolm=1
+com.tencent.tmgp.speedmobile=1
+com.garena.game.fctw=1
+com.tencent.tmgp.pubgmhd=1
+com.tencent.tmgp.pubgmhdce=1
+com.tencent.ig=1
+com.netease.moba.aligames=1
+com.netease.dwrg=1
+com.netease.dwrg.nearme.gamecenter=1
+com.netease.dwrg.mi=1
+com.levelinfinite.sgameGlobal.midaspay=1
+com.pubg.imobile=1
+com.tencent.tmgp.dfm=0

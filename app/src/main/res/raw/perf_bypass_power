@@ -1,0 +1,37 @@
+[{
+  "desc": "@string:bypass_warn",
+  "items": [
+    {
+      "title": "@string:bypass_switch",
+      "desc": "@string:bypass_switch_desc",
+      "visible": "never",
+      "field": {
+        "default": "0",
+        "path": "enable",
+        "type": "boolean"
+      }
+    },
+    {
+      "title": "@string:bypass_threshold",
+      "desc": "@string:bypass_threshold_desc",
+      "visible": "always",
+      "field": {
+        "path": "threshold",
+        "type": "number",
+        "default": 41,
+        "min": 30,
+        "max": 43
+      }
+    },
+    {
+      "title": "@string:bypass_cpu_temp",
+      "desc": "@string:bypass_cpu_temp_desc",
+      "visible": "always",
+      "field": {
+        "default": "0",
+        "path": "cpu_temp_check",
+        "type": "boolean"
+      }
+    }
+  ]
+}]

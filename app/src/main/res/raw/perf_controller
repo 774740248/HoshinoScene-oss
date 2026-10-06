@@ -1,0 +1,101 @@
+[{
+  "title": "downmigrate/upmigrate",
+  "items": [
+    {
+      "id": "sched_downmigrate",
+      "title": "sched_downmigrate",
+      "field": {
+        "path": "/proc/sys/kernel/sched_downmigrate",
+        "type": "string"
+      }
+    },
+    {
+      "id": "sched_upmigrate",
+      "title": "sched_upmigrate",
+      "field": {
+        "path": "/proc/sys/kernel/sched_upmigrate",
+        "type": "string"
+      }
+    },
+    {
+      "id": "sched_group_downmigrate",
+      "title": "sched_group_downmigrate",
+      "field": {
+        "path": "/proc/sys/kernel/sched_group_downmigrate",
+        "type": "string"
+      }
+    },
+    {
+      "id": "sched_group_upmigrate",
+      "title": "sched_group_upmigrate",
+      "field": {
+        "path": "/proc/sys/kernel/sched_group_upmigrate",
+        "type": "string"
+      }
+    }
+  ]
+}, {
+  "title": "mask force",
+  "items": [
+    {
+      "id": "sched_force_lb_enable",
+      "title": "sched_force_lb_enable",
+      "field": {
+        "path": "/proc/sys/kernel/sched_force_lb_enable",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    },
+    {
+      "id": "sched_lib_mask_force",
+      "title": "sched_lib_name",
+      "field": {
+        "path": "/proc/sys/kernel/sched_lib_mask_force",
+        "type": "string"
+      }
+    },
+    {
+      "id": "sched_lib_name",
+      "title": "sched_lib_name",
+      "field": {
+        "path": "/proc/sys/kernel/sched_lib_name",
+        "type": "string"
+      }
+    }
+  ]
+}, {
+  "title": "boost",
+  "items": [
+    {
+      "id": "sched_boost",
+      "title": "sched_boost",
+      "field": {
+        "path": "/proc/sys/kernel/sched_boost",
+        "type": "number",
+        "max": 3,
+        "min": 0,
+        "options": [
+          "0|NO_BOOST",
+          "1|FULL_THROTTLE_BOOST",
+          "2|CONSERVATIVE_BOOST",
+          "3|RESTRAINED_BOOST"
+        ]
+      }
+    }
+  ]
+}, {
+  "title": "*",
+  "items": [
+    {
+      "id": "sched_energy_aware",
+      "title": "sched_energy_aware",
+      "field": {
+        "path": "/proc/sys/kernel/sched_energy_aware",
+        "type": "boolean",
+        "on": "1",
+        "off": "0"
+      }
+    }
+  ]
+}]

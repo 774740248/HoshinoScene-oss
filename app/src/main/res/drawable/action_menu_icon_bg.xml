@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="#ff000000" />
+    <padding
+        android:left="8.0dip"
+        android:top="8.0dip"
+        android:right="8.0dip"
+        android:bottom="8.0dip" />
+    <corners
+        android:topLeftRadius="@dimen/card_bg_radius"
+        android:topRightRadius="@dimen/card_bg_radius"
+        android:bottomLeftRadius="@dimen/card_bg_radius"
+        android:bottomRightRadius="@dimen/card_bg_radius" />
+</shape>

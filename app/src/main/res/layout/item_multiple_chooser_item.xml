@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="6.0dip"
+    android:paddingVertical="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/ItemCheckBox">
+        <TextView
+            android:ellipsize="end"
+            android:id="@id/ItemTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:breakStrategy="simple"
+            style="@style/textTitle" />
+        <TextView
+            android:ellipsize="end"
+            android:id="@id/ItemDesc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:breakStrategy="simple"
+            style="@style/textSmall" />
+    </LinearLayout>
+    <CheckBox
+        android:id="@id/ItemCheckBox"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8.0dip"
+        android:layout_alignParentEnd="true" />
+    <ImageButton
+        android:id="@id/ItemDelete"
+        android:padding="8.0dip"
+        android:visibility="gone"
+        android:layout_width="32.0dip"
+        android:src="@drawable/delete"
+        android:scaleType="centerInside"
+        android:tint="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8.0dip"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneButton" />
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@id/fw_chart_list"
+    android:background="@drawable/monitor_game_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="3.0dip"
+    android:paddingEnd="1.5dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_width="8.0dip"
+        android:layout_height="8.0dip"
+        android:src="@drawable/ic_cpu" />
+    <com.omarea.ui.CpuChartBarView
+        android:id="@id/fw_cpu_chart"
+        android:layout_width="20.0dip"
+        android:layout_height="7.5dip"
+        android:layout_marginBottom="0.5dip"
+        android:layout_marginStart="1.0dip" />
+    <TextView
+        android:textSize="7.5dip"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:id="@id/fw_cpu_freq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="20.0dip"
+        android:text="-MHz"
+        android:fontFamily="monospace"
+        android:layout_marginStart="1.0dip"
+        android:lineHeight="1.0dip" />
+    <ImageView
+        android:layout_width="8.0dip"
+        android:layout_height="8.0dip"
+        android:src="@drawable/ic_gpu"
+        android:layout_marginStart="2.0dip" />
+    <com.omarea.ui.CpuChartBarView
+        android:id="@id/fw_gpu_chart"
+        android:layout_width="5.0dip"
+        android:layout_height="7.5dip"
+        android:layout_marginBottom="0.5dip"
+        android:layout_marginStart="1.5dip" />
+    <TextView
+        android:textSize="7.5dip"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:id="@id/fw_gpu_freq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="20.0dip"
+        android:text="-MHz"
+        android:fontFamily="monospace"
+        android:layout_marginStart="1.0dip" />
+    <ImageView
+        android:layout_width="8.0dip"
+        android:layout_height="8.0dip"
+        android:src="@drawable/ic_frame"
+        android:layout_marginStart="2.0dip" />
+    <TextView
+        android:textSize="8.0dip"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:id="@id/fw_mini_col3_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="22.0dip"
+        android:text="--"
+        android:fontFamily="monospace"
+        android:layout_marginStart="1.0dip" />
+    <ImageView
+        android:layout_width="8.0dip"
+        android:layout_height="8.0dip"
+        android:src="@drawable/ic_battery"
+        android:layout_marginStart="2.0dip" />
+    <TextView
+        android:textSize="7.5dip"
+        android:textStyle="bold"
+        android:textColor="#ffffffff"
+        android:id="@id/fw_battery_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="33.0dip"
+        android:text="--W"
+        android:fontFamily="monospace"
+        android:layout_marginStart="1.0dip" />
+</LinearLayout>

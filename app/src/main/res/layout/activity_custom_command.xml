@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:focusable="false"
+        android:focusableInTouchMode="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar">
+        <com.omarea.ui.BlurView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/ListCardItem">
+            <EditText
+                android:textStyle="bold"
+                android:textColor="?android:textColorPrimary"
+                android:id="@id/command_title"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/task_command_name"
+                android:maxLength="20" />
+        </com.omarea.ui.BlurView>
+        <com.omarea.ui.BlurView
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            style="@style/ListCardItem">
+            <EditText
+                android:textSize="12.0dip"
+                android:textStyle="normal"
+                android:textColor="?android:textColorSecondary"
+                android:gravity="top"
+                android:id="@id/command_script"
+                android:background="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:hint="@string/task_command_content"
+                android:minLines="8" />
+        </com.omarea.ui.BlurView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:paddingHorizontal="@dimen/activity_horizontal_margin">
+            <Button
+                android:id="@id/btn_run"
+                android:text="@string/btn_test_run"
+                android:layout_marginEnd="8.0dip"
+                style="@style/dialogCancelBtn" />
+            <Button
+                android:id="@id/btn_confirm"
+                android:text="@string/btn_save"
+                style="@style/dialogConfirmBtn" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

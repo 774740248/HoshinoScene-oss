@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:padding="12.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/krscript_item_ripple_inactive"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginBottom="65.0dip">
+        <TextView
+            android:id="@id/confirm_title"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scene_contract_title"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            style="@style/textTitle" />
+        <WebView
+            android:id="@id/agreement_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@id/btn_cancel"
+            android:text="@string/forget_it"
+            android:layout_marginEnd="8.0dip"
+            style="@style/dialogCancelBtn" />
+        <Button
+            android:id="@id/btn_confirm"
+            android:text="@string/agree"
+            style="@style/dialogConfirmBtn" />
+    </LinearLayout>
+</RelativeLayout>
