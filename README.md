@@ -19,8 +19,8 @@
 
 最新版本 APK 已随仓库发布，见 **[Releases](../../releases)** 页面下载：
 
-- `星野SCENEN1A11fix-V1.apk`（`release/` 目录内同步归档）
-- 包名：`com.omarea.vtools` · 版本：`1.0-recovered`（versionCode 1）
+- `星野SCENEN1A12.apk`（`release/` 目录内同步归档）
+- 最新 Release：**v1.1-N1A12** · 包名：`com.omarea.vtools`（versionCode 1）
 - 架构：arm64-v8a · 最低支持：Android 8.0（minSdk 26）· targetSdk 36
 
 ## 🛠️ 从源码构建
