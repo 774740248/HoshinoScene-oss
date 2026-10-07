@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="appops_filter">
+        <item>全部</item>
+        <item>允許</item>
+        <item>前景允許</item>
+        <item>忽略</item>
+        <item>拒絕</item>
+    </string-array>
+    <string-array name="apps_filter">
+        <item>所有應用程式</item>
+        <item>已停用</item>
+        <item>已更新</item>
+        <item>已啟用</item>
+    </string-array>
+    <string-array name="default_powercfg_mode_options">
+        <item>@string/powersave</item>
+        <item>@string/balance</item>
+        <item>@string/performance</item>
+        <item>@string/fast</item>
+    </string-array>
+    <string-array name="detail_categories">
+        <item>應用程式</item>
+        <item>遊戲</item>
+    </string-array>
+    <string-array name="modules_source_filter">
+        <item>所有來源</item>
+        <item>官方上傳</item>
+        <item>使用者分享</item>
+        <item>Magisk的存放庫</item>
+    </string-array>
+    <string-array name="powercfg_apptype_filter">
+        <item>使用者</item>
+        <item>系統</item>
+        <item>全部</item>
+    </string-array>
+    <string-array name="powercfg_modes_filter">
+        <item>全部模式</item>
+        <item>@string/powersave</item>
+        <item>@string/balance</item>
+        <item>@string/performance</item>
+        <item>@string/fast</item>
+        <item>@string/global_default</item>
+        <item>@string/kepp_state</item>
+    </string-array>
+    <string-array name="process_filter">
+        <item>Android 應用程式</item>
+        <item>其他處理程序</item>
+        <item>所有處理程序</item>
+    </string-array>
+    <string-array name="process_sort_modes">
+        <item>依 CPU</item>
+        <item>依 RES</item>
+        <item>依 PID</item>
+        <item>依 UID</item>
+        <item>不排序</item>
+    </string-array>
+    <string-array name="sleep_powercfg_mode_options">
+        <item>@string/powersave</item>
+        <item>@string/balance</item>
+        <item>@string/performance</item>
+        <item>@string/kepp_state</item>
+    </string-array>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- L3: 该布局在 APK 资源还原中损坏（原为库布局，内容丢失），
+     占位为可控的 view 根节点并禁用 viewBinding，避免编译期报错。 -->
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:viewBindingIgnore="true" />

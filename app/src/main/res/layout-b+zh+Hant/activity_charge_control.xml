@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <com.omarea.common.ui.OverScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.omarea.ui.BatteryRealtimeStatus
+                android:id="@id/view_realtime_values"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <com.omarea.ui.BlurViewLinearLayout
+                android:id="@id/settings_pd_support"
+                style="@style/ListCardItem">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <com.omarea.ui.HelpIcon
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:text="@string/battery_pd_allowed_desc" />
+                    <Switch
+                        android:enabled="false"
+                        android:id="@id/settings_pd"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_pd_allowed"
+                        android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_pd_active_state"
+                        style="@style/textSmall" />
+                    <TextView
+                        android:id="@id/settings_pd_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_pd_active_unknown"
+                        style="@style/textSmall" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/settings_step_charge"
+                android:layout_marginTop="1.0dip"
+                style="@style/ListCardItem">
+                <com.omarea.ui.HelpIcon
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:text="@string/battery_step_charge_desc" />
+                <Switch
+                    android:id="@id/settings_step_charge_enabled"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/battery_step_charge"
+                    android:layout_weight="1.0" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:id="@id/settings_qc_panel"
+                style="@style/ListCardItem">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <com.omarea.ui.HelpIcon
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:text="@string/battery_qc_charger_desc" />
+                    <Switch
+                        android:id="@id/settings_qc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_qc_charger" />
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip">
+                    <SeekBar
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/settings_qc_limit"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:max="220"
+                        android:progress="30"
+                        android:layout_weight="1.0"
+                        style="@style/SceneSeekBar" />
+                    <EditText
+                        android:layout_gravity="center"
+                        android:id="@id/settings_qc_limit_desc"
+                        android:background="@drawable/text_underline"
+                        android:padding="2.0dip"
+                        android:layout_width="55.0dip"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:maxLength="7"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"
+                        android:layout_marginStart="8.0dip"
+                        style="@style/textSmall" />
+                </LinearLayout>
+                <TextView
+                    android:id="@id/settings_qc_limit_current"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="@string/battery_reality_limit"
+                    style="@style/textSmall" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/battery_charge_speed_ext"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin">
+                        <com.omarea.ui.HelpIcon
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:text="@string/battery_night_mode_desc" />
+                        <Switch
+                            android:id="@id/battery_night_mode"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/battery_night_mode" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/battery_time_get_up"
+                            android:layout_marginStart="25.0dip"
+                            android:layout_marginEnd="12.0dip"
+                            style="@style/textDefault" />
+                        <TextView
+                            android:textColor="?android:colorAccent"
+                            android:id="@id/battery_get_up"
+                            android:background="?actionBarItemBackground"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:textAlignment="center"
+                            android:timePickerMode="spinner"
+                            style="@style/textDefault" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/battery_time_sleep"
+                            android:layout_marginStart="20.0dip"
+                            android:layout_marginEnd="12.0dip"
+                            style="@style/textDefault" />
+                        <TextView
+                            android:textColor="?android:colorAccent"
+                            android:id="@id/battery_sleep"
+                            android:background="?actionBarItemBackground"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:textAlignment="center"
+                            android:timePickerMode="spinner"
+                            style="@style/textDefault" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:id="@id/bp_cardview"
+                android:visibility="gone"
+                style="@style/ListCardItem">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <com.omarea.ui.HelpIcon
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:text="@string/battery_bp_desc" />
+                    <Switch
+                        android:id="@id/settings_bp"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_bp"
+                        android:layout_weight="1.0" />
+                </LinearLayout>
+                <SeekBar
+                    android:id="@id/settings_bp_level"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:max="70"
+                    style="@style/SceneSeekBar" />
+                <TextView
+                    android:id="@id/battery_bp_level_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="@string/battery_bp_level_desc"
+                    style="@style/textSmall" />
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <com.omarea.ui.HelpIcon
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:text="@string/settings_cdp_disable_desc" />
+                    <Switch
+                        android:id="@id/settings_cdp_disable"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_cdp_disable"
+                        android:layout_weight="1.0" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_manual_control"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                    <Button
+                        android:id="@id/bp_disable_charge"
+                        android:layout_width="wrap_content"
+                        android:text="@string/battery_charge_disable"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        style="@style/SceneButton" />
+                    <Button
+                        android:id="@id/bp_enable_charge"
+                        android:layout_width="wrap_content"
+                        android:text="@string/battery_charge_resume"
+                        style="@style/SceneButton" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <com.omarea.ui.BlurViewLinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    style="@style/ListCardItem">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:text="@string/battery_uevent_title"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:id="@id/battery_uevent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/textSmall" />
+                </com.omarea.ui.BlurViewLinearLayout>
+                <com.omarea.ui.BlurViewLinearLayout
+                    android:id="@id/battery_usb"
+                    android:layout_width="0.0dip"
+                    android:layout_weight="1.0"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    style="@style/ListCardItem">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:text="@string/battery_usb_uevent_title"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:id="@id/battery_usb_uevent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/textSmall" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.0dip"
+                        android:text="*資料僅供參考"
+                        android:alpha="0.5"
+                        style="@style/textSmall" />
+                </com.omarea.ui.BlurViewLinearLayout>
+            </LinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="vertical"
+                android:id="@id/battery_forgery"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                style="@style/ListCardItemLast">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <com.omarea.ui.HelpIcon
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:text="偽裝資料並不會獲得相應的續航能力，自欺欺人而已" />
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_forgery"
+                        android:layout_weight="1.0"
+                        style="@style/textTitle" />
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_forgery_ratio"
+                        android:textAlignment="textEnd"
+                        style="@style/textDefault" />
+                    <TextView
+                        android:id="@id/battery_forgery_ratio"
+                        android:layout_width="60.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="--%"
+                        android:textAlignment="center"
+                        android:paddingStart="8.0dip"
+                        style="@style/textLink" />
+                    <View
+                        android:layout_width="50.0dip"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_forgery_full_now"
+                        android:textAlignment="textEnd"
+                        style="@style/textDefault" />
+                    <TextView
+                        android:id="@id/battery_forgery_full_now"
+                        android:layout_width="80.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="--mAh"
+                        android:textAlignment="center"
+                        android:paddingStart="8.0dip"
+                        style="@style/textLink" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+        </LinearLayout>
+    </com.omarea.common.ui.OverScrollView>
+</RelativeLayout>
