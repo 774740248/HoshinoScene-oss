@@ -28,7 +28,7 @@ android {
         }
 
         // 保留多语言中文资源
-        resourceConfigurations += ['en', 'zh', 'zh-rCN']
+        resourceConfigurations += ['en', 'zh', 'zh-rCN', 'b+zh+Hant', 'zh-rTW']
     }
 
     // ★ ViewBinding 必开（证据充分）

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:text="購買專業版"
+        style="@style/dialogTitle" />
+    <TextView
+        android:text="可透過以下方式購買/續費(Pro Version)"
+        style="@style/dialogDesc" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/dialogRoot">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/user_paymet"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8.0dip"
+            android:layout_above="@id/user_store">
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:id="@id/pay_alipay"
+                android:background="@drawable/krscript_item_ripple"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.0dip"
+                android:layout_weight="1.0"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:paddingVertical="15.0dip">
+                <TextView
+                    android:textSize="17.0dip"
+                    android:textColor="?android:colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付寶"
+                    style="@style/textTitle" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:id="@id/pay_wxpay"
+                android:background="@drawable/krscript_item_ripple"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:layout_marginStart="8.0dip"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:paddingVertical="15.0dip">
+                <TextView
+                    android:textSize="17.0dip"
+                    android:textColor="?android:colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="微信"
+                    style="@style/textTitle" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@id/user_store"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/info">
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:id="@id/pay_paypal"
+                android:background="@drawable/krscript_item_ripple"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:paddingVertical="15.0dip">
+                <TextView
+                    android:textSize="17.0dip"
+                    android:textColor="?android:colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paypal"
+                    style="@style/textTitle" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:id="@id/pay_google"
+                android:background="@drawable/in_card_item"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:alpha="0.5"
+                android:layout_marginStart="8.0dip"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:paddingVertical="15.0dip">
+                <TextView
+                    android:textSize="17.0dip"
+                    android:textColor="?android:colorAccent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Google Play"
+                    style="@style/textTitle" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/info"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="12.0dip"
+        style="@style/dialogWarn">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="每臺裝置可以使用SCENE的完整功能15天。"
+            style="@style/textSmall" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="在此之後，你需要完成支付才能繼續使用Pro版的功能。"
+            style="@style/textSmall" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Pro版的功能通常是指依賴ROOT許可權的功能。"
+            style="@style/textSmall" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Each device has a free 15-day trial of all [SCENE] features."
+            style="@style/textSmall" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="After that, you need to make a payment to use Pro's features."
+            style="@style/textSmall" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Pro features usually refer to functions that rely on ROOT permissions."
+            style="@style/textSmall" />
+    </LinearLayout>
+</LinearLayout>

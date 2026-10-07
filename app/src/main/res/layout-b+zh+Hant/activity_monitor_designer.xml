@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <ImageView
+        android:id="@id/btn_reset"
+        android:padding="10.0dip"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/icon_clear"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneTitleBarBtn" />
+    <RelativeLayout
+        android:id="@id/designer_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_app_bar">
+        <com.omarea.ui.fw.FloatMonitorRender
+            android:id="@id/designer_preview_monitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20.0dip"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <com.omarea.ui.BlurViewLinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:layout_below="@id/designer_preview"
+        android:layout_alignParentBottom="true"
+        style="@style/ListCardItemLast">
+        <com.omarea.common.ui.Tags
+            android:id="@id/designer_filter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/designer_options"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="0.0dip"
+                    android:text="過高頻率的重新整理，會產生嚴重的觀察者效應，反而使監控資料失真。CPU、DDR、GPU的頻率調節頻率可達千次/秒，不要妄圖用肉眼盯住所有變化，而因關注整體變化趨勢。"
+                    android:layout_marginStart="0.0dip"
+                    android:layout_marginEnd="0.0dip"
+                    style="@style/dialogWarn" />
+                <com.omarea.common.ui.SeekBar
+                    android:id="@id/designer_refresh_interval"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8.0dip"
+                    app:max="15"
+                    app:min="2" />
+                <com.omarea.common.ui.SeekBar
+                    android:id="@id/designer_scale"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8.0dip"
+                    app:max="10"
+                    app:min="-10"
+                    app:progress="0" />
+                <Switch
+                    android:id="@id/designer_chart_cpu"
+                    android:tag="chart"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CPU頻率(MHz)、負載(%)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_chart_gpu"
+                    android:tag="chart"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GPU頻率(MHz)、負載(%)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_chart_battery"
+                    android:tag="chart"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="電池電量(%)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_chart_memory"
+                    android:tag="chart"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="記憶體佔用(%)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_cpu"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CPU頻率(MHz)、負載(%)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_memory"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="記憶體佔用(%)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_ddr_freq"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DDR頻率(MHz|Mbps)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_cpu_temp"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CPU溫度(℃)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_gpu_temp"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GPU溫度(℃)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_ddr_temp"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DDR溫度(℃)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_battery_temp"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="電池溫度(℃)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_fps"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="螢幕畫面幀率"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_power"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="放電功率(W)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_gpu_memory"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GPU佔用記憶體(M)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_disk"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="磁碟讀寫(MB/s)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_network"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="網路傳輸(MB/s)"
+                    android:layout_marginVertical="8.0dip" />
+                <Switch
+                    android:id="@id/designer_text_perf_mem"
+                    android:tag="text"
+                    android:saveEnabled="false"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stall統計"
+                    android:layout_marginVertical="8.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </com.omarea.ui.BlurViewLinearLayout>
+</RelativeLayout>

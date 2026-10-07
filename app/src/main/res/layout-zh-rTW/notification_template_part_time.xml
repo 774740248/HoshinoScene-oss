@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- L3: 原为库布局 notification_template_part_time（android.widget.DateTimeView 已被 R8 重定位，无法还原），
+     占位并禁用 viewBinding。 -->
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:viewBindingIgnore="true" />

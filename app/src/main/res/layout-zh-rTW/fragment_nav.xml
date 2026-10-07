@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.omarea.common.ui.OverScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/nav"
+        android:paddingBottom="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/activity_horizontal_margin">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="@string/menu_group_perf"
+            style="@style/textSmall" />
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="@integer/nav_grid_columns">
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_core_control"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_cpu"
+                app:text="@string/menu_core_control"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_swap"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_swap"
+                app:text="@string/menu_swap"
+                style="@style/nav_item_wrap" />
+        </GridLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="@string/menu_group_power"
+            style="@style/textSmall" />
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="@integer/nav_grid_columns">
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_power_utilization"
+                app:drawable="@drawable/ic_bat_stats"
+                app:text="@string/menu_power_utilization"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_charge"
+                app:drawable="@drawable/ic_menu_charge"
+                app:text="@string/menu_charge"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_fps_chart"
+                app:drawable="@drawable/fw_float_fps"
+                app:text="@string/menu_fps_chart"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_charge_control"
+                android:tag="root"
+                app:drawable="@drawable/icon_charge_control"
+                app:text="@string/menu_charge_control"
+                style="@style/nav_item_wrap" />
+        </GridLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="@string/menu_group_apps"
+            style="@style/textSmall" />
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="@integer/nav_grid_columns">
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_processes"
+                android:tag="adb"
+                app:drawable="@drawable/ic_processes"
+                app:text="@string/menu_processes"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_applictions"
+                app:drawable="@drawable/ic_menu_modules"
+                app:text="@string/menu_applictions"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_activities"
+                app:drawable="@drawable/ic_activities"
+                app:text="@string/menu_activities"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_freeze"
+                android:tag="adb"
+                app:drawable="@drawable/ic_freezer"
+                app:text="@string/menu_freeze"
+                style="@style/nav_item_wrap" />
+        </GridLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="@string/menu_group_magisk"
+            style="@style/textSmall" />
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="@integer/nav_grid_columns"
+            android:alignmentMode="alignBounds">
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_modules"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_download"
+                app:text="@string/menu_modules"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_app_magisk"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_mask"
+                app:text="@string/menu_app_magisk"
+                style="@style/nav_item_wrap" />
+        </GridLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="@string/menu_group_advance"
+            style="@style/textSmall" />
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="@integer/nav_grid_columns">
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_img"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_img"
+                app:text="@string/menu_img"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_additional"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_more"
+                app:text="@string/menu_sundry"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_additional_all"
+                android:tag="root"
+                app:drawable="@drawable/ic_menu_shell"
+                app:text="@string/menu_additional"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_miui_thermal"
+                app:drawable="@drawable/ic_menu_xiaomi"
+                app:text="@string/menu_miui_thermal"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_oplus_orms"
+                app:drawable="@drawable/ic_menu_oneplus"
+                app:text="@string/menu_oplus_orms"
+                style="@style/nav_item_wrap" />
+        </GridLayout>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="@string/menu_group_diagnose"
+            style="@style/textSmall" />
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="@integer/nav_grid_columns">
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_screen_test"
+                app:drawable="@drawable/icon_display"
+                app:text="@string/menu_screen_test"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_perf_bench"
+                app:drawable="@drawable/icon_test"
+                app:text="模擬測試"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_power_bench"
+                app:drawable="@drawable/icon_chart"
+                app:text="能耗測試"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_app_files"
+                app:drawable="@drawable/icon_folder"
+                app:text="@string/menu_files"
+                style="@style/nav_item_wrap" />
+        </GridLayout>
+        <TextView
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="@string/menu_group_xp"
+            style="@style/textSmall" />
+        <GridLayout
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dip"
+            android:layout_marginRight="-4.0dip"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:columnCount="@integer/nav_grid_columns">
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <Space
+                style="@style/nav_grid_spacer" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_xposed_app"
+                app:drawable="@drawable/ic_menu_addon"
+                app:text="@string/menu_xposed_app"
+                style="@style/nav_item_wrap" />
+            <com.omarea.ui.NavItem
+                android:id="@id/nav_xposed_global"
+                app:drawable="@drawable/ic_menu_addon"
+                app:text="@string/menu_xposed_global"
+                style="@style/nav_item_wrap" />
+        </GridLayout>
+    </LinearLayout>
+</com.omarea.common.ui.OverScrollView>

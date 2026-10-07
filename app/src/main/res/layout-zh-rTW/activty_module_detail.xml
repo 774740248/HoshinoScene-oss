@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:saveEnabled="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/layout_app_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_app_bar" />
+    <ImageView
+        android:id="@id/module_edit"
+        android:padding="10.0dip"
+        android:visibility="gone"
+        android:layout_marginBottom="9.0dip"
+        android:src="@drawable/icon_edit"
+        android:layout_alignBottom="@id/layout_app_bar"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_alignParentEnd="true"
+        style="@style/SceneTitleBarBtn" />
+    <com.omarea.common.ui.OverScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/layout_app_bar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/module_view"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/activity_horizontal_margin">
+            <com.omarea.ui.BlurViewLinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/module_warn"
+                android:background="@drawable/list_view_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:paddingVertical="12.0dip">
+                <ImageView
+                    android:layout_width="25.0dip"
+                    android:layout_height="25.0dip"
+                    android:src="@drawable/nav_icon_warn"
+                    app:tint="@color/warning" />
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="此模組由使用者分享，SCENE不做安全擔保"
+                    android:layout_weight="1.0"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    style="@style/textDefault" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:orientation="vertical"
+                android:background="@drawable/list_view_bg"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/module_id"
+                        android:textIsSelectable="true"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:id="@id/module_id"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1.0"
+                        android:textIsSelectable="true"
+                        android:textAlignment="textEnd"
+                        style="@style/textTitle" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/module_name"
+                        style="@style/textTitle" />
+                    <TextView
+                        android:id="@id/module_name"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1.0"
+                        android:textIsSelectable="true"
+                        android:textAlignment="textEnd"
+                        style="@style/textTitle" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/module_author"
+                        style="@style/textDefault" />
+                    <TextView
+                        android:id="@id/module_author"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1.0"
+                        android:textIsSelectable="true"
+                        android:textAlignment="textEnd"
+                        style="@style/textDefault" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/module_version_name"
+                        style="@style/textDefault" />
+                    <TextView
+                        android:id="@id/module_version_name"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1.0"
+                        android:textIsSelectable="true"
+                        android:textAlignment="textEnd"
+                        style="@style/textDefault" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.0dip">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/module_version_code"
+                        style="@style/textDefault" />
+                    <TextView
+                        android:id="@id/module_version_code"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1.0"
+                        android:textIsSelectable="true"
+                        android:textAlignment="textEnd"
+                        style="@style/textDefault" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/module_sharer"
+                        style="@style/textDefault" />
+                    <TextView
+                        android:id="@id/module_uid"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:layout_weight="1.0"
+                        android:textIsSelectable="true"
+                        android:textAlignment="textEnd"
+                        style="@style/textDefault" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@drawable/list_view_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/activity_horizontal_margin"
+                android:paddingVertical="8.0dip">
+                <ImageButton
+                    android:id="@id/module_download"
+                    android:layout_width="32.0dip"
+                    android:src="@drawable/ic_menu_download"
+                    android:scaleType="centerInside"
+                    style="@style/SceneButton" />
+                <TextView
+                    android:autoLink="all"
+                    android:id="@id/module_download_url"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_weight="1.0"
+                    android:textIsSelectable="true"
+                    android:textAlignment="textEnd"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    style="@style/textDefault" />
+            </com.omarea.ui.BlurViewLinearLayout>
+            <com.omarea.ui.BlurView
+                android:background="@drawable/list_view_bg"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+                <TextView
+                    android:gravity="top"
+                    android:id="@id/module_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:hint="@string/module_summary"
+                    android:minLines="5"
+                    android:maxLength="5000"
+                    android:textIsSelectable="true"
+                    style="@style/textDefault" />
+            </com.omarea.ui.BlurView>
+            <com.omarea.ui.BlurViewLinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@drawable/list_view_bg"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/module_rank"
+                    style="@style/textDefault" />
+                <LinearLayout
+                    android:gravity="end|center"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0">
+                    <ImageView
+                        android:id="@id/module_like"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/icon_praise"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        app:tint="#80808080" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textColor="@android:color/holo_blue_light"
+                        android:id="@id/module_like_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+                    <View
+                        android:background="#ffcccccc"
+                        android:layout_width="1.0px"
+                        android:layout_height="10.0dip"
+                        android:layout_marginHorizontal="@dimen/activity_horizontal_margin" />
+                    <TextView
+                        android:textSize="14.0dip"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:id="@id/module_dislike_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+                    <ImageView
+                        android:id="@id/module_dislike"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/icon_belittle"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        app:tint="#80808080" />
+                </LinearLayout>
+            </com.omarea.ui.BlurViewLinearLayout>
+        </LinearLayout>
+    </com.omarea.common.ui.OverScrollView>
+</RelativeLayout>

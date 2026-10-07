@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.omarea.ui.OptionItemView
+        android:id="@id/app_options_open"
+        android:visibility="gone"
+        app:desc="自動解凍並啟動此應用"
+        app:iconColor="@android:color/holo_green_dark"
+        app:iconSrc="@drawable/app_options_apk"
+        app:title="開啟應用"
+        style="@style/ListCardItemSmall" />
+    <com.omarea.ui.OptionItemView
+        android:id="@id/app_options_remove"
+        app:desc="@string/freezer_remove_desc"
+        app:iconColor="#ffff9800"
+        app:iconSrc="@drawable/app_options_clear2"
+        app:title="@string/freezer_remove"
+        style="@style/ListCardItemSmall" />
+    <com.omarea.ui.OptionItemView
+        android:id="@id/app_options_uninstall"
+        app:desc="@string/freezer_uninstall_desc"
+        app:iconColor="#ffff5722"
+        app:iconSrc="@drawable/app_options_uninstall"
+        app:title="@string/freezer_uninstall"
+        style="@style/ListCardItemSmall" />
+    <com.omarea.ui.OptionItemView
+        android:id="@id/app_options_freeze"
+        app:desc="@string/freezer_freeze_thaw_desc"
+        app:iconColor="@android:color/holo_blue_light"
+        app:iconSrc="@drawable/app_options_freeze"
+        app:title="@string/freezer_freeze_thaw"
+        style="@style/ListCardItemSmall" />
+    <com.omarea.ui.OptionItemView
+        android:id="@id/app_options_shortcut"
+        app:desc="@string/freezer_shortcut_create_desc"
+        app:iconColor="#ffb3ca6e"
+        app:iconPadding="10.0dip"
+        app:iconSrc="@drawable/app_options_shortcut"
+        app:title="@string/freezer_shortcut_create"
+        style="@style/ListCardItemSmall" />
+</LinearLayout>
