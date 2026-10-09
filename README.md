@@ -53,10 +53,21 @@ HoshinoScene/
 │   └── src/main/           # 源码 / 资源 / assets / jniLibs
 ├── native/                 # Native 层（BPF / disassembly / prebuilt）
 ├── signing/                # 原始签名材料与说明
-├── tools/                  # 辅助工具脚本
+├── tools/                  # 辅助工具脚本（含繁体中文生成脚本）
 ├── docs/                   # 工程还原说明（RECOVERY.md）
+├── decompiled/             # 各版本反编译工程归档（7z）
 └── release/                # 版本产物归档
 ```
+
+## 🗂️ 反编译工程归档
+
+`decompiled/` 目录存放**各版本的完整反编译工程**（apktool + jadx 还原产物，7z 压缩归档），供需要对照研究特定版本实现细节的开发者使用：
+
+| 归档 | 对应版本 | 内容 |
+|------|---------|------|
+| [HoshinoSCEN-OSS反编译工程N1 2026.10 Alpha14.7z](decompiled/) | N1 2026.10 Alpha14（v1.2-N1A14） | 4910 文件 · smali / 资源 / native 库完整还原 |
+
+> 💡 提示：若只需构建最新版，直接使用根目录的 Gradle 工程即可，无需解压反编译归档。
 
 ## 🔐 签名说明
 
