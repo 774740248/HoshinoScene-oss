@@ -27,7 +27,6 @@ build.ps1
 gradlew
 gradlew.bat
 # 本地打包產物
-release/星野SCENE-*.apk
 release/*.idsig
 
 # 签名材料：依据用户要求「公开放入源代码中」，故**刻意不排除**
