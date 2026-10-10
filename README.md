@@ -65,7 +65,8 @@ HoshinoScene/
 
 | 归档 | 对应版本 | 内容 |
 |------|---------|------|
-| [HoshinoSCEN-OSS反编译工程N1 2026.10 Alpha14.7z](decompiled/) | N1 2026.10 Alpha14（v1.2.1-N1A14Lite） | 4910 文件 · smali / 资源 / native 库完整还原 |
+| [HoshinoSCEN-OSS反编译工程N1 2026.10 Alpha14.7z](decompiled/) | N1 2026.10 Alpha14（v1.2-N1A14） | 4910 文件 · smali / 资源 / native 库完整还原 |
+| [星野SceneN1 2026.10 Alpha14 Lite.7z](decompiled/) | N1 26.10 Alpha14Lite（v1.2.1-N1A14Lite） | 4914 文件 · smali / 资源 / native 库完整还原 |
 
 > 💡 提示：若只需构建最新版，直接使用根目录的 Gradle 工程即可，无需解压反编译归档。
 
