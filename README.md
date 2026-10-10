@@ -19,8 +19,8 @@
 
 最新版本 APK 已随仓库发布，见 **[Releases](../../releases)** 页面下载：
 
-- `星野SCENE-N1-2026.10-Alpha14.apk`（`release/` 目录内同步归档）
-- 最新 Release：**v1.2-N1A14** · 包名：`com.omarea.vtools`（versionCode 1）
+- `星野SCENE-N1-2026.10-Alpha14Lite.apk`（`release/` 目录内同步归档）
+- 最新 Release：**v1.2.1-N1A14Lite** · 包名：`com.omarea.vtools`（versionCode 1）
 - 架构：arm64-v8a · 最低支持：Android 8.0（minSdk 26）· targetSdk 36
 
 ## 🛠️ 从源码构建
@@ -65,7 +65,7 @@ HoshinoScene/
 
 | 归档 | 对应版本 | 内容 |
 |------|---------|------|
-| [HoshinoSCEN-OSS反编译工程N1 2026.10 Alpha14.7z](decompiled/) | N1 2026.10 Alpha14（v1.2-N1A14） | 4910 文件 · smali / 资源 / native 库完整还原 |
+| [HoshinoSCEN-OSS反编译工程N1 2026.10 Alpha14.7z](decompiled/) | N1 2026.10 Alpha14（v1.2.1-N1A14Lite） | 4910 文件 · smali / 资源 / native 库完整还原 |
 
 > 💡 提示：若只需构建最新版，直接使用根目录的 Gradle 工程即可，无需解压反编译归档。
 
